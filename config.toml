@@ -1,0 +1,9 @@
+languageCode = "en-us"
+title = "Eternal-flame-AD"
+canonifyURLS = false
+publishDir = "docs"
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+[permalinks]
+  blog = "/blog/:year/:month/:title/"

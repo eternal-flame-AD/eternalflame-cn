@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    
+
+    <base href="">
+    <title>Python使用multiprocessing实现多进程 | eternal-flame-AD</title>
+    <link rel="canonical" href="/blog/2018/03/python%E4%BD%BF%E7%94%A8multiprocessing%E5%AE%9E%E7%8E%B0%E5%A4%9A%E8%BF%9B%E7%A8%8B/">
+    
+
+    
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+
+
+<link rel="stylesheet" href="/style.css" />
+
+
+
+<script src="/js/anime.min.js"></script>
+<script async src="/js/fireworks.js"></script>
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+<body lang="en">
+    <nav class="navbar navbar-default navbar-expand-lg navbar-light bg-light">
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-main" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav-main">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+            <li class="nav-item active"><a href="/blog/" class="nav-link">Blog</a></li>
+            <li class="nav-item"><a href="https://github.com/eternal-flame-AD" class="nav-link">Github</a></li>
+            <li class="nav-item"><a href="https://connect.garmin.com/modern/profile/67225a8f-1f19-491b-ae65-274a76fe0ba1" class="nav-link">Garmin Connect</a></li>
+            <li class="nav-item"><a href="https://keybase.io/eternal_flame" class="nav-link">Keybase</a></li>
+        </ul>
+        <button class="btn btn-primary my-2 my-sm-0" onClick="javascript::window.location.href='https://github.com/eternal-flame-AD'"><i class="fab fa-github"></i>Follow me on Github</button>
+    </div>
+</nav>
+    <div class="container">
+        <div class="jumbotron jumbotron-narrow">
+            <h3 class="display-4">Python使用multiprocessing实现多进程</h3>
+            <i class="text-muted"><i class="fas fa-user"></i>Eternal-flame-AD</i> <br />
+            <i class="text-muted"><i class="fas fa-clock"></i>Mon, Mar 26, 2018</i> <br />
+            
+            <i class="text-muted"><i class="fas fa-shapes"></i><a href="/categories/%e6%97%a5%e5%b8%b8">日常&nbsp;</a></i> <br />
+            <i class="text-muted"><i class="fas fa-link"></i><a style="word-wrap: break-word;" href="/blog/2018/03/python%E4%BD%BF%E7%94%A8multiprocessing%E5%AE%9E%E7%8E%B0%E5%A4%9A%E8%BF%9B%E7%A8%8B/">/blog/2018/03/python%E4%BD%BF%E7%94%A8multiprocessing%E5%AE%9E%E7%8E%B0%E5%A4%9A%E8%BF%9B%E7%A8%8B/</a></i> <br />
+            <i class="text-muted"><i class="fas fa-copyright"></i><a href="https://creativecommons.org/licenses/by/4.0/deed.zh">CC-BY-NC 4.0</a></i> <br />
+            
+            
+        </div>
+        <article>
+        <p>Python由于GIL锁的缘故，多线程进行CPU密集任务会导致严重的性能问题，而multiprocessing库模仿了threading的使用方法，但使用了多进程避开了GIL锁的问题。</p>
+
+<p>首先，先来看一个最简单的Process实现，和threading几乎一模一样的使用方法：</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> multiprocessing
+<span style="color:#f92672">import</span> time
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">watch</span>(owner):
+    <span style="color:#66d9ef">print</span>(owner,<span style="color:#e6db74">&#34;is looking at his/her watch&#34;</span>)
+    time<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">3</span>)
+    now<span style="color:#f92672">=</span>time<span style="color:#f92672">.</span>asctime(time<span style="color:#f92672">.</span>localtime())
+    <span style="color:#66d9ef">print</span>(owner,<span style="color:#e6db74">&#34;&#39;s Watch says it is &#34;</span>,now,sep<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>)
+
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>():
+    p<span style="color:#f92672">=</span>multiprocessing<span style="color:#f92672">.</span>Process(target<span style="color:#f92672">=</span>watch,args<span style="color:#f92672">=</span>(<span style="color:#e6db74">&#34;Mike&#34;</span>,))
+    p<span style="color:#f92672">.</span>start()
+    p<span style="color:#f92672">.</span>join()
+
+<span style="color:#66d9ef">if</span> __name__<span style="color:#f92672">==</span><span style="color:#e6db74">&#34;__main__&#34;</span>:
+    main()</code></pre></div>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">PS&gt;python .\example.py
+Mike is looking at his/her watch
+Mike<span style="color:#960050;background-color:#1e0010">&#39;</span>s Watch says it is Mon Mar 26 17<span style="color:#960050;background-color:#1e0010">:</span>55<span style="color:#960050;background-color:#1e0010">:</span>06 2018</code></pre></div>
+
+<p>加入显示pid之后可以看到watch在不同的进程上进行：</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> multiprocessing
+<span style="color:#f92672">import</span> time
+<span style="color:#f92672">import</span> os
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">watch</span>(owner):
+    <span style="color:#66d9ef">print</span>(owner,<span style="color:#e6db74">&#34;(&#34;</span>,os<span style="color:#f92672">.</span>getpid(),<span style="color:#e6db74">&#34;)&#34;</span>,<span style="color:#e6db74">&#34; is looking at his/her watch&#34;</span>,sep<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>)
+    time<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">3</span>)
+    now<span style="color:#f92672">=</span>time<span style="color:#f92672">.</span>asctime(time<span style="color:#f92672">.</span>localtime())
+    <span style="color:#66d9ef">print</span>(owner,<span style="color:#e6db74">&#34;(&#34;</span>,os<span style="color:#f92672">.</span>getpid(),<span style="color:#e6db74">&#34;)&#34;</span>,<span style="color:#e6db74">&#34;&#39;s Watch says it is &#34;</span>,now,sep<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>)
+
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>():
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;I(&#34;</span>,os<span style="color:#f92672">.</span>getpid(),<span style="color:#e6db74">&#34;) am asking time.&#34;</span>,sep<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>)
+    p<span style="color:#f92672">=</span>multiprocessing<span style="color:#f92672">.</span>Process(target<span style="color:#f92672">=</span>watch,args<span style="color:#f92672">=</span>(<span style="color:#e6db74">&#34;Mike&#34;</span>,))
+    p<span style="color:#f92672">.</span>start()
+    p<span style="color:#f92672">.</span>join()
+
+<span style="color:#66d9ef">if</span> __name__<span style="color:#f92672">==</span><span style="color:#e6db74">&#34;__main__&#34;</span>:
+    main()</code></pre></div>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">PS<span style="color:#f92672">&gt;</span>python <span style="color:#f92672">.</span>\example<span style="color:#f92672">.</span>py
+I(<span style="color:#ae81ff">12800</span>) am asking time<span style="color:#f92672">.</span>
+Mike(<span style="color:#ae81ff">16696</span>) <span style="color:#f92672">is</span> looking at his<span style="color:#f92672">/</span>her watch
+Mike(<span style="color:#ae81ff">16696</span>)<span style="color:#e6db74">&#39;s Watch says it is Mon Mar 26 18:01:00 2018</span></code></pre></div>
+
+<p>因为是在不同进程中，所以global变量并不能跨程序,这里main尝试读取watch里的now就出现了错误：</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> multiprocessing
+<span style="color:#f92672">import</span> time
+<span style="color:#f92672">import</span> os
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">watch</span>(owner):
+    <span style="color:#66d9ef">global</span> now
+    <span style="color:#66d9ef">print</span>(owner,<span style="color:#e6db74">&#34;(&#34;</span>,os<span style="color:#f92672">.</span>getpid(),<span style="color:#e6db74">&#34;)&#34;</span>,<span style="color:#e6db74">&#34; is looking at his/her watch&#34;</span>,sep<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>)
+    time<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">3</span>)
+    now<span style="color:#f92672">=</span>time<span style="color:#f92672">.</span>asctime(time<span style="color:#f92672">.</span>localtime())
+    <span style="color:#66d9ef">print</span>(owner,<span style="color:#e6db74">&#34;(&#34;</span>,os<span style="color:#f92672">.</span>getpid(),<span style="color:#e6db74">&#34;)&#34;</span>,<span style="color:#e6db74">&#34;&#39;s Watch says it is &#34;</span>,now,sep<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>)
+
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>():
+    <span style="color:#66d9ef">global</span> now
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;I(&#34;</span>,os<span style="color:#f92672">.</span>getpid(),<span style="color:#e6db74">&#34;) am asking time.&#34;</span>,sep<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>)
+    p<span style="color:#f92672">=</span>multiprocessing<span style="color:#f92672">.</span>Process(target<span style="color:#f92672">=</span>watch,args<span style="color:#f92672">=</span>(<span style="color:#e6db74">&#34;Mike&#34;</span>,))
+    p<span style="color:#f92672">.</span>start()
+    p<span style="color:#f92672">.</span>join()
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;I see Mike&#39;s watch says:&#34;</span>,now)
+
+<span style="color:#66d9ef">if</span> __name__<span style="color:#f92672">==</span><span style="color:#e6db74">&#34;__main__&#34;</span>:
+    main()</code></pre></div>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">PS<span style="color:#f92672">&gt;</span>python <span style="color:#f92672">.</span>\example<span style="color:#f92672">.</span>py
+I(<span style="color:#ae81ff">17536</span>) am asking time<span style="color:#f92672">.</span>
+Mike(<span style="color:#ae81ff">12136</span>) <span style="color:#f92672">is</span> looking at his<span style="color:#f92672">/</span>her watch
+Mike(<span style="color:#ae81ff">12136</span>)<span style="color:#e6db74">&#39;s Watch says it is Mon Mar 26 18:04:44 2018</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#e6db74">Traceback (most recent call last):</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#e6db74">  File &#34;.\example.py&#34;, line 21, in &amp;lt;module&gt;</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#e6db74">    main()</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#e6db74">  File &#34;.\example.py&#34;, line 18, in main</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#e6db74">    print(&#34;I see Mike&#39;</span>s watch says:<span style="color:#e6db74">&#34;,now)</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#e6db74">NameError: name &#39;now&#39; is not defined</span></code></pre></div>
+
+<p>multiprocessing中有multiprocessing.Pipe()可以建立一个Pipe跨进程传送变量,调用一次multiprocessing.Pipe()可以得到一个双向pipe：</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> multiprocessing
+<span style="color:#f92672">import</span> time
+<span style="color:#f92672">import</span> os
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">watch</span>(owner,conn):
+    <span style="color:#66d9ef">print</span>(owner,<span style="color:#e6db74">&#34;(&#34;</span>,os<span style="color:#f92672">.</span>getpid(),<span style="color:#e6db74">&#34;)&#34;</span>,<span style="color:#e6db74">&#34; is looking at his/her watch&#34;</span>,sep<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>)
+    time<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">3</span>)
+    now<span style="color:#f92672">=</span>time<span style="color:#f92672">.</span>asctime(time<span style="color:#f92672">.</span>localtime())
+    conn<span style="color:#f92672">.</span>send(now)
+    <span style="color:#66d9ef">print</span>(owner,<span style="color:#e6db74">&#34;(&#34;</span>,os<span style="color:#f92672">.</span>getpid(),<span style="color:#e6db74">&#34;)&#34;</span>,<span style="color:#e6db74">&#34;&#39;s Watch says it is &#34;</span>,now,sep<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>)
+
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>():
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;I(&#34;</span>,os<span style="color:#f92672">.</span>getpid(),<span style="color:#e6db74">&#34;) am asking time.&#34;</span>,sep<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>)
+    conn_for_me,conn_for_mike<span style="color:#f92672">=</span>multiprocessing<span style="color:#f92672">.</span>Pipe()
+    p<span style="color:#f92672">=</span>multiprocessing<span style="color:#f92672">.</span>Process(target<span style="color:#f92672">=</span>watch,args<span style="color:#f92672">=</span>(<span style="color:#e6db74">&#34;Mike&#34;</span>,conn_for_mike))
+    p<span style="color:#f92672">.</span>start()
+    p<span style="color:#f92672">.</span>join()
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;I see Mike&#39;s watch says:&#34;</span>,conn_for_me<span style="color:#f92672">.</span>recv())
+
+<span style="color:#66d9ef">if</span> __name__<span style="color:#f92672">==</span><span style="color:#e6db74">&#34;__main__&#34;</span>:
+    main()</code></pre></div>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">python <span style="color:#f92672">.</span>\example<span style="color:#f92672">.</span>py
+I(<span style="color:#ae81ff">9812</span>) am asking time<span style="color:#f92672">.</span>
+Mike(<span style="color:#ae81ff">7288</span>) <span style="color:#f92672">is</span> looking at his<span style="color:#f92672">/</span>her watch
+Mike(<span style="color:#ae81ff">7288</span>)<span style="color:#e6db74">&#39;s Watch says it is Mon Mar 26 18:15:46 2018</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#e6db74">I see Mike&#39;</span>s watch says: Mon Mar <span style="color:#ae81ff">26</span> <span style="color:#ae81ff">18</span>:<span style="color:#ae81ff">15</span>:<span style="color:#ae81ff">46</span> <span style="color:#ae81ff">2018</span></code></pre></div>
+
+<p>multiprocess还仿照queue实现了进程安全的multiprocess.Queue</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> multiprocessing <span style="color:#f92672">import</span> Process, Queue
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">f</span>(q):
+    q<span style="color:#f92672">.</span>put([<span style="color:#ae81ff">42</span>, None, <span style="color:#e6db74">&#39;hello&#39;</span>])
+
+<span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
+    q <span style="color:#f92672">=</span> Queue()
+    p <span style="color:#f92672">=</span> Process(target<span style="color:#f92672">=</span>f, args<span style="color:#f92672">=</span>(q,))
+    p<span style="color:#f92672">.</span>start()
+    <span style="color:#66d9ef">print</span>(q<span style="color:#f92672">.</span>get())    <span style="color:#75715e"># prints &#34;[42, None, &#39;hello&#39;]&#34;</span>
+    p<span style="color:#f92672">.</span>join()</code></pre></div>
+
+<p>也有可以用进程锁：</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> multiprocessing <span style="color:#f92672">import</span> Process, Lock
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">f</span>(l, i):
+    l<span style="color:#f92672">.</span>acquire()
+    <span style="color:#66d9ef">try</span>:
+        <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;hello world&#39;</span>, i)
+    <span style="color:#66d9ef">finally</span>:
+        l<span style="color:#f92672">.</span>release()
+
+<span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
+    lock <span style="color:#f92672">=</span> Lock()
+
+    <span style="color:#66d9ef">for</span> num <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">10</span>):
+        Process(target<span style="color:#f92672">=</span>f, args<span style="color:#f92672">=</span>(lock, num))<span style="color:#f92672">.</span>start()</code></pre></div>
+
+<p>multiprocess的功能很强大，还有进程池管理，共享内存，服务器进程等的支持，如果有时间学习了再码出来~</p>
+
+        </article>
+    </div>
+    </body>
+</html>

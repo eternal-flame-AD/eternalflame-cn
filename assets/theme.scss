@@ -1,0 +1,77 @@
+$main-bg: #fbf1f8;
+$main-fg: #ffb7dd;
+
+$dark-fg: darken($main-fg, 20);
+
+
+@import "scss/bootstrap";
+@import "scss/article.scss";
+@import "scss/paginator.scss";
+@import "scss/fireworks.scss";
+$navbar-light-color: $gray-400;
+$navbar-light-active-color: $gray-600;
+
+body {
+  background-color: $main-bg !important;
+}
+
+.fa, .far, .fas {
+	margin-right: 5px;
+}
+
+.jumbotron {
+	background-color: $main-fg;
+}
+
+.jumbotron-narrow {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+
+.border {
+	border-color: #f036e7;
+}
+
+.navbar {
+	background-image: linear-gradient(to bottom,#FFB7DD 0%,#ffa7d7 100%);
+}
+.navbar-brand {
+	color: #5e5e5e;
+}
+
+.container {
+	margin-top: 40px;
+}
+
+a {
+	transition: all 0.2s ease-in-out;
+	color: darken($main-fg, 10);
+	&:hover {
+		color: $dark-fg;
+	}
+}
+
+.list-item {
+	border: $main-fg 2px solid;
+	padding: 2rem;
+	margin: 2rem;
+}
+
+.list-title > a {
+	a {
+		color: $gray-800 !important;
+		&:hover {
+			color: $main-fg !important;
+			text-decoration: none;
+		}
+	}
+}
+
+
+@keyframes blink { 
+	50% { border-color: #000000; } 
+}
+.warning {
+	border-width: 5px !important;
+	animation: blink .5s step-end infinite alternate !important;
+}

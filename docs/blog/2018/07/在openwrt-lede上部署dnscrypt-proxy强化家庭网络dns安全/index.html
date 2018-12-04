@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    
+
+    <base href="">
+    <title>在openwrt/lede上部署dnscrypt-proxy，强化家庭网络dns安全 | eternal-flame-AD</title>
+    <link rel="canonical" href="/blog/2018/07/%E5%9C%A8openwrt-lede%E4%B8%8A%E9%83%A8%E7%BD%B2dnscrypt-proxy%E5%BC%BA%E5%8C%96%E5%AE%B6%E5%BA%AD%E7%BD%91%E7%BB%9Cdns%E5%AE%89%E5%85%A8/">
+    
+
+    
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+
+
+<link rel="stylesheet" href="/style.css" />
+
+
+
+<script src="/js/anime.min.js"></script>
+<script async src="/js/fireworks.js"></script>
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+<body lang="en">
+    <nav class="navbar navbar-default navbar-expand-lg navbar-light bg-light">
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-main" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav-main">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+            <li class="nav-item active"><a href="/blog/" class="nav-link">Blog</a></li>
+            <li class="nav-item"><a href="https://github.com/eternal-flame-AD" class="nav-link">Github</a></li>
+            <li class="nav-item"><a href="https://connect.garmin.com/modern/profile/67225a8f-1f19-491b-ae65-274a76fe0ba1" class="nav-link">Garmin Connect</a></li>
+            <li class="nav-item"><a href="https://keybase.io/eternal_flame" class="nav-link">Keybase</a></li>
+        </ul>
+        <button class="btn btn-primary my-2 my-sm-0" onClick="javascript::window.location.href='https://github.com/eternal-flame-AD'"><i class="fab fa-github"></i>Follow me on Github</button>
+    </div>
+</nav>
+    <div class="container">
+        <div class="jumbotron jumbotron-narrow">
+            <h3 class="display-4">在openwrt/lede上部署dnscrypt-proxy，强化家庭网络dns安全</h3>
+            <i class="text-muted"><i class="fas fa-user"></i>Eternal-flame-AD</i> <br />
+            <i class="text-muted"><i class="fas fa-clock"></i>Tue, Jul 24, 2018</i> <br />
+            
+            <i class="text-muted"><i class="fas fa-shapes"></i><a href="/categories/openwrt%e5%ba%94%e7%94%a8">Openwrt应用&nbsp;</a><a href="/categories/%e6%8a%80%e6%9c%af">技术&nbsp;</a></i> <br />
+            <i class="text-muted"><i class="fas fa-link"></i><a style="word-wrap: break-word;" href="/blog/2018/07/%E5%9C%A8openwrt-lede%E4%B8%8A%E9%83%A8%E7%BD%B2dnscrypt-proxy%E5%BC%BA%E5%8C%96%E5%AE%B6%E5%BA%AD%E7%BD%91%E7%BB%9Cdns%E5%AE%89%E5%85%A8/">/blog/2018/07/%E5%9C%A8openwrt-lede%E4%B8%8A%E9%83%A8%E7%BD%B2dnscrypt-proxy%E5%BC%BA%E5%8C%96%E5%AE%B6%E5%BA%AD%E7%BD%91%E7%BB%9Cdns%E5%AE%89%E5%85%A8/</a></i> <br />
+            <i class="text-muted"><i class="fas fa-copyright"></i><a href="https://creativecommons.org/licenses/by/4.0/deed.zh">CC-BY-NC 4.0</a></i> <br />
+            
+            <hr class="my-4" /><p class="text-muted">dnscypt-proxy &#43; dnsmasq</p>
+        </div>
+        <article>
+        <p>自从部署了透明代理之后，整个人都变得宅了很多（家里的wifi太美好了）。但一直有个问题让我很烦恼——有部分网站因为不在gfwlist中，对应域名的dns查询并没有走代理，存在一个可能被跟踪的隐患，而如果全部将dns查询代理出去，有很多国内网站会出现解析到国外的问题。后来做了一些研究，使用dnsmasq+dnscrypt-proxy的方法解决了这个问题，将大致方法记录如下：</p>
+
+<p>首先我们要分析一下自己的需求——国内域名直接解析（我也不在乎了，国内网站很多连https都懒得上我也不觉得有什么隐私可言），国外域名使用DNS-over-TLS或DNS-over-HTTPS进行解析。也就是我们需要几个工具：</p>
+
+<ol>
+<li>一个国内域名表 我找到了<a href="https://github.com/felixonmars/dnsmasq-china-list">felixonmars/dnsmasq-china-list</a>这个很赞的项目~里面有一个较全的国内域名列表，大小有1.48M，实测基本能涵盖对速度有要求的网站（视频网站等），有少部分流量较少的域名没有涵盖（个人博客等）但问题不是很大，“国内域名”的定义是有国内CDN节点或NS服务器在国内，这两个标准正好符合我的需求~<del>送个小心心</del>，小透明也写了个脚本跟踪自己的国内域名记录，会不时发PR给原作者更新~</li>
+<li>DoH/DoT代理，这里使用了<a href="https://github.com/jedisct1/dnscrypt-proxy">dnscrypt-proxy</a>（注意这里没有使用软件包中的dnscrypt，实测不是很好用所以自己部署的）</li>
+<li>分流工具，使用Openwrt自带的dnsmasq</li>
+</ol>
+
+<p>步骤如下：</p>
+
+<p><li style="list-style-type: none;">
+  <ol>
+    <li>
+      下载中国域名配置 <pre># wget <a href="https://github.com/felixonmars/dnsmasq-china-list/raw/master/accelerated-domains.china.conf">https://github.com/felixonmars/dnsmasq-china-list/raw/master/accelerated-domains.china.conf</a></p>
+
+<h1 id="sed-i-s-114-114-114-114-lt-你使用的国内dns服务器-gt-accelerated-domains-china-conf-pre">sed -i &rsquo;s/114.114.114.114/&lt;你使用的国内DNS服务器&gt;/&rsquo; accelerated-domains.china.conf</pre></h1>
+
+<pre><code>&lt;/li&gt;
+
+&lt;li&gt;
+  将中国域名配置加入到dnsmasq配置中，在/etc/dnsmasq.conf的文件尾加入一行： &lt;pre&gt;conf-file=/path/to/your/accelerated-domains.china.conf&lt;/pre&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+  下载dnscrypt-proxy：这一步推荐在pc上做，在&lt;a href=&quot;https://github.com/jedisct1/dnscrypt-proxy/releases&quot;&gt;发布页&lt;/a&gt;下载对应架构的二进制后使用upx压缩（实测可以从10M+压缩到不到2M，空间多的请随意），使用scp或其它工具将最终的的二进制传到路由器/usr/sbin/下，加执行权限 &lt;pre&gt;# wget https://github.com/jedisct1/dnscrypt-proxy/releases/download/2.0.16/dnscrypt-proxy-linux_arm64-2.0.16.tar.gz
+</code></pre>
+
+<h1 id="tar-xvf-dnscrypt-proxy-linux-arm64-2-0-16-tar-gz">tar -xvf dnscrypt-proxy-linux_arm64-2.0.16.tar.gz</h1>
+
+<h1 id="cd-dnscrypt-proxy-linux-arm64-2-0-16">cd dnscrypt-proxy-linux_arm64-2.0.16</h1>
+
+<h1 id="upx-lzma-dnscrypt-proxy">upx &ndash;lzma dnscrypt-proxy</h1>
+
+<h1 id="cp-dnscrypt-proxy-usr-sbin">cp dnscrypt-proxy /usr/sbin</h1>
+
+<h1 id="chmod-x-usr-sbin-dnscrypt-proxy-pre">chmod +x /usr/sbin/dnscrypt-proxy</pre></h1>
+
+<pre><code>&lt;/li&gt;
+
+&lt;li&gt;
+  添加dnscrypt-proxy配置文件，这一步因为要改动的比较多也推荐在PC上做（估计vim大佬也不会看小透明说到这里直接自己上手了），先将刚刚下载的压缩包里的example-dnscrypt-proxy.toml复制出来，改名为dnscrypt-proxy.toml，初始配置注释很全面，这里小透明只说必须的改动，大佬们可以自己修改呐~ &lt;ol&gt;
+    &lt;li&gt;
+      L36，修改dnscrypt监听端口，为了不和dnsmasq冲突修改一个端口号
+    &lt;/li&gt;
+    &lt;li&gt;
+      L165，初始用来解析DoH服务器域名的一个普通dns，默认dns国内用不了，可以用1.1.1.1:53或者114.114.114.114:53
+    &lt;/li&gt;
+  &lt;/ol&gt;
+
+  &lt;p&gt;
+    修改完成后将保存的dnscrypt-proxy.toml拷贝到路由器/etc/config下&lt;/li&gt; 
+
+    &lt;li&gt;
+      配置init.d，开机自启，这里有一个已经写好的&lt;a href=&quot;https://github.com/etam/DNS-over-HTTPS-for-OpenWRT/blob/master/dnscrypt-proxy&quot;&gt;文件&lt;/a&gt;，拷贝到/etc/init.d/下即可，之后启用，运行dnscrypt-proxy &lt;pre&gt;# cd /etc/init.d
+</code></pre>
+
+<h1 id="wget-https-github-com-etam-dns-over-https-for-openwrt-raw-master-dnscrypt-proxy">wget <a href="https://github.com/etam/DNS-over-HTTPS-for-OpenWRT/raw/master/dnscrypt-proxy">https://github.com/etam/DNS-over-HTTPS-for-OpenWRT/raw/master/dnscrypt-proxy</a></h1>
+
+<h1 id="dnscrypt-proxy-enable">./dnscrypt-proxy enable</h1>
+
+<h1 id="dnscrypt-proxy-start-pre">./dnscrypt-proxy start</pre></h1>
+
+<pre><code>    &lt;/li&gt;
+
+    &lt;li&gt;
+      配置dnsmasq，修改默认DNS服务器到dnscrypt-proxy，这一步可以直接在LuCl里做，比用终端来的快，修改默认dns服务器为127.0.0.1#&lt;你的dnscrypt监听端口&gt;，切记dnsmasq的端口号用的是#分隔不是:，填错会导致dnsmasq无法启动，删除所有其他上游dns服务器，在WAN接口配置里“忽略远端通告的DNS服务器”
+    &lt;/li&gt;
+    &lt;li&gt;
+      验证，可以使用dnsmasq日志或者dnscrypt-proxy日志检查查询是否被正确分配
+    &lt;/li&gt;&lt;/ol&gt; &lt;/li&gt; &lt;/ol&gt; 
+
+    &lt;p&gt;
+</code></pre>
+
+<p></p></p>
+        </article>
+    </div>
+    </body>
+</html>

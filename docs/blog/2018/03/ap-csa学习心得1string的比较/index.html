@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    
+
+    <base href="">
+    <title>【AP CSA学习心得】（1）String的比较 | eternal-flame-AD</title>
+    <link rel="canonical" href="/blog/2018/03/ap-csa%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%971string%E7%9A%84%E6%AF%94%E8%BE%83/">
+    
+
+    
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+
+
+<link rel="stylesheet" href="/style.css" />
+
+
+
+<script src="/js/anime.min.js"></script>
+<script async src="/js/fireworks.js"></script>
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+<body lang="en">
+    <nav class="navbar navbar-default navbar-expand-lg navbar-light bg-light">
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-main" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav-main">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+            <li class="nav-item active"><a href="/blog/" class="nav-link">Blog</a></li>
+            <li class="nav-item"><a href="https://github.com/eternal-flame-AD" class="nav-link">Github</a></li>
+            <li class="nav-item"><a href="https://connect.garmin.com/modern/profile/67225a8f-1f19-491b-ae65-274a76fe0ba1" class="nav-link">Garmin Connect</a></li>
+            <li class="nav-item"><a href="https://keybase.io/eternal_flame" class="nav-link">Keybase</a></li>
+        </ul>
+        <button class="btn btn-primary my-2 my-sm-0" onClick="javascript::window.location.href='https://github.com/eternal-flame-AD'"><i class="fab fa-github"></i>Follow me on Github</button>
+    </div>
+</nav>
+    <div class="container">
+        <div class="jumbotron jumbotron-narrow">
+            <h3 class="display-4">【AP CSA学习心得】（1）String的比较</h3>
+            <i class="text-muted"><i class="fas fa-user"></i>Eternal-flame-AD</i> <br />
+            <i class="text-muted"><i class="fas fa-clock"></i>Mon, Mar 26, 2018</i> <br />
+            <i class="text-muted"><i class="fas fa-tags"></i>AP Computer Science A Java </i> <br />
+            <i class="text-muted"><i class="fas fa-shapes"></i><a href="/categories/java">Java&nbsp;</a><a href="/categories/%e5%ad%a6%e4%b9%a0">学习&nbsp;</a></i> <br />
+            <i class="text-muted"><i class="fas fa-link"></i><a style="word-wrap: break-word;" href="/blog/2018/03/ap-csa%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%971string%E7%9A%84%E6%AF%94%E8%BE%83/">/blog/2018/03/ap-csa%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%971string%E7%9A%84%E6%AF%94%E8%BE%83/</a></i> <br />
+            <i class="text-muted"><i class="fas fa-copyright"></i><a href="https://creativecommons.org/licenses/by/4.0/deed.zh">CC-BY-NC 4.0</a></i> <br />
+            
+            
+        </div>
+        <article>
+        <p>今天学习AP CSA时出现了一个问题：</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> loops<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> java.util.Scanner<span style="color:#f92672">;</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">WhileLoop</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        Scanner input<span style="color:#f92672">=</span><span style="color:#66d9ef">new</span> Scanner<span style="color:#f92672">(</span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">in</span><span style="color:#f92672">);</span>
+        String password<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>password<span style="color:#f92672">!=</span><span style="color:#e6db74">&#34;PASSWORD&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>  <span style="color:#75715e">//WARNING: password!=&#34;PASSWORD&#34; is NOT going to work! This is causing an infinite loop
+</span><span style="color:#75715e"></span>            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">print</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Password please:&#34;</span><span style="color:#f92672">);</span>
+            password<span style="color:#f92672">=</span>input<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">();</span>
+            <span style="color:#75715e">//password=&#34;PASSWORD&#34;; //Uncomment this and the while loop will end
+</span><span style="color:#75715e"></span>            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>password<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">());</span> <span style="color:#75715e">//8
+</span><span style="color:#75715e"></span>            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;PASSWORD&#34;</span><span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">());</span> <span style="color:#75715e">//8
+</span><span style="color:#75715e"></span>            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>password<span style="color:#f92672">==</span><span style="color:#e6db74">&#34;PASSWORD&#34;</span><span style="color:#f92672">);</span> <span style="color:#75715e">//always false
+</span><span style="color:#75715e"></span>        <span style="color:#f92672">}</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;OK.&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span></code></pre></div>
+
+<p>如上的代码，不论输入的字符串是否正确，循环均会一直进行，找了很久没有找到原因，后来发现是input.next()出来的String对象和直接&#8221;PASSWORD&#8221;出来的对象不等，应当使用String.equals()方法</p>
+
+<p>然而，int等其它类型却没有这个问题</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> loops<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> java.util.Scanner<span style="color:#f92672">;</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">WhileLoop</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        Scanner input<span style="color:#f92672">=</span><span style="color:#66d9ef">new</span> Scanner<span style="color:#f92672">(</span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">in</span><span style="color:#f92672">);</span>
+        String password<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">while</span> <span style="color:#f92672">(!</span>password<span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;PASSWORD&#34;</span><span style="color:#f92672">))</span> <span style="color:#f92672">{</span>  <span style="color:#75715e">//WARNING: password!=&#34;PASSWORD&#34; is NOT going to work!
+</span><span style="color:#75715e"></span>            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">print</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Password please:&#34;</span><span style="color:#f92672">);</span>
+            password<span style="color:#f92672">=</span>input<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">();</span>
+        <span style="color:#f92672">}</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;OK. Next challenge:&#34;</span><span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">int</span> intpassword<span style="color:#f92672">=</span>0<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>intpassword<span style="color:#f92672">!=</span>123456<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>  <span style="color:#75715e">//This one is OK
+</span><span style="color:#75715e"></span>            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">print</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Password please:&#34;</span><span style="color:#f92672">);</span>
+            intpassword<span style="color:#f92672">=</span>input<span style="color:#f92672">.</span><span style="color:#a6e22e">nextInt</span><span style="color:#f92672">();</span>
+        <span style="color:#f92672">}</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">print</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;OK&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span></code></pre></div>
+
+        </article>
+    </div>
+    </body>
+</html>

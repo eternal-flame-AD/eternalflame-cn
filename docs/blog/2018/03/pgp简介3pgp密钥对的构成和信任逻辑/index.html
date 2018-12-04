@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    
+
+    <base href="">
+    <title>【PGP简介】（3）PGP密钥对的构成和信任逻辑 | eternal-flame-AD</title>
+    <link rel="canonical" href="/blog/2018/03/pgp%E7%AE%80%E4%BB%8B3pgp%E5%AF%86%E9%92%A5%E5%AF%B9%E7%9A%84%E6%9E%84%E6%88%90%E5%92%8C%E4%BF%A1%E4%BB%BB%E9%80%BB%E8%BE%91/">
+    
+
+    
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+
+
+<link rel="stylesheet" href="/style.css" />
+
+
+
+<script src="/js/anime.min.js"></script>
+<script async src="/js/fireworks.js"></script>
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+<body lang="en">
+    <nav class="navbar navbar-default navbar-expand-lg navbar-light bg-light">
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-main" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav-main">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+            <li class="nav-item active"><a href="/blog/" class="nav-link">Blog</a></li>
+            <li class="nav-item"><a href="https://github.com/eternal-flame-AD" class="nav-link">Github</a></li>
+            <li class="nav-item"><a href="https://connect.garmin.com/modern/profile/67225a8f-1f19-491b-ae65-274a76fe0ba1" class="nav-link">Garmin Connect</a></li>
+            <li class="nav-item"><a href="https://keybase.io/eternal_flame" class="nav-link">Keybase</a></li>
+        </ul>
+        <button class="btn btn-primary my-2 my-sm-0" onClick="javascript::window.location.href='https://github.com/eternal-flame-AD'"><i class="fab fa-github"></i>Follow me on Github</button>
+    </div>
+</nav>
+    <div class="container">
+        <div class="jumbotron jumbotron-narrow">
+            <h3 class="display-4">【PGP简介】（3）PGP密钥对的构成和信任逻辑</h3>
+            <i class="text-muted"><i class="fas fa-user"></i>Eternal-flame-AD</i> <br />
+            <i class="text-muted"><i class="fas fa-clock"></i>Sat, Mar 31, 2018</i> <br />
+            
+            <i class="text-muted"><i class="fas fa-shapes"></i><a href="/categories/%e6%8a%80%e6%9c%af">技术&nbsp;</a><a href="/categories/%e6%97%a5%e5%b8%b8">日常&nbsp;</a></i> <br />
+            <i class="text-muted"><i class="fas fa-link"></i><a style="word-wrap: break-word;" href="/blog/2018/03/pgp%E7%AE%80%E4%BB%8B3pgp%E5%AF%86%E9%92%A5%E5%AF%B9%E7%9A%84%E6%9E%84%E6%88%90%E5%92%8C%E4%BF%A1%E4%BB%BB%E9%80%BB%E8%BE%91/">/blog/2018/03/pgp%E7%AE%80%E4%BB%8B3pgp%E5%AF%86%E9%92%A5%E5%AF%B9%E7%9A%84%E6%9E%84%E6%88%90%E5%92%8C%E4%BF%A1%E4%BB%BB%E9%80%BB%E8%BE%91/</a></i> <br />
+            <i class="text-muted"><i class="fas fa-copyright"></i><a href="https://creativecommons.org/licenses/by/4.0/deed.zh">CC-BY-NC 4.0</a></i> <br />
+            
+            
+        </div>
+        <article>
+        <p>对于一个PGP密钥对，除了公私钥内容之外，它还另外包括了一下信息（这些信息是被这个密钥签名过的，因此只有私钥的所有者能够更改它们）：</p>
+
+<ol>
+<li>用户标识
+
+<ul>
+<li>用户标识，通常是姓名和电子邮件地址，是用来标识这个PGP密钥的所有者的（注意我这里用的是<strong>密钥的所有者</strong> 不是<strong>用户标识上的姓名</strong> 两者的区别我会在下面讲到）</li>
+</ul></li>
+<li>有效期
+
+<ul>
+<li>有效期是密钥的有效时间范围，这个标识是为了保证密钥只在一段时间内有效（比如我的PGP密钥目前有效期是从18年1月19日到19年1月19日），每次使用这个密钥时，PGP程序会核对计算机上的时间和密钥的有效期，如果不在有效期内则会发出警告。设计有效期的目的主要是为了最大程度上减少因为私钥泄露等问题导致的后果，有效期短的密钥需要经常更新（不要忘了，私钥拥有者是可以更改有效期的），推荐每次更新他人的公钥的时候都要验证密钥的来源。</li>
+</ul></li>
+<li>指纹
+
+<ul>
+<li>指纹是对整个密钥的一个hash，由密钥的其他部分经过散列计算而来，主要是用来：
+
+<ul>
+<li>（1）标识这个密钥，在密钥服务器上查找公钥时，常常会使用指纹来搜索（例如你可以在hkp服务器上搜索我的公钥指纹_0x356982FADCBDDC60DBAD25E84CBBC48C2F2FF36B 来获得我完整的公钥_）</li>
+<li>（2）验证密钥的完整性，比如，今天Alice和Bob见面，它们希望确定之前通过QQ等途径交换的公钥是否就是对方的公钥，他们不必逐字比对完整的公钥（那可能会花费大量时间），而只需要比对密钥指纹，基本就可以确认他们公钥的完整性。</li>
+</ul></li>
+</ul></li>
+<li>子密钥
+
+<ul>
+<li>子密钥是隶属与这个主密钥的子密钥，可以理解为子密钥用于日常的加密/解密/签名/验证，而主密钥用来操作子密钥（增加子密钥/更改有效期/吊销/……）。一般只有命令行工具才提供比较自由的子密钥操作支持，所以为了通俗一点这里就不介绍具体用法了，引用一个<a href="https://www.cnblogs.com/andypeker/p/6124045.html">博文</a></li>
+</ul></li>
+</ol>
+
+<p>&nbsp;</p>
+
+<p>但是，现在就出现了一个问题，我们假设Alice和Bob使用某种不安全聊天工具交换公钥的时候，Eve（服务器）在中间不仅可以监听，还可以截获/伪造消息，那么，Eve完全有能力自己生成两个密钥对，分别填上Alice和Bob的用户标识，并把假冒的公钥发给Alice和Bob，这样Alice和Bob都会发现自己拿到了用户标识写着对方的公钥（实际上是Eve的公钥，对应的私钥在Eve手中），而当他们再进行通信的时候，他们加密出的所有内容都可以被Eve解密了（例如：Alice把她的消息用自己的私钥签名，之后通过<strong>他认为的</strong>Bob的公钥加密发出去；Eve截获这个消息，用自己手中的私钥解密（因为Alice手中认为的Bob的公钥其实是Eve生成的 这时Eve就获得<strong>消息明文</strong>了） 再用自己假冒的Alice的私钥签名 用Bob真正的公钥加密发给Bob；Bob就得到了一条看起来由Alice签名并加密给自己的信息） 这种情况就被称为<a href="https://en.wikipedia.org/wiki/Man-in-the-middle_attack">中间人攻击（MITM）</a>，为了确定密钥交换过程中没有中间人的干扰，我们就需要去验证双方收到的公钥是否和发出的相匹配，这一点PGP并不能帮你去做，你只能通过某种安全的渠道（例如见面），逐字核对密钥指纹来确定Alice获得的公钥就是和Bob手中的私钥相对应。在下一篇中我会详细说到PGP是如何处理对公钥的信任的问题的。</p>
+
+        </article>
+    </div>
+    </body>
+</html>

@@ -1,0 +1,17 @@
+.pagination {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    li.page-item {
+        &.active {
+            a.page-link {
+                background-color: $dark-fg;
+                border-color: $dark-fg;
+                color: white;
+            }
+        }
+        a.page-link {
+            color: $dark-fg;
+        }
+    }
+}

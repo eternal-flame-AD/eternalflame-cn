@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    
+
+    <base href="">
+    <title>记openssl版本冲突导致PHP-FPM反复崩溃 | eternal-flame-AD</title>
+    <link rel="canonical" href="/blog/2018/03/%E8%AE%B0openssl%E7%89%88%E6%9C%AC%E5%86%B2%E7%AA%81%E5%AF%BC%E8%87%B4php-fpm%E5%8F%8D%E5%A4%8D%E5%B4%A9%E6%BA%83/">
+    
+
+    
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+
+
+<link rel="stylesheet" href="/style.css" />
+
+
+
+<script src="/js/anime.min.js"></script>
+<script async src="/js/fireworks.js"></script>
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+<body lang="en">
+    <nav class="navbar navbar-default navbar-expand-lg navbar-light bg-light">
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-main" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav-main">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+            <li class="nav-item active"><a href="/blog/" class="nav-link">Blog</a></li>
+            <li class="nav-item"><a href="https://github.com/eternal-flame-AD" class="nav-link">Github</a></li>
+            <li class="nav-item"><a href="https://connect.garmin.com/modern/profile/67225a8f-1f19-491b-ae65-274a76fe0ba1" class="nav-link">Garmin Connect</a></li>
+            <li class="nav-item"><a href="https://keybase.io/eternal_flame" class="nav-link">Keybase</a></li>
+        </ul>
+        <button class="btn btn-primary my-2 my-sm-0" onClick="javascript::window.location.href='https://github.com/eternal-flame-AD'"><i class="fab fa-github"></i>Follow me on Github</button>
+    </div>
+</nav>
+    <div class="container">
+        <div class="jumbotron jumbotron-narrow">
+            <h3 class="display-4">记openssl版本冲突导致PHP-FPM反复崩溃</h3>
+            <i class="text-muted"><i class="fas fa-user"></i>Eternal-flame-AD</i> <br />
+            <i class="text-muted"><i class="fas fa-clock"></i>Sun, Mar 25, 2018</i> <br />
+            
+            <i class="text-muted"><i class="fas fa-shapes"></i><a href="/categories/php">PHP&nbsp;</a><a href="/categories/%e6%8a%80%e6%9c%af">技术&nbsp;</a><a href="/categories/%e6%97%a5%e5%b8%b8">日常&nbsp;</a></i> <br />
+            <i class="text-muted"><i class="fas fa-link"></i><a style="word-wrap: break-word;" href="/blog/2018/03/%E8%AE%B0openssl%E7%89%88%E6%9C%AC%E5%86%B2%E7%AA%81%E5%AF%BC%E8%87%B4php-fpm%E5%8F%8D%E5%A4%8D%E5%B4%A9%E6%BA%83/">/blog/2018/03/%E8%AE%B0openssl%E7%89%88%E6%9C%AC%E5%86%B2%E7%AA%81%E5%AF%BC%E8%87%B4php-fpm%E5%8F%8D%E5%A4%8D%E5%B4%A9%E6%BA%83/</a></i> <br />
+            <i class="text-muted"><i class="fas fa-copyright"></i><a href="https://creativecommons.org/licenses/by/4.0/deed.zh">CC-BY-NC 4.0</a></i> <br />
+            
+            
+        </div>
+        <article>
+        <p>之前在部署服务器PHP-FPM时，发现web应用经常会出现502情况，具体有以下表现：</p>
+
+<ul>
+<li>Nextcloud检测不到网络连接，服务器基本信息面板第一次访问502，刷新后可以显示，提示&#8221;检查服务器配置时出错，请查看日志以获取更多信息&#8221;，但Nextcloud日志里并无任何消息
+
+<ul>
+<li>WordPress几乎所有管理员页面均出现第一次访问502，仪表板甚至一直502</li>
+<li>Mediawiki绝大多数功能正常，上传文件时502</li>
+</ul></li>
+</ul>
+
+<p>之后去查看了PHP-FPM的错误日志，找到了如下的提示：</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-INI" data-lang="INI"><span style="color:#a6e22e">[23-Mar-2018 21:38:50] NOTICE: [pool www] child 5508 started</span>
+  
+<span style="color:#a6e22e">[23-Mar-2018 21:38:50] WARNING: [pool www] child 5504 exited on signal 11 (SIGSEGV) after 106.266723 seconds from start</span>
+  
+<span style="color:#a6e22e">[23-Mar-2018 21:38:50] NOTICE: [pool www] child 5510 started</span>
+  
+<span style="color:#a6e22e">[23-Mar-2018 21:38:55] WARNING: [pool www] child 5370 exited on signal 11 (SIGSEGV) after 1011.828673 seconds from start</span>
+  
+<span style="color:#a6e22e">[23-Mar-2018 21:38:55] NOTICE: [pool www] child 5512 started</span>
+  
+<span style="color:#a6e22e">[23-Mar-2018 21:38:58] WARNING: [pool www] child 5512 exited on signal 11 (SIGSEGV) after 2.966123 seconds from start</span></code></pre></div>
+
+<p>发现PHP-FPM的child出现了频繁崩溃的情况，正是因为child崩溃导致nginx出现502错误</p>
+
+<p>因为崩溃没有指明原因，正好我之前编译PHP时手滑，配置curl时忘了开启https支持，被Nextcloud日志明确指出，所以一开始我一直在想也许是curl还有问题，但折腾了好久，后来PHP版本也降级了仍然没有解决问题。</p>
+
+<p>后来一次偶然去查看syslog时终于找到了罪魁祸首：</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-INI" data-lang="INI"><span style="color:#a6e22e">Mar 23 09:15:02 vultr kernel: [917417.083117] php[22852]: segfault at 7fd414540bc0 ip 00007fd414540bc0 sp 00007ffdb0d4d858 error 15 in libssl.so.1.1[7fd41453d000+4000]</span></code></pre></div>
+
+<p>这时我终于想起编译PHP时给出的一条警告，内容大致是openssl版本可能存在冲突，因为我之前使用apt安装了一个旧版本（1.0.2g）的openssl，但编译时出现找不到evp.h头文件的问题，于是我从openssl.org下载了一个1.1.0g的版本自行编译安装（prefix选择了/usr/local/openssl），之后PHP可以正常编译（除了给出上述警告 我就没管它= =），但运行时便出现了PHP-FPM崩溃的问题。/usr/local/lib下同时存在两个版本的libssl.so（PHP加载了1.1版本）。现在问题已经比较明确是OPENSSL版本冲突导致问题（也许是静态库使用了1.0.2g，动态库使用了1.1.0g？）于是：</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">apt-get remove openssl
+cd /path/to/openssl/source/
+./config --prefix /usr/local/openssl <span style="color:#f92672">&amp;&amp;</span> make <span style="color:#f92672">&amp;&amp;</span> make install
+ls /usr/local/lib/libssl*
+/usr/local/lib/libssl.a /usr/local/lib/libssl.so /usr/local/lib/libssl.so.1.1</code></pre></div>
+
+<p>重新编译PHP安装，警告消失，也不再出现502错误</p>
+        </article>
+    </div>
+    </body>
+</html>

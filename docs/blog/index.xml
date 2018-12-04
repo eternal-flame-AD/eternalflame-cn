@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blogs on Eternal-flame-AD</title>
+    <link>/blog/</link>
+    <description>Recent content in Blogs on Eternal-flame-AD</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 01 Nov 2018 14:04:02 +0000</lastBuildDate>
+    
+	<atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>「分享」沈谢原创曲《偃月流华》</title>
+      <link>/blog/2018/11/%E5%88%86%E4%BA%AB%E6%B2%88%E8%B0%A2%E5%8E%9F%E5%88%9B%E6%9B%B2%E5%81%83%E6%9C%88%E6%B5%81%E5%8D%8E/</link>
+      <pubDate>Thu, 01 Nov 2018 14:04:02 +0000</pubDate>
+      
+      <guid>/blog/2018/11/%E5%88%86%E4%BA%AB%E6%B2%88%E8%B0%A2%E5%8E%9F%E5%88%9B%E6%9B%B2%E5%81%83%E6%9C%88%E6%B5%81%E5%8D%8E/</guid>
+      <description>纯粹只是觉得很喜欢w，分享出来。虽然不是很懂歌背后的故事不过还是心里有些难受……
+  </description>
+    </item>
+    
+    <item>
+      <title>「汉服文化周」聚散终有时</title>
+      <link>/blog/2018/10/%E6%B1%89%E6%9C%8D%E6%96%87%E5%8C%96%E5%91%A8%E8%81%9A%E6%95%A3%E7%BB%88%E6%9C%89%E6%97%B6/</link>
+      <pubDate>Wed, 31 Oct 2018 05:28:33 +0000</pubDate>
+      
+      <guid>/blog/2018/10/%E6%B1%89%E6%9C%8D%E6%96%87%E5%8C%96%E5%91%A8%E8%81%9A%E6%95%A3%E7%BB%88%E6%9C%89%E6%97%B6/</guid>
+      <description>申请季，忙里偷闲，小透明作为一位假的文科生和两位真的文科生同学一起参加了西塘的汉服文化周。虽然很遗憾因为申请的关系没能全程参与，算头算尾也就去了四天，不过也算是一次和同学，和环境，和民族的感情交流了～
+ 悲欢聚散一杯酒，南北东西万里程。
+长亭送别&amp;nbsp;&amp;nbsp;&amp;nbsp; 元 王实甫
+  脱产之后才发现，其实之前自己百般期待的每天不用上课的日子也没有那样的美好——在学校的时候，大家能够交谈共同的兴趣，给考试加油，玩那些怎么玩都不会无聊的只有本班同学能懂的梗……一直以为自己是个圈子很大的人，脱产以后才意识到原来失去了一起上课这一层羁绊，没有几个人是能够继续保持联系的。ED申请截止日临近，几个月后当我们都收到了来自各个城市，各个州，甚至是各个国家的admission letter时，离别大概就是一杯酒的距离了吧。
+ 夜市千灯照碧云，高楼红袖客纷纷。
+夜看扬州市 唐 王建
+
+  虽然一直喜欢一个人呆着，尤其不喜欢去满是人的国内景区旅游。这次西塘古镇的体验绝对是extraordinary的。西塘作为一个商业化景区，其实还是满满的套路的——各种全国通用的“特产”，比淘宝贵几倍的发饰，山寨的汉服……但当夜幕降临以后和小伙伴一起出去逛的时候，就觉得有种走进千年之前宋朝夜市的感觉～
+说到汉服，真的想说，看到有那么多穿汉服的同僚就觉得好开心www（PS:没有抢到线上的免票名额不过和小伙伴竟然赶上了最后一小时的现场免票！！小声：也算是从汉服大坑回了一点血）当看到从像我们这样的刚刚走进成年的人到年过半百的汉文化爱好者都在这里相聚，小透明还是燃起了一些曾经快要消逝的对汉文化的信心和自知——中国传统文化在大众心目中不只是景区摆着奇怪造型的佛像、叫不上名字的挂着LED彩灯的亭子、被呛人的烟味笼罩的功德箱和中小学生必背矫情古诗文1e+9999篇，而是确确实实地在不少人人心中留下了一些实实在在的东西的
+ 山有木兮木有枝，心悦君兮君不知。
+越人歌
+  离开的前一天晚上，偶遇了你，只记得你当时一身鹤纹，看起来很是帅气～那天晚上（或者，凌晨……）请你来坐了坐。送你回去的时候路上很不舍，走在少有人经过的大街上，半夜的凉风吹的我直发抖。你把手里的灯笼给了我，然后用大袖帮我挡住了吹来的凉风（好暖……嗷呜～～）
+和你的相遇也算是这次旅行一次难忘的经历吧……不知还有没有再相见的机会……
+&amp;lt;- done </description>
+    </item>
+    
+    <item>
+      <title>使用Python抓取rejet作品官博</title>
+      <link>/blog/2018/10/%E4%BD%BF%E7%94%A8python%E6%8A%93%E5%8F%96rejet%E4%BD%9C%E5%93%81%E5%AE%98%E5%8D%9A/</link>
+      <pubDate>Fri, 05 Oct 2018 08:53:24 +0000</pubDate>
+      
+      <guid>/blog/2018/10/%E4%BD%BF%E7%94%A8python%E6%8A%93%E5%8F%96rejet%E4%BD%9C%E5%93%81%E5%AE%98%E5%8D%9A/</guid>
+      <description>今天又被安利了R社的另一个IP——「幽幻ロマンチカ」，还是和剑君一样养眼的画风～～ 不过小透明不会日语再也啃不动了QWQ
+于是打算搜刮一波图来舔，打开官博之后发现竟然和剑君的是一个套路（也许R社太懒两个作品的官博用的就是同一套CMS换了个主题hhhh）：
+「幽幻ロマンチカ」的URL前缀是：
+http://rejetweb.jp/yuroma/blog/
+剑君的是：
+http://rejetweb.jp/kengakimi/blog/
+所以就翻出了几个月前自己用来下剑君官博的图的脚本，把前缀的配置提出来就可以支持这个作品了～
+代码传到了Github Gist上，完全使用正则表达式来匹配，因为是一次性的活所以小透明就怎么方便怎么来了～
+ &amp;nbsp;</description>
+    </item>
+    
+    <item>
+      <title>今天不想跑，所以才去跑</title>
+      <link>/blog/2018/09/%E4%BB%8A%E5%A4%A9%E4%B8%8D%E6%83%B3%E8%B7%91%E6%89%80%E4%BB%A5%E6%89%8D%E5%8E%BB%E8%B7%91/</link>
+      <pubDate>Sat, 22 Sep 2018 10:35:27 +0000</pubDate>
+      
+      <guid>/blog/2018/09/%E4%BB%8A%E5%A4%A9%E4%B8%8D%E6%83%B3%E8%B7%91%E6%89%80%E4%BB%A5%E6%89%8D%E5%8E%BB%E8%B7%91/</guid>
+      <description>最近看到了一句话
+ 今天不想跑，所以才去跑，这才是长距离跑者的思维方式
+——村上春树
+ 突然想起自己还没有写过几篇关于自己长跑的文章，正好试试新的gutenburg编辑器，就来写一篇聊聊自己的跑步吧～
+从训练技能的角度上说，小透明很多时候去跑步只是觉得可以让自己获得一些让自己努力下去的决心，没有逼乎上面的回答那么ambitious——毕竟，小透明可以看到自己真的在努力一点点提高。说来也是有些可笑：学习方面，有的时候小透明感觉自己努力了很多，最后只是弄得个不尽人意的结果，有的时候小透明觉得自己都没怎么努力，就获得了一个令人羡慕的成绩。而跑的多了以后，发现跑步方面真的是一分汗水一分收获，练多了自然能提高，懒惰了自然会变差。久而久之自己在其他方面也会更努力一些，大概是长跑给我的动力吧。
+相对于烂大街的“跑步锻炼意志”，跑步对小透明思想的塑造，是小透明觉得跑步的魔法所在。
+ 跑步给小透明提供了释放压抑的场所。记得自己还小的时候就养成了心情不好的时候出去跑步的习惯，当时只是觉得在自己跑步的时候思维变得十分梦幻，就像自己理想的世界那样，每跨出一步，脚下的路就向后移动一步，而不是像一些烦心的事情一样，被看不见的魔鬼抓住然后永远被困在原地。 跑步给小透明提供了走出思维僵局的方式。长大以后，小透明有了自己的想法，而小透明又有些蠢，时不时会有一些复杂的人生哲学问题想不明白，一个人安静的时候去想只会陷入自己思维的死胡同，越理越乱还会制造负能量（或许小透明就是负能制造机吧……），而跑步的时候去想这些问题的时候小透明发现，当身体处于疲劳的时候，思想有的时候可以跳出身体的束缚，不再卡在“我觉得是这样才是对的，而别人怎么就觉得这不对呢？”的无解状态，而是可以切换成自己想像出的各种角色，和自己开展一段模拟的讨论，有的时候就能给陷入僵局的思维提供一个新的方向。 跑步教会了小透明为何要维护独立的思想、怎么维护独立的思想。当今世界的信息交流实在是太快了：不管是主动在各种平台上刷出来的“动态”，还是被动接受的广告和他人的言语，似乎除了睡觉的时候，信息无时无刻不在以一个极大的，超过正常人们能够接受的速率向人们涌来，而小透明发现在这个buffer overflow的过程中，有的时候我们的潜意识作出的选择不是去丢弃这些多余的信息，而是take them for granted——当全市的广告牌上到处都是“为******而不懈奋斗”的时候，当所有美好的爱情故事都是“正常的性关系”的时候，有多少人会去想想凭什么呢？有人说当今中国对于LGBT的接受程度低，有很大原因是之前收到西方宗教的影响，或许在民国时代有一些这样的bootstrap的因素，但试问当今那些反同、恐同者/当局，能背出多少条基督教教义呢？不过是从小到大看到的都是异性恋，自然而然的就觉得同性恋都是变态了，而不是去想一想，他们做错了什么呢，让你们要把有罪的法槌对着他们重重地敲下。在这样一个大家都在被动被灌输信息的世界里，小透明发现跑步的时候自己能够有一个几乎隔离的世界——没有永远在视野范围内的红色广告牌，没有无尽的“比你自己还懂你自己”的“个性化广告”，没有宣传“经典模式”的各式社会新闻。小透明身边的一切信息只是脑中新接受到的资讯——新鲜的，还没来的及筛选过滤的资讯。小透明可以向阅兵那样一个一个地去仔细的推敲他们——他们的想法完善吗？足够inclusive吗？是不是伤害了一些无辜人？，由此小透明能够及时隔离那些“思想的蠕虫”，让自己的思维更加独立，更加开放，更加inclusive一些。  呼，也不想长篇大论了，最近对于Neko的事情实在是伤心，晚上也睡不着……先写到这里吧。
+分享一段难受的时候可以听的后摇：
+ </description>
+    </item>
+    
+    <item>
+      <title>[FIN] 当回忆化成灰</title>
+      <link>/blog/2018/09/fin-%E5%BD%93%E5%9B%9E%E5%BF%86%E5%8C%96%E6%88%90%E7%81%B0/</link>
+      <pubDate>Wed, 19 Sep 2018 08:57:59 +0000</pubDate>
+      
+      <guid>/blog/2018/09/fin-%E5%BD%93%E5%9B%9E%E5%BF%86%E5%8C%96%E6%88%90%E7%81%B0/</guid>
+      <description>小透明总是反应比别人慢一拍呢，今天在Github上逛的时候想起以前看到过的Neko，去看了一下发现竟然已经走了。。。 Github上的Contribution Chart就这么戞然而止，还是第一次对着Github流眼泪QWQ
+Neko的最后一篇博文上的引用：
+ 「只要你的内心是善良的，对错都是他人的事。」
+–《大鱼海棠》的台词
+ Neko曾经做过不善良的事情，但小透明始终相信她那猫咪样的内心一定是软软的——和其他人一样，想给自己爱的人最好的，想和爱的人在一起…… 当世界变得像暗房一样黑暗，只有那一盏微弱的红色安全灯照耀着的时候，或许每个人都会选择蜷缩起自己，选择去孤独吧
+其实从某些角度上来说，小透明也和Neko很像呢：备战ACT，觉得自己和别人有些不同，向往着全新的生活，渴望inclusiveness。平时在家里也就是坐在电脑前不是写申请的资料就是coding，chatting，reviewing。晚上出去长跑。小透明很喜欢长跑，也许是因为长跑的时候身体有30%的时间是离开这个被重力禁锢在的地面上的吧， 思想也摆脱了平时那隐形的束缚，自由的去旅行 开始妄想。心跳也不像平时那样缓慢、冰冷（或许有的时候也习惯跟一些自己觉得没想象的那么值得敞开内心的人冷言冷语吧）。PS: 下次半马还有不到6周了，这次争取进1:30！
+但小透明比Neko幸福的多——小透明有个关爱自己的父母，有个完美的家庭，而Neko没有这些： 她的身边只有无尽的背叛，冷眼和欺骗，还有正在慢慢耗尽的希望。
+Neko的最后一个Commit, f449ac8  给最后一篇博文加上了给羽毛和琉璃的博客的链接，不知道当Neko commit出这最后一篇故事后，是用了多大的勇气再编辑的呢？
+终究有一天，Neko的域名会被停泊、收回，羽毛在7月也去找Neko了……诶……再过一段时间，也许Neko存在的证据也就是那一些Commit SHA了。
+祝Neko在另一个世界能成为自己喜欢的样子，和自己爱的人在一起，看到五彩斑斓的情感。
+希望这个世界能少一点家长式作风，多一点宽容和接受。</description>
+    </item>
+    
+    <item>
+      <title>通过HTTPS中间人绕过SNI-based censorship</title>
+      <link>/blog/2018/09/%E9%80%9A%E8%BF%87https%E4%B8%AD%E9%97%B4%E4%BA%BA%E7%BB%95%E8%BF%87sni-based-censorship/</link>
+      <pubDate>Wed, 19 Sep 2018 02:56:41 +0000</pubDate>
+      
+      <guid>/blog/2018/09/%E9%80%9A%E8%BF%87https%E4%B8%AD%E9%97%B4%E4%BA%BA%E7%BB%95%E8%BF%87sni-based-censorship/</guid>
+      <description>最近墙似乎又升级了，增加了基于SNI的检测，导致P站不翻墙完全不能访问，症状是Firefox建立的所有TCP链接均在TLS Client Hello发送后被Reset，之前写的mkhosts工具也不好使了：因为直接建立TCP是能通的，但是真正访问目标网站的时候因为要发送明文的SNI，因此被拦截。
+本来这么一想解决方法就是简单粗暴——别发SNI不就好了，但后来发现并不简单，没有哪个浏览器允许用户使用任何方式直接调整TLS握手的时候的参数的。
+看来这样，完全在浏览器里解决问题是不太现实了，我本来想着是不是可以把握手的时候浏览器发送的SNI修改一下，但每次浏览器都无法建立TLS链接，使用wireshark抓包发现在Handshake Finished阶段对端发出Alert Decryption Error，无法完成握手。查询rfc发现自己Too Young Too Simple，Handshake Finished阶段服务器端要签名整个握手阶段报文的hash来确定握手没有被修改，所以这条路又凉了。
+最后只好退一步编写一个中间人来截获浏览器的TLS连接，再向目标服务器建立另一个修改过的链接，然后把两边的TLS通道相互copy一下。
+上一个演示代码（Github Gist 国内现在好像也凉了 可能是因为上面有一些你懂得证据吧），利用elazarl/goproxy 来建立本地HTTP代理，截获其中的CONNECT请求（浏览器会通过HTTP CONNECT动词尝试经过代理服务器建立和对端服务器的连接，我们在这里不要直接链接对方服务器而是自己签发对方域名的证书，然后做一次修改的握手，复制两边TLS通道内传递的消息）修改的握手部分主要要注意ServerName不要传递，跳过默认证书验证（因为那是基于ServerName的，你没有给ServerName是过不了的），使用内置的crypto/x509写一个自定义的验证函数（再次吐槽 node里面只要checkServerIdentity: (host, cert)=&amp;gt;tls.checkServerIdentity(realhost, cert)一句话就好了，go写了这么长hhhh）：
+ 安装ca证书后，编译运行代码，浏览器设置http代理http://127.0.0.1:8080/ （HTTPS也要走这个代理）即可
+&amp;nbsp;
+有个朋友当时跟小透明说要不要把这个完善一下做成项目，小透明后来想了一下觉得还是不了，一是因为SNI审查不会是常态，应该会过去的，二是整个思路其实很清晰很简单也不复杂，程序员应该很容易就能写出来而且更加符合自己的需求，而对于普通人这些方法想比××上网来的太不稳定太复杂了，也没有太大价值。就当作一次尝试啦～
+更新：已经写成项目了，在这里</description>
+    </item>
+    
+    <item>
+      <title>終幕、剣</title>
+      <link>/blog/2018/07/%E7%B5%82%E5%B9%95%E5%89%A3/</link>
+      <pubDate>Sat, 28 Jul 2018 17:21:44 +0000</pubDate>
+      
+      <guid>/blog/2018/07/%E7%B5%82%E5%B9%95%E5%89%A3/</guid>
+      <description>终于下定决心啃了剑君…基本是随缘选择的…本来超想玩99线的结果不知不觉到了左京美人的线QWQ结果玩下去竟然是一口玻璃渣呜哇哇(╥﹏╥)
+前章的左京一直是种摸不透的感觉…虽然在面前一直是一副甜美的笑容…但总是看起来有很重的心事…
+到了后章，玩的时候就超级揪心了…先是被追杀时被埋伏受了严重的伤…（看着都超级痛的TAT）之后养伤的日子里感觉是最甜的（除了铃悬放血治疗那一段很害怕唔…） 最喜欢的就是靠在左京美人的肩膀上看小书的那一段了(｡･ω･｡)ﾉ♡ 超级幸福的呀啊啊啊
+本来觉得要是能够这么下去幸福美满该多好…结果没想到左京美人是有那样重的怨气…即使伤没好还要去御前试合…（家人都被杀害了确实…）…
+觉得结局不妙的时候是在左京美人再次作为客人来店里访问，一起出去买簪子的时候…左京突然变得那种…不一般的温柔…就像是想要告别一样…后来在林子里还被扑倒强吻了⁄(⁄ ⁄•⁄ω⁄•⁄ ⁄)⁄ 左京在林子里想方设法想招来厌恶…应该也是很爱女主的吧(/ω＼)
+当那天在店里 簪子突然掉落碎掉的时候，看到这flag，小透明整个人都不好了…被妖刀村正控制的左京竟然把萤丸扔掉惹QWQ…本来是为了家族报仇，竟然把家族的刀扔掉，真的是对村正太着迷了…最终左京勉强唤起了自己的理性。当左京被自己送出的陀螺唤醒记忆，把刀收入刀鞘，跑走之后…一口玻璃渣就…≥﹏≤
+左京最终还是唤起了自己的理智。但因罪名已不能修改，最终选择了和自己丢弃的萤丸一同葬身池底。在池底找到萤丸的香夜，和左京在三途河相会了…
+本以为结局就是这样，和左京在极乐净土共同生活下去…而左京很快发现事情并不是这样：香夜发现三途河的水是温的，而自己却感觉是冰冷的；香夜听到了父亲（插嘴：父亲真的超级温柔的啊啊啊啊…）和其他人的呼喊声；而左京却看到了对岸被杀害的无辜的人
+最终左京看清了自己并不能渡过三途河进入极乐的事实，而要还清自己犯下的罪恶；香夜也面临着回去还是跟着左京的选择≥﹏≤（呜哇…都…都想要…）左京也希望香夜能回到现世…
+最终（大概是萤丸的保护吧）香夜回到了现世…最终是一个大团圆（除了左京TAT），团圆后女主为左京扫墓（已经哭成狗…），希望能在黄泉再相见…
+================
+小…小透明只想能和左京…(｡•́︿•̀｡)
+三途河上的那张CG真的超级凄美哇 晚上闭上眼睛，脑海里就会冒出这张图，香夜最后的，和左京的接触…
+在黄泉路上能够再次挂上萤丸宝刀，和香夜阴阳相隔，应当…最终还是会在还清罪恶之后能够回到极乐净土，也许会有一天能和香夜再次相会 永远在一起吧
+不…不要左京下地狱呜哇哇哇≥﹏≤（趴）</description>
+    </item>
+    
+    <item>
+      <title>HAProxy使用多个iface负载均衡</title>
+      <link>/blog/2018/07/haproxy%E4%BD%BF%E7%94%A8%E5%A4%9A%E4%B8%AAiface%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/</link>
+      <pubDate>Tue, 24 Jul 2018 11:19:55 +0000</pubDate>
+      
+      <guid>/blog/2018/07/haproxy%E4%BD%BF%E7%94%A8%E5%A4%9A%E4%B8%AAiface%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/</guid>
+      <description>因为家里软路由是两条宽带上游，所以希望自己路由器上运行的的HAProxy能够在两个路由器上均分负载，需求大致是这样：
+eth0.2 +---------------+ +-----------------+ | +---------------&amp;gt; | | HAProxy | | Backend | | +---------------&amp;gt; | +---------------+ +-----------------+ eth0.3 原来查了HAProxy的文档竟然没有看出来怎么做，后来在stackoverflow上找了很久发现server句是可以使用source参数的，这个小透明觉得文档写的不是很清楚，故在这里记录一下，大致写法是这样：
+server back1 1.2.3.4:31646 source 0.0.0.0 interface eth0.2 server back2 1.2.3.4:31646 source 0.0.0.0 interface eth0.3 &amp;nbsp;</description>
+    </item>
+    
+    <item>
+      <title>在openwrt/lede上部署dnscrypt-proxy，强化家庭网络dns安全</title>
+      <link>/blog/2018/07/%E5%9C%A8openwrt-lede%E4%B8%8A%E9%83%A8%E7%BD%B2dnscrypt-proxy%E5%BC%BA%E5%8C%96%E5%AE%B6%E5%BA%AD%E7%BD%91%E7%BB%9Cdns%E5%AE%89%E5%85%A8/</link>
+      <pubDate>Tue, 24 Jul 2018 11:04:54 +0000</pubDate>
+      
+      <guid>/blog/2018/07/%E5%9C%A8openwrt-lede%E4%B8%8A%E9%83%A8%E7%BD%B2dnscrypt-proxy%E5%BC%BA%E5%8C%96%E5%AE%B6%E5%BA%AD%E7%BD%91%E7%BB%9Cdns%E5%AE%89%E5%85%A8/</guid>
+      <description>&lt;p&gt;自从部署了透明代理之后，整个人都变得宅了很多（家里的wifi太美好了）。但一直有个问题让我很烦恼——有部分网站因为不在gfwlist中，对应域名的dns查询并没有走代理，存在一个可能被跟踪的隐患，而如果全部将dns查询代理出去，有很多国内网站会出现解析到国外的问题。后来做了一些研究，使用dnsmasq+dnscrypt-proxy的方法解决了这个问题，将大致方法记录如下：&lt;/p&gt;
+
+&lt;p&gt;首先我们要分析一下自己的需求——国内域名直接解析（我也不在乎了，国内网站很多连https都懒得上我也不觉得有什么隐私可言），国外域名使用DNS-over-TLS或DNS-over-HTTPS进行解析。也就是我们需要几个工具：&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;一个国内域名表 我找到了&lt;a href=&#34;https://github.com/felixonmars/dnsmasq-china-list&#34;&gt;felixonmars/dnsmasq-china-list&lt;/a&gt;这个很赞的项目~里面有一个较全的国内域名列表，大小有1.48M，实测基本能涵盖对速度有要求的网站（视频网站等），有少部分流量较少的域名没有涵盖（个人博客等）但问题不是很大，“国内域名”的定义是有国内CDN节点或NS服务器在国内，这两个标准正好符合我的需求~&lt;del&gt;送个小心心&lt;/del&gt;，小透明也写了个脚本跟踪自己的国内域名记录，会不时发PR给原作者更新~&lt;/li&gt;
+&lt;li&gt;DoH/DoT代理，这里使用了&lt;a href=&#34;https://github.com/jedisct1/dnscrypt-proxy&#34;&gt;dnscrypt-proxy&lt;/a&gt;（注意这里没有使用软件包中的dnscrypt，实测不是很好用所以自己部署的）&lt;/li&gt;
+&lt;li&gt;分流工具，使用Openwrt自带的dnsmasq&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;步骤如下：&lt;/p&gt;
+
+&lt;p&gt;&lt;li style=&#34;list-style-type: none;&#34;&gt;
+  &lt;ol&gt;
+    &lt;li&gt;
+      下载中国域名配置 &lt;pre&gt;# wget &lt;a href=&#34;https://github.com/felixonmars/dnsmasq-china-list/raw/master/accelerated-domains.china.conf&#34;&gt;https://github.com/felixonmars/dnsmasq-china-list/raw/master/accelerated-domains.china.conf&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;sed-i-s-114-114-114-114-lt-你使用的国内dns服务器-gt-accelerated-domains-china-conf-pre&#34;&gt;sed -i &amp;rsquo;s/114.114.114.114/&amp;lt;你使用的国内DNS服务器&amp;gt;/&amp;rsquo; accelerated-domains.china.conf&lt;/pre&gt;&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;/li&amp;gt;
+
+&amp;lt;li&amp;gt;
+  将中国域名配置加入到dnsmasq配置中，在/etc/dnsmasq.conf的文件尾加入一行： &amp;lt;pre&amp;gt;conf-file=/path/to/your/accelerated-domains.china.conf&amp;lt;/pre&amp;gt;
+&amp;lt;/li&amp;gt;
+
+&amp;lt;li&amp;gt;
+  下载dnscrypt-proxy：这一步推荐在pc上做，在&amp;lt;a href=&amp;quot;https://github.com/jedisct1/dnscrypt-proxy/releases&amp;quot;&amp;gt;发布页&amp;lt;/a&amp;gt;下载对应架构的二进制后使用upx压缩（实测可以从10M+压缩到不到2M，空间多的请随意），使用scp或其它工具将最终的的二进制传到路由器/usr/sbin/下，加执行权限 &amp;lt;pre&amp;gt;# wget https://github.com/jedisct1/dnscrypt-proxy/releases/download/2.0.16/dnscrypt-proxy-linux_arm64-2.0.16.tar.gz
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;tar-xvf-dnscrypt-proxy-linux-arm64-2-0-16-tar-gz&#34;&gt;tar -xvf dnscrypt-proxy-linux_arm64-2.0.16.tar.gz&lt;/h1&gt;
+
+&lt;h1 id=&#34;cd-dnscrypt-proxy-linux-arm64-2-0-16&#34;&gt;cd dnscrypt-proxy-linux_arm64-2.0.16&lt;/h1&gt;
+
+&lt;h1 id=&#34;upx-lzma-dnscrypt-proxy&#34;&gt;upx &amp;ndash;lzma dnscrypt-proxy&lt;/h1&gt;
+
+&lt;h1 id=&#34;cp-dnscrypt-proxy-usr-sbin&#34;&gt;cp dnscrypt-proxy /usr/sbin&lt;/h1&gt;
+
+&lt;h1 id=&#34;chmod-x-usr-sbin-dnscrypt-proxy-pre&#34;&gt;chmod +x /usr/sbin/dnscrypt-proxy&lt;/pre&gt;&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;/li&amp;gt;
+
+&amp;lt;li&amp;gt;
+  添加dnscrypt-proxy配置文件，这一步因为要改动的比较多也推荐在PC上做（估计vim大佬也不会看小透明说到这里直接自己上手了），先将刚刚下载的压缩包里的example-dnscrypt-proxy.toml复制出来，改名为dnscrypt-proxy.toml，初始配置注释很全面，这里小透明只说必须的改动，大佬们可以自己修改呐~ &amp;lt;ol&amp;gt;
+    &amp;lt;li&amp;gt;
+      L36，修改dnscrypt监听端口，为了不和dnsmasq冲突修改一个端口号
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;
+      L165，初始用来解析DoH服务器域名的一个普通dns，默认dns国内用不了，可以用1.1.1.1:53或者114.114.114.114:53
+    &amp;lt;/li&amp;gt;
+  &amp;lt;/ol&amp;gt;
+
+  &amp;lt;p&amp;gt;
+    修改完成后将保存的dnscrypt-proxy.toml拷贝到路由器/etc/config下&amp;lt;/li&amp;gt; 
+
+    &amp;lt;li&amp;gt;
+      配置init.d，开机自启，这里有一个已经写好的&amp;lt;a href=&amp;quot;https://github.com/etam/DNS-over-HTTPS-for-OpenWRT/blob/master/dnscrypt-proxy&amp;quot;&amp;gt;文件&amp;lt;/a&amp;gt;，拷贝到/etc/init.d/下即可，之后启用，运行dnscrypt-proxy &amp;lt;pre&amp;gt;# cd /etc/init.d
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;wget-https-github-com-etam-dns-over-https-for-openwrt-raw-master-dnscrypt-proxy&#34;&gt;wget &lt;a href=&#34;https://github.com/etam/DNS-over-HTTPS-for-OpenWRT/raw/master/dnscrypt-proxy&#34;&gt;https://github.com/etam/DNS-over-HTTPS-for-OpenWRT/raw/master/dnscrypt-proxy&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h1 id=&#34;dnscrypt-proxy-enable&#34;&gt;./dnscrypt-proxy enable&lt;/h1&gt;
+
+&lt;h1 id=&#34;dnscrypt-proxy-start-pre&#34;&gt;./dnscrypt-proxy start&lt;/pre&gt;&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;    &amp;lt;/li&amp;gt;
+
+    &amp;lt;li&amp;gt;
+      配置dnsmasq，修改默认DNS服务器到dnscrypt-proxy，这一步可以直接在LuCl里做，比用终端来的快，修改默认dns服务器为127.0.0.1#&amp;lt;你的dnscrypt监听端口&amp;gt;，切记dnsmasq的端口号用的是#分隔不是:，填错会导致dnsmasq无法启动，删除所有其他上游dns服务器，在WAN接口配置里“忽略远端通告的DNS服务器”
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;
+      验证，可以使用dnsmasq日志或者dnscrypt-proxy日志检查查询是否被正确分配
+    &amp;lt;/li&amp;gt;&amp;lt;/ol&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;/ol&amp;gt; 
+
+    &amp;lt;p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>【LGBT】呵呵，芒果tv</title>
+      <link>/blog/2018/05/lgbt%E5%91%B5%E5%91%B5%E8%8A%92%E6%9E%9Ctv/</link>
+      <pubDate>Mon, 14 May 2018 08:16:19 +0000</pubDate>
+      
+      <guid>/blog/2018/05/lgbt%E5%91%B5%E5%91%B5%E8%8A%92%E6%9E%9Ctv/</guid>
+      <description>本来心情很好的一天怎么可以打开手机就看到这种新闻呢！！→_→
+我的看法：在你*的见【此处省略1000字】
+版权方是良心了。放弃一些经济利益，通过行动尽自己的一点微薄之力让整个社会变得更加inclusive一些，我很赞赏！
+好啦好啦也不想这个博客搞得这么丧。最近在看花丸续集呐~放一首欢快的片头曲开心一下！
+http://music.163.com/song?id=529823500
+最近好像某易播放器插件出了点问题就贴链接啦QWQ</description>
+    </item>
+    
+    <item>
+      <title>新域名启用！</title>
+      <link>/blog/2018/04/%E6%96%B0%E5%9F%9F%E5%90%8D%E5%90%AF%E7%94%A8/</link>
+      <pubDate>Mon, 30 Apr 2018 05:14:52 +0000</pubDate>
+      
+      <guid>/blog/2018/04/%E6%96%B0%E5%9F%9F%E5%90%8D%E5%90%AF%E7%94%A8/</guid>
+      <description>审核终于通过了！
+新域名：eternalflame.cn
+也用cloudflare加速了！
+旧域名仍然可以继续使用。邮箱暂时还没有切换</description>
+    </item>
+    
+    <item>
+      <title>关于美国对ZTE的出口禁令</title>
+      <link>/blog/2018/04/%E5%85%B3%E4%BA%8E%E7%BE%8E%E5%9B%BD%E5%AF%B9zte%E7%9A%84%E5%87%BA%E5%8F%A3%E7%A6%81%E4%BB%A4/</link>
+      <pubDate>Thu, 26 Apr 2018 05:24:07 +0000</pubDate>
+      
+      <guid>/blog/2018/04/%E5%85%B3%E4%BA%8E%E7%BE%8E%E5%9B%BD%E5%AF%B9zte%E7%9A%84%E5%87%BA%E5%8F%A3%E7%A6%81%E4%BB%A4/</guid>
+      <description>15日，美国发起了又一波力量空前的对ZTE的制裁行动，其中包括了下达软件(包括Android甚至可以包括Windows)和科技产品（例如Qualcomm,Sandisk等公司的处理器和其它半导体设备）的出口禁令。如果美国真的说到做到要执行7年，个人认为ZTE大概是远远撑不到那个时候的QWQ
+去年ZTE已经关于违规向伊朗出售科技产品的事情达成和解。根据本次禁令文件内容，可以看出美国官方对于此次执行原因表达为在涉及伊朗事件的几位高管的处罚决定上存在”多次欺骗，造假“等行为，文件中称，中兴在2017年6月和2016年11月发布的两封信件中“表达了对涉事的39名高管会进行处罚或将要进行处罚”，而之后禁令文件称在2018年2月的报告中发现相关员工的奖金并没有被扣除，也没有收到其它处罚，直到2018年3月ZTE仍未对此问题做出补救措施。中兴发表声明称对此处罚表示“不能接受”。
+由于双方均没有公布两封信件的全文或相关段落的引用（如果有人找到了可以留言嘛谢谢哒~），所以相关说法并不能得到完全证实，当然目前小透明也并没有听说禁令文件中存在对两封信件的扭曲的说法，并且如果存在对两封信件的扭曲，应该会有相关人员爆出相关内容的引用的，所以本文小透明会基于上述说法属实的基础上发表观点。
+首先，很想批判一个现象，就是部分（其实还不少）人喜欢把美国对中国或中国公司执行的种种决定不管三七二十一全部扣在Donald Trump的头上，喜欢把问题政治化，Donald Trump确实发布了一些对中国不利的言论和决定，但个人认为这次部分人看到美国商务部做出制裁决定就说Donald Trump又“XXX” 大概就和 _之前广电发表一封把同性恋和强奸、乱伦并列的文件的事情总结成“习”就是个彻头彻尾的反同性恋者一样_，是莫须有的“指控”，至今小透明也没有看到Donald Trump对此事发表声明。小透明不否认此事有可能背后是DT决定但既然没有证据首先就不要随便指控了= = 虽然美国也有不少令人发指的社会现象，但美国不是总统带领的黑社会，永远还是宪法和法律是老大！！！
+其次，对于ZTE之前“多次欺骗”的做法，小透明认为这的确是ZTE的不对，当然此事之所以会发生可能也有文化方面的原因。西方可能对于这些并非官方公开文件一样认为是具有很强效力的，并不能随便发表。而在我国的文化中其实有着不少“公关文件”“安慰声明”等等的说法，认为没有公开发表/没有明确指出处理办法约等于可以不经任何声明就不执行/撤回。美国商务部发表的禁令显然是非常严格，其中很可能是因为双方存在对两封信件表达的意思的截然不同的理解（ZTE认为大意就是我们知道错了，其它的我们也没承诺 而商务部认为你是要处罚39名员工）。 小透明求部分人不要喷，小透明没有说任何一方的处事原则就比另一方好
+最后，关于为什么这次禁令如此致命，还是我国在IC集成电路的制造上存在一些问题，这篇文章小透明觉得分析得很好。也和我国的一些科研环境有关。另外，个人认为，我国的确在高科技领域获得了非常大的成功，这非常值得国人骄傲。但骄傲之后还应该有所反思，客观来说，有很多成功是“站在巨人的肩膀上的”，底层技术还是使用的美国解决方案。
+此外，小透明还一直有一些疑问百思不得其解，求大佬们的高见QWQ：
+ 为什么ZTE一开始要有意去违反美国对伊朗的出口禁令？个人认为这样带来的商业风险不是一般的大，卖不到伊朗损失不了多少钱但是被美国制裁会是致命的打击。 个人认为可能后面还有一些其它的原因 之前美国商务部对类似事件的做法是怎样的，没有找到相关参考  </description>
+    </item>
+    
+    <item>
+      <title>分享歌曲</title>
+      <link>/blog/2018/04/%E5%88%86%E4%BA%AB%E6%AD%8C%E6%9B%B2/</link>
+      <pubDate>Tue, 24 Apr 2018 14:36:48 +0000</pubDate>
+      
+      <guid>/blog/2018/04/%E5%88%86%E4%BA%AB%E6%AD%8C%E6%9B%B2/</guid>
+      <description>最近这几周可能会比较忙……不太会更新博客QWQ……推荐两首歌~
+可能下周会回来~
+  </description>
+    </item>
+    
+    <item>
+      <title>【LGBT】愿明天会更好</title>
+      <link>/blog/2018/04/lgbt%E6%84%BF%E6%98%8E%E5%A4%A9%E4%BC%9A%E6%9B%B4%E5%A5%BD/</link>
+      <pubDate>Sun, 15 Apr 2018 10:38:55 +0000</pubDate>
+      
+      <guid>/blog/2018/04/lgbt%E6%84%BF%E6%98%8E%E5%A4%A9%E4%BC%9A%E6%9B%B4%E5%A5%BD/</guid>
+      <description>非常抱歉好多天没有写了……前几天发烧头比较疼……
+昨天（4月14日）因为一些不方便推脱的事情，所以发着烧还是出去了，回家的路上还下了雨，在路上看到的这条来自新浪微博(weibo.com)官方账号@微博管理员的微博：
+ #微博社区公告#为了进一步营造晴朗和谐的社区环境，微博根据《网络安全法》等法律法规的要求，严格履行企业主体责任，现开展为期三个月的针对违规漫画、游戏及短视频内容的集中清理行动。
+本次行动主要的清查对象包括：
+1、涉黄的、宣扬血腥暴力、同性恋题材的漫画及短视频内容，如包含以下特征的内容：“腐、基、耽美、本子”；
+2、含有暴力内容的违法游戏（如：侠盗飞车、黑手党、雇佣兵）及相关的动图短视频内容；
+ 当时是在QQ空间上看到别人的截图（从来没有用过新浪微博这个平台），本来以为是一些无聊的人PS混转发的，后来发现是真的有= =，我亲眼看到这条微博的时候人还没到家，当时就感到一阵酸楚，眼泪就涌了上来……
+过了一会自己冷静了下来，想想这条微博上举的一些例子确实属于色情内容，有一些内容更是妖魔化LGBT群体，的确应该禁止。然后我就认为这只是一次措辞上的失误。（对这个措辞的事情我也想说说自己的看法，个人比较喜欢博客这样的“老古董”，博客这样的一个平台需要撰写人精心编写博文，一篇博文常常是几百几千甚至上万字的文章，不论是否具有很高的价值，也是作者的思考的体现，而如今微博、空间等平台把这样一个网络发声的过程变成了敲几个字按个发送，甚至某些平台上按住一个按钮录几秒视频就能解决的事情，这样看似是“方便”，却导致了大量没有经过深思熟虑的文字就被发送出去，更引起了平台上大量垃圾内容的产生）
+因为微博上的这种措辞异常已经是司空见惯了（个人认为微博这样“快餐”式的平台弄到最后，连官方也不怎么经过思考就发公告），网络上也总是有人喷，但从来没有得到过回应，也就没有再多去想。
+然而，只在几个小时之后，15日的12点多，同平台微博账号“同志之声”宣布无限期暂停工作，该公众号的简介写到：
+ 中国首本公益性质同志资讯微杂志《同志之声》官方微博
+&amp;nbsp;
+始于2009年，非营利同志公益媒体。同志之声致力于以更科学、更健康的角度推动和促进公众对同志的了解与认同。
+ 停更声明的拷贝：
+ 【公告】由于不可抗力原因，同志之声微博编辑部将无限期暂停工作。在暂停工作期间，我们将不再使用@同志之声 官方微博更新任何同志资讯。感谢新浪微博多年来对同志之声的支持与帮助！感谢2009年至今关注同志之声的微博读者：你的每一次评论、转发与点赞，都是在完成一次对爱的发声。愿明天会更好！
+ 我并不想因此去指责哪一方的具体做法（比如说渣浪怎么怎么样……），毕竟这样也并不会有什么卵用。我相信这件事情也不会是纯粹新浪自己所为，几年前的新浪微博还是一个非常包容(inclusive)的平台，非常尊重用户的solidarity，也有很多为LGBT群体发声的帐号活跃在新浪微博上，而我想新浪微博完全没有这个必要做这样一件既花费精力又损害自己名誉的事情。
+从新浪官方发出的微博措辞中我大致能看出，新浪希望针对的是那些带有色情淫秽信息的内容，其出发点我本人非常支持，的确能够看到之前有一些所谓的“腐”内容纯粹就是打着LGBT的旗号实则是在传播色情信息，但为何最终事情发展成了连“同志之声”这样的为LGBT正名，为LGBT发声的团体都遭到了巨大的冲击呢？我记得很久以前听到过这样一个故事：
+ 有一家大公司想建造一栋大楼，工程师在设计的时候留足了余量，安排了直径80cm的柱子，并且在提交图纸的时候还自豪地说道这样大的安全余量，这栋大楼一定能坚持至少几百年。工程师的这一番话语瞬间传遍了整个公司和承建者。董事会讨论了一下：既然余量那么大那就减到75cm吧，不会有什么问题的，能减小一大笔开支，于是告诉公司的员工：柱子就是75cm的，是设计图画错了。公司的员工也想，工程师都这么说了，如果我减一点柱子直径，减少了成本说不定还能得到奖金，于是告诉承建者：柱子直径65cm。承建者也想，工程师都这么有自信了，那我如果稍微偷工减料一点应该不会有人能发现，于是最后盖出的楼房的柱子直径只有55cm，横截面面积只有原来的不到一半，柱子里钢筋的数目也减少了一半。最终大楼在几个月后就难逃倒塌的结局。
+ 这个故事本身是告诉人们不要抱有侥幸心理，但我认为它更多的是揭示了一个社会现象：小的事情经过自上而下的传递（从领导到员工，从政府到人民，从媒体到读者……），事情的规模往往会被层层放大，就像在这个故事里也是一样：本来工程师只是想表达一下这栋楼房有多么大的安全余量，经过一层层的传递最后竟然导致了灾难性的后果。而新浪的这件事情我想也是如此，我相信相关部门是有自己的考虑的，惩治网络色情内容也是他们的职责所在，只是在这一层层上级精神的传递中出现了误差，导致了这样曲解的发生。
+上面也就是我个人对这个事情的一些见解。在这样的现状下，我的声音可能基本不能为别人所听见，这篇文章可能更多也只是一篇自我安慰的文章（如果有人看的话，应该也能看出我这篇博文没有任何论证只是纯粹瞎想= =）。
+我相信今后这样的事情会得到改善，当滋生在LGBT这片本应是美丽的彩虹色的净土上的一些不良信息得到彻底的扫除后，LGBT群体会得到他们应有的尊重和包容。
+最后，愿明天会更好……</description>
+    </item>
+    
+    <item>
+      <title>群晖NAS cloud sync的数据加密功能~</title>
+      <link>/blog/2018/04/%E7%BE%A4%E6%99%96nas-cloud-sync%E7%9A%84%E6%95%B0%E6%8D%AE%E5%8A%A0%E5%AF%86%E5%8A%9F%E8%83%BD~/</link>
+      <pubDate>Mon, 09 Apr 2018 13:29:37 +0000</pubDate>
+      
+      <guid>/blog/2018/04/%E7%BE%A4%E6%99%96nas-cloud-sync%E7%9A%84%E6%95%B0%E6%8D%AE%E5%8A%A0%E5%AF%86%E5%8A%9F%E8%83%BD~/</guid>
+      <description>今天配置了群晖上的Cloud sync，可以把我的NAS上的数据自动备份到百度云，但云端备份使用了RSA加密，可以说很用心~（早知道这么方便本地就直接JBOD了，现在是RAID 1，不过云端多一份备份也是以防万一，譬如整个NAS丢了之类的。。）唯一不太爽的是文件名没有加密，不过也不是很在意这个了
+平时可以使用NAS上存储的密钥进行同步，如果出现所有本地备份丢失的情况，可以使用群晖官方提供的解密工具加载自己的私钥解密百度云上的备份~
+随李彦宏用数据做什么事情吧= =</description>
+    </item>
+    
+    <item>
+      <title>【分享】Travis CI的Pride选项</title>
+      <link>/blog/2018/04/%E5%88%86%E4%BA%ABtravis-ci%E7%9A%84pride%E9%80%89%E9%A1%B9/</link>
+      <pubDate>Sun, 08 Apr 2018 01:46:29 +0000</pubDate>
+      
+      <guid>/blog/2018/04/%E5%88%86%E4%BA%ABtravis-ci%E7%9A%84pride%E9%80%89%E9%A1%B9/</guid>
+      <description>今天偶然发现travis CI调皮了，有一个Pride选项，开启之后导航栏会变成彩虹旗~logo也有了彩虹旗的元素~
+ We deeply care about diversity, and strive to be an inclusive organisation. Show your pride (or your solidarity).
+ </description>
+    </item>
+    
+    <item>
+      <title>【PGP简介】（4）gpg钥匙串的管理与信任体系</title>
+      <link>/blog/2018/04/pgp%E7%AE%80%E4%BB%8B4gpg%E9%92%A5%E5%8C%99%E4%B8%B2%E7%9A%84%E7%AE%A1%E7%90%86%E4%B8%8E%E4%BF%A1%E4%BB%BB%E4%BD%93%E7%B3%BB/</link>
+      <pubDate>Thu, 05 Apr 2018 12:12:50 +0000</pubDate>
+      
+      <guid>/blog/2018/04/pgp%E7%AE%80%E4%BB%8B4gpg%E9%92%A5%E5%8C%99%E4%B8%B2%E7%9A%84%E7%AE%A1%E7%90%86%E4%B8%8E%E4%BF%A1%E4%BB%BB%E4%BD%93%E7%B3%BB/</guid>
+      <description>在我们实际使用PGP进行通讯的时候，首先就有一个非常核心的问题：我们究竟如何来管理自己所拥有的密钥呢？ PGP使用了一个钥匙串的体系来管理用户的密钥。下面我用gpg程序演示：
+我们可以通过gpg --list-keys命令或者图形界面来查看钥匙串中的公钥，gpg --list-secret-keys来查看私钥：
+下面我们来看一个pgp公钥记录（这是我的公钥~）
+pub rsa4096 2018-01-19 [SCA] [expires: 2019-01-19] 356982FADCBDDC60DBAD25E84CBBC48C2F2FF36B uid [ultimate] Eternal_flame-AD_extend (extended) &amp;amp;lt;eternal_flame-AD@protonmail.com&amp;amp;gt; uid [ultimate] Eternal_flame-AD(extended) &amp;amp;lt;eternal_flame-AD@protonmail.com&amp;amp;gt; sub rsa4096 2018-01-19 [E] [expires: 2019-01-19] 我们看到，这个公钥有两个用户标识（uid），还有一个子密钥，2018-01-19生效，有效期到2019-01-19，使用的是rsa4096，上面可以看到我的名称和email地址，[ultimate]这个密钥因为被赋予了ultimate级别的信任所以有效性也是绝对可靠的（因为这是我自己的密钥= = 不要给予任何外来的密钥最高信任）
+关于信任级别的问题，可以使用gpg edit-keys [uid]进入密钥编辑后查看，我们来看这个密钥（因为是别人的所以我隐藏了指纹和用户标识）：
+pub rsa4096/XXXXXXXXXXXXXX created: 2018-02-26 expires: never usage: C trust: never validity: full sub rsa2048/XXXXXXXXXXXX created: 2018-02-26 expires: 2026-02-24 usage: E sub rsa2048/XXXXXXXXXXXXX created: 2018-02-26 expires: 2026-02-24 usage: SA [ full ] (1). XXXXXXX &amp;lt;XXXXXXXXX; 可以看到trust（信任）一栏是never，validity（有效性）是full，这两个有什么区别呢？首先要从validity说起，validity指的是对一个密钥的有效性的说明，是由gpg程序计算出的，而非用户指派，一个密钥要被认为是有效的，就必须满足以下的条件：
+ 密钥在有效期内 密钥没有被吊销（吊销属于密钥操作，之后会说到） 密钥已经被另一个full级别或ultimate级别trust的密钥签名，或被多个（通常是3个）以上的marginal级别trust的密钥签名  上面的前两个应该比较简洁，第三个就要补充一个知识点了：我之前说到私钥可以给信息签名，这里的签名，不仅仅是对我发出的消息进行签名，还可以对其它的公钥进行签名，以此表明签名者认为该公钥是有效的。例如，你收到了来自朋友的一个公钥，你再将它导入钥匙串之后，gpg程序默认是不认为这个公钥有效的，只有你自己面对面或使用其他可靠方式确认公钥有效性以后，你使用自己的私钥（ultimate级别信任）签名之后，这个公钥才能在钥匙串中被标为有效。而对于full和marginal级别密钥签名的其他密钥，gpg分别有一套处理方法：这里就要说到密钥的trust了，gpg一共有一下五种trust级别，可以在编辑trust时看到：</description>
+    </item>
+    
+    <item>
+      <title>-_-#</title>
+      <link>/blog/2018/04/_/</link>
+      <pubDate>Wed, 04 Apr 2018 10:14:49 +0000</pubDate>
+      
+      <guid>/blog/2018/04/_/</guid>
+      <description>折腾了半天还是没成功开启TLSv1.3
+哭唧唧。。。</description>
+    </item>
+    
+    <item>
+      <title>卸载微信了！！</title>
+      <link>/blog/2018/04/%E5%8D%B8%E8%BD%BD%E5%BE%AE%E4%BF%A1%E4%BA%86/</link>
+      <pubDate>Mon, 02 Apr 2018 07:15:49 +0000</pubDate>
+      
+      <guid>/blog/2018/04/%E5%8D%B8%E8%BD%BD%E5%BE%AE%E4%BF%A1%E4%BA%86/</guid>
+      <description> 因为有一些迫不得已的事情（人←_←）所以还是得收取微信消息
+所以写了这个桥（Github），可以使用Riot.im收取和回复微信消息(端到端加密的支持以后看心情了= =，matrix.org用的是https，我还是信任matrix.org的人品的)，服务端挂在服务器上，效果如下（还很简陋后面会优化的= =）：         
+神清气爽！！！ </description>
+    </item>
+    
+    <item>
+      <title>【PGP简介】（3）PGP密钥对的构成和信任逻辑</title>
+      <link>/blog/2018/03/pgp%E7%AE%80%E4%BB%8B3pgp%E5%AF%86%E9%92%A5%E5%AF%B9%E7%9A%84%E6%9E%84%E6%88%90%E5%92%8C%E4%BF%A1%E4%BB%BB%E9%80%BB%E8%BE%91/</link>
+      <pubDate>Sat, 31 Mar 2018 04:00:31 +0000</pubDate>
+      
+      <guid>/blog/2018/03/pgp%E7%AE%80%E4%BB%8B3pgp%E5%AF%86%E9%92%A5%E5%AF%B9%E7%9A%84%E6%9E%84%E6%88%90%E5%92%8C%E4%BF%A1%E4%BB%BB%E9%80%BB%E8%BE%91/</guid>
+      <description>对于一个PGP密钥对，除了公私钥内容之外，它还另外包括了一下信息（这些信息是被这个密钥签名过的，因此只有私钥的所有者能够更改它们）：
+ 用户标识  用户标识，通常是姓名和电子邮件地址，是用来标识这个PGP密钥的所有者的（注意我这里用的是密钥的所有者 不是用户标识上的姓名 两者的区别我会在下面讲到）  有效期  有效期是密钥的有效时间范围，这个标识是为了保证密钥只在一段时间内有效（比如我的PGP密钥目前有效期是从18年1月19日到19年1月19日），每次使用这个密钥时，PGP程序会核对计算机上的时间和密钥的有效期，如果不在有效期内则会发出警告。设计有效期的目的主要是为了最大程度上减少因为私钥泄露等问题导致的后果，有效期短的密钥需要经常更新（不要忘了，私钥拥有者是可以更改有效期的），推荐每次更新他人的公钥的时候都要验证密钥的来源。  指纹  指纹是对整个密钥的一个hash，由密钥的其他部分经过散列计算而来，主要是用来：  （1）标识这个密钥，在密钥服务器上查找公钥时，常常会使用指纹来搜索（例如你可以在hkp服务器上搜索我的公钥指纹_0x356982FADCBDDC60DBAD25E84CBBC48C2F2FF36B 来获得我完整的公钥_） （2）验证密钥的完整性，比如，今天Alice和Bob见面，它们希望确定之前通过QQ等途径交换的公钥是否就是对方的公钥，他们不必逐字比对完整的公钥（那可能会花费大量时间），而只需要比对密钥指纹，基本就可以确认他们公钥的完整性。   子密钥  子密钥是隶属与这个主密钥的子密钥，可以理解为子密钥用于日常的加密/解密/签名/验证，而主密钥用来操作子密钥（增加子密钥/更改有效期/吊销/……）。一般只有命令行工具才提供比较自由的子密钥操作支持，所以为了通俗一点这里就不介绍具体用法了，引用一个博文   &amp;nbsp;
+但是，现在就出现了一个问题，我们假设Alice和Bob使用某种不安全聊天工具交换公钥的时候，Eve（服务器）在中间不仅可以监听，还可以截获/伪造消息，那么，Eve完全有能力自己生成两个密钥对，分别填上Alice和Bob的用户标识，并把假冒的公钥发给Alice和Bob，这样Alice和Bob都会发现自己拿到了用户标识写着对方的公钥（实际上是Eve的公钥，对应的私钥在Eve手中），而当他们再进行通信的时候，他们加密出的所有内容都可以被Eve解密了（例如：Alice把她的消息用自己的私钥签名，之后通过他认为的Bob的公钥加密发出去；Eve截获这个消息，用自己手中的私钥解密（因为Alice手中认为的Bob的公钥其实是Eve生成的 这时Eve就获得消息明文了） 再用自己假冒的Alice的私钥签名 用Bob真正的公钥加密发给Bob；Bob就得到了一条看起来由Alice签名并加密给自己的信息） 这种情况就被称为中间人攻击（MITM），为了确定密钥交换过程中没有中间人的干扰，我们就需要去验证双方收到的公钥是否和发出的相匹配，这一点PGP并不能帮你去做，你只能通过某种安全的渠道（例如见面），逐字核对密钥指纹来确定Alice获得的公钥就是和Bob手中的私钥相对应。在下一篇中我会详细说到PGP是如何处理对公钥的信任的问题的。</description>
+    </item>
+    
+    <item>
+      <title>【PGP简介】（2）PGP的原理简介之非对称加密</title>
+      <link>/blog/2018/03/pgp%E7%AE%80%E4%BB%8B2pgp%E7%9A%84%E5%8E%9F%E7%90%86%E7%AE%80%E4%BB%8B%E4%B9%8B%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86/</link>
+      <pubDate>Fri, 30 Mar 2018 04:14:26 +0000</pubDate>
+      
+      <guid>/blog/2018/03/pgp%E7%AE%80%E4%BB%8B2pgp%E7%9A%84%E5%8E%9F%E7%90%86%E7%AE%80%E4%BB%8B%E4%B9%8B%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86/</guid>
+      <description>这篇文章主要讨论的是PGP究竟是如何工作的~小透明会尽量简洁通俗地讲清楚究竟PGP能够给我们提供什么，它是如何保护我们的隐私的~
+ 首先，在介绍具体实现之前，先简要介绍一些核心的概念~ PGP使用了一个非常核心的加密机制——非对称加密，它和我们平常所说的加密有所不同： 平常我们所说的“加密”，是指对称加密，例如我通过某种算法，使用一个密钥（密码）加密明文，获得的密文发送给对方后，对方也使用这个密钥逆转这个加密过程，获得我最初加密的明文。 “非对称加密”（也称“公钥加密”）有所不同的是，非对称加密一个流程一共使用了两个密钥：公钥和私钥（一对公私钥合称一个密钥对，之后的文字会使用这个名词简化语言），故名思议，公钥就是“公开的密钥”，而私钥是自己保存，不给别人的！！非对称加密的算法有一个特性——一个密钥对中，经过公钥加密的明文只能使用私钥解密，经过私钥加密的明文需要使用公钥解密，有没有感觉到“非对称”这个词的意义了？如果还是有点没有懂，结合下面这张图解释一下：  现在Bob希望向Alice发送一个信息（“Hello Alice!”），于是Bob要求Alice将她的公钥发送给他，Bob获得这个公钥后将消息通过这个公钥加密之后将密文发回给Alice，Alice可以通过自己的私钥将密文解密为明文，这样就完成了一次非对称加密保护的信息交换。你可能已经发现了非对称加密的一个最大的优点：在整个过程中这条消息的解密密钥（Alice的私钥）在对话中完全没有被交换，也就是说，即使有一个人（我们叫她Eve PS:ABE这三个人就是我们的小明，小红和小亮，之后会经常看到的哈哈哈哈哈哈哈）截获了两个人的整个通话内容，在加密算法是安全的情况下，Eve也无法获得任何消息明文，因为她只能截获密文和Alice的公钥，这是对称加密所不能做到的（对称加密无法避免密钥信息的交换）。 除了上述提到的这个优点，非对称加密还有一个不可比拟的优势， 我们设想这样一种情形：一个公司里有100个人，现在这100个人想建立一个系统，让每两个人之间都能够安全的交换信息。如果使用对称加密手段：方法简单粗暴，每两个人之间使用一个密钥，整个系统一共需要100*99&amp;frasl;2=4950个密钥，而且需要的密钥数和人数并非呈线性，一万人就需要五千万个密钥。而使用非对称加密手段时，每个人只要自己生成一个密钥对，公开自己的公钥即可，整个系统只需要100个密钥对 然而，非对称加密也有一个最大的缺点，一个字：慢。不像通常是通过位运算和矩阵的运算实现的对称加密算法，非对称算法涉及大量随机数的生成和很大数字的运算，因此加密一段内容的开销比对称算法大得多（加密相同长度的数据消耗的cpu时间五十倍甚至更多），为了补偿性能上巨大的差异，通常在使用非对称算法加密信息时，加密者会先生成一个随机的密钥，用这个密钥使用对称算法加密明文后，将这个密钥（通常是固定长度，比消息短的多）使用非对称算法加密后放在密文末尾，而接受者先使用自己的私钥解密消息密钥，再使用这个密钥解密消息，这样就很大程度上减少了因使用非对称算法导致的性能损失（openpgp也使用了这种策略） 当然近几年也有新的算法（例如椭圆曲线ECC很大程度改进了性能） 除了加密消息之外，非对称加密算法还有一个很重要的用途：数字签名 这一点其实很多人并不是很能理解，认为有的时候连手写签名都能造假，凭什么我就应该相信一个数字签名呢？下面我简单介绍一下为什么数字签名具有可靠性 数字签名主要证明的是两点：1. 消息的发出者 2.消息在传输过程中没有经过修改。我们通过下面这个实例来看看数字签名是如何实现的： 仍然是Alice希望给Bob发送一个邮件：&amp;#8221;Meet me at 3 P.M&amp;#8221;，这次Alice将这个消息通过某个散列函数（例如SHA512 你可能听说过MD5，他们都是散列函数，是一个可以将任意长度信息成一个固定长度的信息的函数 可以理解为生成了消息的&amp;#8221;指纹&amp;#8221;），Alice希望证实这个消息由她发出并且在传输过程中没有经过篡改，因此她使用自己的私钥加密这个消息&amp;#8221;指纹&amp;#8221;，将整个消息和指纹的加密结果一起发给Bob，而Bob接收到这个消息之后，用Alice的公钥解密出消息指纹，然后和自己计算的收到的消息的指纹进行比对，如果一致，那么就证明了这条消息的来源和完整性——因为，_只有拥有Alice私钥的人才能够加密出可以被Alice的公钥解密的信息_（这里有点绕需要理解一下QWQ 其实就是和加密相反，加密是公钥加密私钥解密 签名是私钥加密公钥解密） 当然在这个过程中，如果中间人Eve想篡改消息内容，除了获得Alice的私钥之外，还有一个方法就是构造一个新的信息并且和原信息具有相同的&amp;#8221;指纹&amp;#8221;，然而要获得一个指纹和原消息指纹相同的消息，这个操作所需要花费的代价是巨大的（对于SHA512，平均需要花费2^511次尝试） 可能你会说，数字签名确实很tricky，但我用不着啊，其实数字签名的应用其实我们每天都在使用，例如你在访问这个博客的时候、你在网上银行交易的时候，服务器都会提供一个证书（其中就包含了一个公钥），并且将自己发送的所有网页信息经过数字签名发送给你，而你的浏览器会对这个数字签名进行校验（校验的机制我会另外写一篇blog），如果浏览器认为这个消息可信，你就会在地址栏上看到那个绿色的小锁啦！  </description>
+    </item>
+    
+    <item>
+      <title>【PGP简介】（1） Phil Zimmermann – Creator of PGP | Phil Zimmermann——PGP之父</title>
+      <link>/blog/2018/03/pgp%E7%AE%80%E4%BB%8B1-phil-zimmermann-creator-of-pgp-phil-zimmermannpgp%E4%B9%8B%E7%88%B6/</link>
+      <pubDate>Thu, 29 Mar 2018 14:58:04 +0000</pubDate>
+      
+      <guid>/blog/2018/03/pgp%E7%AE%80%E4%BB%8B1-phil-zimmermann-creator-of-pgp-phil-zimmermannpgp%E4%B9%8B%E7%88%B6/</guid>
+      <description>打算开天坑啦~这次打算开一个PGP简介的系列，会从简介和历史讲起，之后会介绍一些常用PGP工具的使用，其中具体技术实现上只打算触及原理介绍和使用方法，不打算涉及过于复杂的细节上的实现，适合用来拉人入坑~
+
+Phil Zimmermann，Pretty Good Privacy(PGP)软件的开创者，个人网站：（中文版 英文版）。他在1991年开发了PGP软件的第一个版本，据说这样一个名字是受到一家名为“Ralph&amp;#8217;s Pretty Good Grocery”的果蔬店的启发而来，当时Phil Zimmermann作为一名反核人士，打算利用自己开发的PGP来保证同样反核的人们能够在互联网上安全的交换信息。因为这个目的，所以Phil Zimmermann没有打算通过售卖PGP的授权获得任何利润，而是直接将PGP及其源代码发布在了各大BBS上，让互联网上的每个人都有权使用、检查和修改其中的代码。
+Phil Zimmermann的PGP很快便引起了极大的反响，也有很多其它国家的人们开始使用PGP软件，然而这一事件却违反了当时美国出口法令：在当时，美国规定超过40位的加密算法都是禁止出口的，而PGP使用的加密算法最低为128位，因此Phil Zimmermann当时收到了长达三年的刑事调查，在调查期间，Phil Zimmermann使用了非常有趣的方法规避这样一个问题：他将所有PGP的源码出版成了书籍，这样每个人只要购买这本书，将书上的代码输入到计算机里，就可以编译出PGP软件，而Phil传播PGP的代码也因为这本书的出版，变成了收到言论自由保护的行为。三年之后，当局放弃了对Phil的指控。
+当局放弃对Phil的指控后，Phil拍的照片= = 2010年，Symantec购买了PGP的授权，将PGP应用于自己的加密工具(Gateway Email Encryption)中，Symantec的PGP工具的源代码依然开放（链接），同时另一个开源分支（和Symantec无关）OpenPGP也在积极收到维护，小透明写的这组文章主要是针对OpenPGP进行介绍~</description>
+    </item>
+    
+    <item>
+      <title>我们不仅要“隐私”，我们要的是隐私!</title>
+      <link>/blog/2018/03/%E6%88%91%E4%BB%AC%E4%B8%8D%E4%BB%85%E8%A6%81%E9%9A%90%E7%A7%81%E6%88%91%E4%BB%AC%E8%A6%81%E7%9A%84%E6%98%AF%E9%9A%90%E7%A7%81/</link>
+      <pubDate>Wed, 28 Mar 2018 13:35:53 +0000</pubDate>
+      
+      <guid>/blog/2018/03/%E6%88%91%E4%BB%AC%E4%B8%8D%E4%BB%85%E8%A6%81%E9%9A%90%E7%A7%81%E6%88%91%E4%BB%AC%E8%A6%81%E7%9A%84%E6%98%AF%E9%9A%90%E7%A7%81/</guid>
+      <description>&lt;p&gt;{{&amp;lt; ncm &lt;a href=&#34;http://music.163.com/#/song?id=419373433&#34;&gt;http://music.163.com/#/song?id=419373433&lt;/a&gt; &amp;gt;}}&lt;/p&gt;
+
+&lt;p&gt;其实很早就有写这样一篇文章的打算了，只是一直没有找到合适的话题切入，正好昨天看到了博主&lt;a href=&#34;https://ziyunirvana.wordpress.com/&#34; rel=&#34;home&#34;&gt;東鱗西爪&lt;/a&gt;的一篇&lt;a href=&#34;https://wp.me/p9qsEo-81&#34;&gt;博文&lt;/a&gt;，深受感触，打算在这里发表一下小透明的看法~&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>【分享】【腐】Ideal workplace</title>
+      <link>/blog/2018/03/%E5%88%86%E4%BA%AB%E8%85%90ideal-workplace/</link>
+      <pubDate>Tue, 27 Mar 2018 16:48:02 +0000</pubDate>
+      
+      <guid>/blog/2018/03/%E5%88%86%E4%BA%AB%E8%85%90ideal-workplace/</guid>
+      <description>2014年的post，AT&amp;amp;T能够如此亲和地接纳LGBT人士，可以说非常暖心~
+不论文章在编排时是否有夸大和广告的嫌疑，一家以商业利益为主要目的的公司能够将此文章post在官网上，本身就不容置疑地表明了自身企业文化中的Equality
+原文链接：http://about.att.com/content/csr/home/blog/2014/11/my_experience_workin.html
+摘要：
+As an openly gay general manager at AT&amp;amp;T, I experience AT&amp;amp;T’s commitment to equality and inclusion firsthand; my story as an employee is special because it is unremarkable. From the day I joined AT&amp;amp;T 13 years ago, AT&amp;amp;T fostered an environment where I feel comfortable to share who I am. My husband Rob is a part of my work life just like any spouse, and when he and I married, I was proud to share the news with my AT&amp;amp;T family.</description>
+    </item>
+    
+    <item>
+      <title>新邮箱启用！</title>
+      <link>/blog/2018/03/%E6%96%B0%E9%82%AE%E7%AE%B1%E5%90%AF%E7%94%A8/</link>
+      <pubDate>Tue, 27 Mar 2018 13:42:17 +0000</pubDate>
+      
+      <guid>/blog/2018/03/%E6%96%B0%E9%82%AE%E7%AE%B1%E5%90%AF%E7%94%A8/</guid>
+      <description>配置了MX，现在可以通过我的域名给我发邮件了：
+尝试一下：ef@eternalflame.cn</description>
+    </item>
+    
+    <item>
+      <title>Python对象的拷贝和深度拷贝</title>
+      <link>/blog/2018/03/python%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B7%B1%E5%BA%A6%E6%8B%B7%E8%B4%9D/</link>
+      <pubDate>Tue, 27 Mar 2018 09:55:45 +0000</pubDate>
+      
+      <guid>/blog/2018/03/python%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B7%B1%E5%BA%A6%E6%8B%B7%E8%B4%9D/</guid>
+      <description>Python语言中，对象的传递默认是引用传递，如果需要创建一个对象的拷贝可以使用copy库：
+import copy list1=[&amp;#39;1&amp;#39;] list2=copy.copy(list1) list2.append(&amp;#39;2&amp;#39;) print(list1) #[&amp;#39;1&amp;#39;] 不过,copy.copy(x)方法是浅层拷贝（即如果list1是一个包含list的list，那么它包含的list仍然会被以引用形式传递）:
+import copy list1=[[&amp;#39;1&amp;#39;]] list2=copy.copy(list1) list2[0].append(&amp;#39;2&amp;#39;) print(list1) #[[&amp;#39;1&amp;#39;,&amp;#39;2&amp;#39;]] 而copy.deepcopy(x)方法即为深度拷贝，会将对象中包含的所有对象也进行拷贝：
+import copy list1=[[&amp;#39;1&amp;#39;]] list2=copy.deepcopy(list1) list2[0].append(&amp;#39;2&amp;#39;) print(list1) #[[&amp;#39;1&amp;#39;]] </description>
+    </item>
+    
+    <item>
+      <title>【AP CSA学习心得】（3）接口</title>
+      <link>/blog/2018/03/ap-csa%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%973%E6%8E%A5%E5%8F%A3/</link>
+      <pubDate>Tue, 27 Mar 2018 03:36:56 +0000</pubDate>
+      
+      <guid>/blog/2018/03/ap-csa%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%973%E6%8E%A5%E5%8F%A3/</guid>
+      <description>接口（Interface）是一种和类相似的结构，只包含常量和抽象方法，用处是指明多个对象的共同行为（个人认为是一种比抽象类更抽象的对象？？？？）：
+interface student { //abstract static int studentID=0; // eclipse don&amp;#39;t accept this but it does compile  int studentID=0; char grade=&amp;#39;A&amp;#39;; //public static final  public void setGrade(char s); //public abstract } 在interface中所有常量均为public static final
+所有方法均为public abstract，因此可以省略
+不过我如果显式地写出abstract static int的话我的Eclipse会显示错误但实际是可以编译的不知道为什么QWQ
+其它类可以通过完成abstract方法实现这个接口：
+class myStudent implements student { int studentID=0; static int nowID=0; public char grade; public static void incrementID() { nowID++; } public void getID() { myStudent.incrementID(); this.studentID=nowID; } public void setGrade(char grade) { this.</description>
+    </item>
+    
+    <item>
+      <title>【AP CSA学习心得】（2）抽象和继承</title>
+      <link>/blog/2018/03/ap-csa%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%972%E6%8A%BD%E8%B1%A1%E5%92%8C%E7%BB%A7%E6%89%BF/</link>
+      <pubDate>Tue, 27 Mar 2018 03:24:02 +0000</pubDate>
+      
+      <guid>/blog/2018/03/ap-csa%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%972%E6%8A%BD%E8%B1%A1%E5%92%8C%E7%BB%A7%E6%89%BF/</guid>
+      <description>抽象和继承一直是AP CSA考察的重点，在这里先码一段介绍整理一下（知识点只涉及了AP涉及到的部分，求大佬轻喷）
+&amp;nbsp;
+在定义类时，我们可以加入abstract关键字来定义一个抽象类：
+abstract class book { public static String material=&amp;#34;paper&amp;#34;; public String ISBN; public String title; public int pagenow; protected book() { //constructor dont have return types  this.pagenow=1; } public void flip_page() { pagenow++; System.out.println(&amp;#34;Flipped to page &amp;#34;+pagenow); } } 抽象类和class很像，只是不能实例化，因此这个book现在只能读取book.material=&amp;#8221;paper&amp;#8221;
+抽象类可以被继承成更加具体的类：
+class AP_Princeton extends book { public String ISBN=&amp;#34;978-1-101-91988-0&amp;#34;; public String title=&amp;#34;Cracking the AP CSA Exam&amp;#34;; private static String Customer_review; public void flip_page() { System.out.println(&amp;#34;FLipping page of:&amp;#34;+this.</description>
+    </item>
+    
+    <item>
+      <title>【AP CSA学习心得】（1）String的比较</title>
+      <link>/blog/2018/03/ap-csa%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%971string%E7%9A%84%E6%AF%94%E8%BE%83/</link>
+      <pubDate>Mon, 26 Mar 2018 15:47:40 +0000</pubDate>
+      
+      <guid>/blog/2018/03/ap-csa%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%971string%E7%9A%84%E6%AF%94%E8%BE%83/</guid>
+      <description>今天学习AP CSA时出现了一个问题：
+package loops; import java.util.Scanner; public class WhileLoop { public static void main(String[] args) { Scanner input=new Scanner(System.in); String password=&amp;#34;&amp;#34;; while (password!=&amp;#34;PASSWORD&amp;#34;) { //WARNING: password!=&amp;#34;PASSWORD&amp;#34; is NOT going to work! This is causing an infinite loop  System.out.print(&amp;#34;Password please:&amp;#34;); password=input.next(); //password=&amp;#34;PASSWORD&amp;#34;; //Uncomment this and the while loop will end  System.out.println(password.length()); //8  System.out.println(&amp;#34;PASSWORD&amp;#34;.length()); //8  System.out.println(password==&amp;#34;PASSWORD&amp;#34;); //always false  } System.out.println(&amp;#34;OK.&amp;#34;); } } 如上的代码，不论输入的字符串是否正确，循环均会一直进行，找了很久没有找到原因，后来发现是input.next()出来的String对象和直接&amp;#8221;PASSWORD&amp;#8221;出来的对象不等，应当使用String.equals()方法
+然而，int等其它类型却没有这个问题
+package loops; import java.</description>
+    </item>
+    
+    <item>
+      <title>【分享】【腐】超级甜的文章~</title>
+      <link>/blog/2018/03/%E5%88%86%E4%BA%AB%E8%85%90%E8%B6%85%E7%BA%A7%E7%94%9C%E7%9A%84%E6%96%87%E7%AB%A0~/</link>
+      <pubDate>Mon, 26 Mar 2018 13:41:15 +0000</pubDate>
+      
+      <guid>/blog/2018/03/%E5%88%86%E4%BA%AB%E8%85%90%E8%B6%85%E7%BA%A7%E7%94%9C%E7%9A%84%E6%96%87%E7%AB%A0~/</guid>
+      <description>摘自微信公众号“宅腐段子社”
+原文链接
+ 大家好，我是某君！
+昨天小夕在没有和我商量的情况下就溜出了长沙一个人去外面潇洒去了，并且今天早上还发信息让我来写今天的推文，在小夕的撒娇攻势下某君我只能缴械投降，答应他来写今天的推文。
+某君此时此刻只想说一句宝宝心里苦但宝宝不说！
+对于小夕这种一个人偷偷跑出去玩的事情，我已经习以为常了。每次说他，小夕就会美曰生活不止眼前的苟且，还有诗和远方的风景。
+其实对于小夕实在不知道该怎么去说他，小夕是一个很多对立的性格都聚集一身的人，大概是跟他从小成长的环境有关吧。
+小夕在我面前就是一个小孩子，常常爱恶作剧。比如有时候做饭的时候，他总是会悄悄的走到厨房，然后从后面突然的拍我一下，久而久之，他的套路我都已经知道了，但是他还是乐此不彼的玩着；每次冲凉的时候，我习惯把水温调到45度，为小夕习惯把水温调调到50度，我觉得50度水温太烫了，所以每次我洗澡的时候他总是悄悄去厨房把水温调高到50度，然后我就会在浴室冲他嚷嚷，他一边在浴室门外哈哈大笑，一边又去把水温调回来。
+但小夕有是一个很独立自主的人，他很清楚自己想要什么。有时候小夕时常会跟我说起他家里的事，他常常抱怨说他父母从小学三年级开始就让他一个人去学校报名缴费，升初中、高中甚至到长沙来读大学也没有送他来，语气中透出一股抱怨的味道，但是，依我对他的了解，就算他父母真的要来送他，他大概也会说我自己可以的；他喜欢旅行，大学期间只要课不多有时间就喜欢往外跑，几年之间也走了不少地方，我是一个不怎么喜欢出去跑的人，宁愿放假在家待在看书也不想出去走走的人，并不是说不喜欢旅行，只是实在不喜欢旅行归来后的那种疲惫感。
+我常常拿小夕的那种撞了南墙也不肯回头的性格没办法，小夕从来就是一个不肯将就的人。就拿前段时间找工作来说，他想去找文案策划的工作，这本跟他的所学专业不对口，所以很难找，找了差不多一个月的时候，他的心态开始崩溃了，时常自己一个人躲在被子里哭，然后问我说他是不是错了，应该去找于自己专业对口的工作？可是一觉起来又去面试文案策划的工作了。
+小夕是一个很没有安全感的人，常常有事没事就会问我说你爱不爱我，就好像我回答了句我爱他他就能吃到麻辣香锅一样开心，可是我恰恰又是一个不怎么会表达自己的人。
+有人曾问我说，你是一个那么闷的人，小夕是一个那么活泼的人，你们两在一起合适吗？
+其实我想说这世上没有完全合适的两个人，只有互相迁就的两颗心。小夕就是那种典型的刀子嘴豆腐心的人，有时候我叫他去弄点东西或者办点事，他常常就是会一脸嫌弃的表情并且嘴上还会叽叽歪歪一大堆，但是呢他又会去做；而我常常将这些看在眼里藏在心里，我本就是一个不怎么会表达的人，只是时常会用文字的形式去表达出来。
+关于昨天小夕看那个南康白起的《我等你到三十五岁》看的眼睛通红，最后问我以后会不会寻一女子，结婚生子，我只是紧紧的握住了他的手，在我看来，我认为这就是我给他最好的回答了。
+至于两个人合不合适，在我看来从来与他人无关。不管别人怎么猜测，怎么议论。两个人在一起，便享受在一起的时光。
+你一言我一语，聊人生，聊生活，聊工作，聊理想，总有聊不完的话题，即使什么话都不说，也不会觉得无聊。因为觉得有他在身边，就觉得整个世界都趣意盎然。
+我会默默的包容小夕的小脾气小任性。
+让他在我面前没有那一份不安全感，可以卸下自己所有的提防，安心地卖萌装傻。
+在外面，他可以一个人面对所有的困难挫折，一个人扛起所有风雨。但在我面前，让他不必要那么强大，在我的伞下做一个疯疯癫癫的小朋友。
+爱从来都是相互的。
+小夕把所有的温柔都给了我，而我能做的就是陪伴。在他心情低落的时候，始终守在他身旁。开心的时刻可以一起分享，难受和沮丧也总可以一起熬过去。
+希望我们可以陪伴着彼此走过一个又一个春夏秋冬，四季轮回。
+春天看桃花绽放。
+夏天去郊区避暑，享受一抹清凉。
+秋天登上看夕阳西下的美丽。
+冬天一起散步，看对方雪花满头。
+================================================
+（捂脸
+ 只愿得一人心，白首不分离……
+ </description>
+    </item>
+    
+    <item>
+      <title>Python使用multiprocessing实现多进程</title>
+      <link>/blog/2018/03/python%E4%BD%BF%E7%94%A8multiprocessing%E5%AE%9E%E7%8E%B0%E5%A4%9A%E8%BF%9B%E7%A8%8B/</link>
+      <pubDate>Mon, 26 Mar 2018 11:02:33 +0000</pubDate>
+      
+      <guid>/blog/2018/03/python%E4%BD%BF%E7%94%A8multiprocessing%E5%AE%9E%E7%8E%B0%E5%A4%9A%E8%BF%9B%E7%A8%8B/</guid>
+      <description>Python由于GIL锁的缘故，多线程进行CPU密集任务会导致严重的性能问题，而multiprocessing库模仿了threading的使用方法，但使用了多进程避开了GIL锁的问题。
+首先，先来看一个最简单的Process实现，和threading几乎一模一样的使用方法：
+import multiprocessing import time def watch(owner): print(owner,&amp;#34;is looking at his/her watch&amp;#34;) time.sleep(3) now=time.asctime(time.localtime()) print(owner,&amp;#34;&amp;#39;s Watch says it is &amp;#34;,now,sep=&amp;#34;&amp;#34;) def main(): p=multiprocessing.Process(target=watch,args=(&amp;#34;Mike&amp;#34;,)) p.start() p.join() if __name__==&amp;#34;__main__&amp;#34;: main() PS&amp;gt;python .\example.py Mike is looking at his/her watch Mike&amp;#39;s Watch says it is Mon Mar 26 17:55:06 2018 加入显示pid之后可以看到watch在不同的进程上进行：
+import multiprocessing import time import os def watch(owner): print(owner,&amp;#34;(&amp;#34;,os.getpid(),&amp;#34;)&amp;#34;,&amp;#34; is looking at his/her watch&amp;#34;,sep=&amp;#34;&amp;#34;) time.sleep(3) now=time.asctime(time.localtime()) print(owner,&amp;#34;(&amp;#34;,os.getpid(),&amp;#34;)&amp;#34;,&amp;#34;&amp;#39;s Watch says it is &amp;#34;,now,sep=&amp;#34;&amp;#34;) def main(): print(&amp;#34;I(&amp;#34;,os.</description>
+    </item>
+    
+    <item>
+      <title>对微信UI和操作逻辑的一些个人想法</title>
+      <link>/blog/2018/03/%E5%AF%B9%E5%BE%AE%E4%BF%A1ui%E5%92%8C%E6%93%8D%E4%BD%9C%E9%80%BB%E8%BE%91%E7%9A%84%E4%B8%80%E4%BA%9B%E4%B8%AA%E4%BA%BA%E6%83%B3%E6%B3%95/</link>
+      <pubDate>Sun, 25 Mar 2018 05:06:57 +0000</pubDate>
+      
+      <guid>/blog/2018/03/%E5%AF%B9%E5%BE%AE%E4%BF%A1ui%E5%92%8C%E6%93%8D%E4%BD%9C%E9%80%BB%E8%BE%91%E7%9A%84%E4%B8%80%E4%BA%9B%E4%B8%AA%E4%BA%BA%E6%83%B3%E6%B3%95/</guid>
+      <description>&lt;p&gt;微信作为一款被中国大众广泛接受的IM工具，自然必然有它设计的独到之处，但我个人一直不是非常喜欢微信的各项逻辑，在此提出自己的一些意见&lt;s&gt;mmp&lt;/s&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>记openssl版本冲突导致PHP-FPM反复崩溃</title>
+      <link>/blog/2018/03/%E8%AE%B0openssl%E7%89%88%E6%9C%AC%E5%86%B2%E7%AA%81%E5%AF%BC%E8%87%B4php-fpm%E5%8F%8D%E5%A4%8D%E5%B4%A9%E6%BA%83/</link>
+      <pubDate>Sun, 25 Mar 2018 01:59:57 +0000</pubDate>
+      
+      <guid>/blog/2018/03/%E8%AE%B0openssl%E7%89%88%E6%9C%AC%E5%86%B2%E7%AA%81%E5%AF%BC%E8%87%B4php-fpm%E5%8F%8D%E5%A4%8D%E5%B4%A9%E6%BA%83/</guid>
+      <description>&lt;p&gt;之前在部署服务器PHP-FPM时，发现web应用经常会出现502情况，具体有以下表现：&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>python使用colorama实现控制台彩色文字输出</title>
+      <link>/blog/2018/03/python%E4%BD%BF%E7%94%A8colorama%E5%AE%9E%E7%8E%B0%E6%8E%A7%E5%88%B6%E5%8F%B0%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97%E8%BE%93%E5%87%BA/</link>
+      <pubDate>Sat, 24 Mar 2018 13:51:25 +0000</pubDate>
+      
+      <guid>/blog/2018/03/python%E4%BD%BF%E7%94%A8colorama%E5%AE%9E%E7%8E%B0%E6%8E%A7%E5%88%B6%E5%8F%B0%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97%E8%BE%93%E5%87%BA/</guid>
+      <description>&lt;p&gt;为了之后写代码方便，打算写一个&lt;a href=&#34;https://github.com/eternal-flame-AD/eflog&#34;&gt;日志模块&lt;/a&gt;，需要实现在控制台上展示不同颜色的文字区分日志紧急度，于是发现了这个colorama模块（&lt;a href=&#34;https://github.com/tartley/colorama&#34;&gt;Github&lt;/a&gt;）~&lt;/p&gt;
+
+&lt;p&gt;colorama可以实现跨平台的前/背景彩色输出，同时还可以加入调暗等文字效果，十分方便&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

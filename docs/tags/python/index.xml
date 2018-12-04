@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on Eternal-flame-AD</title>
+    <link>/tags/python/</link>
+    <description>Recent content in Python on Eternal-flame-AD</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 27 Mar 2018 09:55:45 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Python对象的拷贝和深度拷贝</title>
+      <link>/blog/2018/03/python%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B7%B1%E5%BA%A6%E6%8B%B7%E8%B4%9D/</link>
+      <pubDate>Tue, 27 Mar 2018 09:55:45 +0000</pubDate>
+      
+      <guid>/blog/2018/03/python%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B7%B1%E5%BA%A6%E6%8B%B7%E8%B4%9D/</guid>
+      <description>Python语言中，对象的传递默认是引用传递，如果需要创建一个对象的拷贝可以使用copy库：
+import copy list1=[&amp;#39;1&amp;#39;] list2=copy.copy(list1) list2.append(&amp;#39;2&amp;#39;) print(list1) #[&amp;#39;1&amp;#39;] 不过,copy.copy(x)方法是浅层拷贝（即如果list1是一个包含list的list，那么它包含的list仍然会被以引用形式传递）:
+import copy list1=[[&amp;#39;1&amp;#39;]] list2=copy.copy(list1) list2[0].append(&amp;#39;2&amp;#39;) print(list1) #[[&amp;#39;1&amp;#39;,&amp;#39;2&amp;#39;]] 而copy.deepcopy(x)方法即为深度拷贝，会将对象中包含的所有对象也进行拷贝：
+import copy list1=[[&amp;#39;1&amp;#39;]] list2=copy.deepcopy(list1) list2[0].append(&amp;#39;2&amp;#39;) print(list1) #[[&amp;#39;1&amp;#39;]] </description>
+    </item>
+    
+    <item>
+      <title>【AP CSA学习心得】（2）抽象和继承</title>
+      <link>/blog/2018/03/ap-csa%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%972%E6%8A%BD%E8%B1%A1%E5%92%8C%E7%BB%A7%E6%89%BF/</link>
+      <pubDate>Tue, 27 Mar 2018 03:24:02 +0000</pubDate>
+      
+      <guid>/blog/2018/03/ap-csa%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%972%E6%8A%BD%E8%B1%A1%E5%92%8C%E7%BB%A7%E6%89%BF/</guid>
+      <description>抽象和继承一直是AP CSA考察的重点，在这里先码一段介绍整理一下（知识点只涉及了AP涉及到的部分，求大佬轻喷）
+&amp;nbsp;
+在定义类时，我们可以加入abstract关键字来定义一个抽象类：
+abstract class book { public static String material=&amp;#34;paper&amp;#34;; public String ISBN; public String title; public int pagenow; protected book() { //constructor dont have return types  this.pagenow=1; } public void flip_page() { pagenow++; System.out.println(&amp;#34;Flipped to page &amp;#34;+pagenow); } } 抽象类和class很像，只是不能实例化，因此这个book现在只能读取book.material=&amp;#8221;paper&amp;#8221;
+抽象类可以被继承成更加具体的类：
+class AP_Princeton extends book { public String ISBN=&amp;#34;978-1-101-91988-0&amp;#34;; public String title=&amp;#34;Cracking the AP CSA Exam&amp;#34;; private static String Customer_review; public void flip_page() { System.out.println(&amp;#34;FLipping page of:&amp;#34;+this.</description>
+    </item>
+    
+    <item>
+      <title>python使用colorama实现控制台彩色文字输出</title>
+      <link>/blog/2018/03/python%E4%BD%BF%E7%94%A8colorama%E5%AE%9E%E7%8E%B0%E6%8E%A7%E5%88%B6%E5%8F%B0%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97%E8%BE%93%E5%87%BA/</link>
+      <pubDate>Sat, 24 Mar 2018 13:51:25 +0000</pubDate>
+      
+      <guid>/blog/2018/03/python%E4%BD%BF%E7%94%A8colorama%E5%AE%9E%E7%8E%B0%E6%8E%A7%E5%88%B6%E5%8F%B0%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97%E8%BE%93%E5%87%BA/</guid>
+      <description>&lt;p&gt;为了之后写代码方便，打算写一个&lt;a href=&#34;https://github.com/eternal-flame-AD/eflog&#34;&gt;日志模块&lt;/a&gt;，需要实现在控制台上展示不同颜色的文字区分日志紧急度，于是发现了这个colorama模块（&lt;a href=&#34;https://github.com/tartley/colorama&#34;&gt;Github&lt;/a&gt;）~&lt;/p&gt;
+
+&lt;p&gt;colorama可以实现跨平台的前/背景彩色输出，同时还可以加入调暗等文字效果，十分方便&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

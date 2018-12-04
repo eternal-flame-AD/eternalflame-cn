@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    
+
+    <base href="">
+    <title>使用Python抓取rejet作品官博 | eternal-flame-AD</title>
+    <link rel="canonical" href="/blog/2018/10/%E4%BD%BF%E7%94%A8python%E6%8A%93%E5%8F%96rejet%E4%BD%9C%E5%93%81%E5%AE%98%E5%8D%9A/">
+    
+
+    
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+
+
+<link rel="stylesheet" href="/style.css" />
+
+
+
+<script src="/js/anime.min.js"></script>
+<script async src="/js/fireworks.js"></script>
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+<body lang="en">
+    <nav class="navbar navbar-default navbar-expand-lg navbar-light bg-light">
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-main" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav-main">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+            <li class="nav-item active"><a href="/blog/" class="nav-link">Blog</a></li>
+            <li class="nav-item"><a href="https://github.com/eternal-flame-AD" class="nav-link">Github</a></li>
+            <li class="nav-item"><a href="https://connect.garmin.com/modern/profile/67225a8f-1f19-491b-ae65-274a76fe0ba1" class="nav-link">Garmin Connect</a></li>
+            <li class="nav-item"><a href="https://keybase.io/eternal_flame" class="nav-link">Keybase</a></li>
+        </ul>
+        <button class="btn btn-primary my-2 my-sm-0" onClick="javascript::window.location.href='https://github.com/eternal-flame-AD'"><i class="fab fa-github"></i>Follow me on Github</button>
+    </div>
+</nav>
+    <div class="container">
+        <div class="jumbotron jumbotron-narrow">
+            <h3 class="display-4">使用Python抓取rejet作品官博</h3>
+            <i class="text-muted"><i class="fas fa-user"></i>Eternal-flame-AD</i> <br />
+            <i class="text-muted"><i class="fas fa-clock"></i>Fri, Oct 5, 2018</i> <br />
+            
+            <i class="text-muted"><i class="fas fa-shapes"></i><a href="/categories/python">Python&nbsp;</a><a href="/categories/%e6%8a%80%e6%9c%af">技术&nbsp;</a></i> <br />
+            <i class="text-muted"><i class="fas fa-link"></i><a style="word-wrap: break-word;" href="/blog/2018/10/%E4%BD%BF%E7%94%A8python%E6%8A%93%E5%8F%96rejet%E4%BD%9C%E5%93%81%E5%AE%98%E5%8D%9A/">/blog/2018/10/%E4%BD%BF%E7%94%A8python%E6%8A%93%E5%8F%96rejet%E4%BD%9C%E5%93%81%E5%AE%98%E5%8D%9A/</a></i> <br />
+            <i class="text-muted"><i class="fas fa-copyright"></i><a href="https://creativecommons.org/licenses/by/4.0/deed.zh">CC-BY-NC 4.0</a></i> <br />
+            
+            
+        </div>
+        <article>
+        <p>今天又被安利了R社的另一个IP——「幽幻ロマンチカ」，还是和剑君一样养眼的画风～～ 不过小透明不会日语再也啃不动了QWQ</p>
+
+<p>于是打算搜刮一波图来舔，打开<a href="http://rejetweb.jp/yuroma/blog/">官博</a>之后发现竟然和剑君的是一个套路（也许R社太懒两个作品的官博用的就是同一套CMS换了个主题hhhh）：</p>
+
+<p>「幽幻ロマンチカ」的URL前缀是：</p>
+
+<p><a href="http://rejetweb.jp/yuroma/blog/">http://rejetweb.jp/yuroma/blog/</a></p>
+
+<p>剑君的是：</p>
+
+<p><a href="http://rejetweb.jp/kengakimi/blog/">http://rejetweb.jp/kengakimi/blog/</a></p>
+
+<p>所以就翻出了几个月前自己用来下剑君官博的图的脚本，把前缀的配置提出来就可以支持这个作品了～</p>
+
+<p>代码传到了Github Gist上，完全使用正则表达式来匹配，因为是一次性的活所以小透明就怎么方便怎么来了～</p>
+
+<script type="application/javascript" src="//gist.github.com/eternal-flame-AD/0fde3f3598e58039d1fecc0f4ed87086.js"></script>
+
+<p>&nbsp;</p>
+
+        </article>
+    </div>
+    </body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    
+
+    <base href="">
+    <title>Gfw | eternal-flame-AD</title>
+    <link rel="canonical" href="/tags/gfw/">
+    <link href="/tags/gfw/index.xml" rel="alternate" type="application/rss+xml" title="Gfw" />
+
+    
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+
+
+<link rel="stylesheet" href="/style.css" />
+
+
+
+<script src="/js/anime.min.js"></script>
+<script async src="/js/fireworks.js"></script>
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+<body lang="en">
+    <nav class="navbar navbar-default navbar-expand-lg navbar-light bg-light">
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-main" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav-main">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="/blog/" class="nav-link">Blog</a></li>
+            <li class="nav-item"><a href="https://github.com/eternal-flame-AD" class="nav-link">Github</a></li>
+            <li class="nav-item"><a href="https://connect.garmin.com/modern/profile/67225a8f-1f19-491b-ae65-274a76fe0ba1" class="nav-link">Garmin Connect</a></li>
+            <li class="nav-item"><a href="https://keybase.io/eternal_flame" class="nav-link">Keybase</a></li>
+        </ul>
+        <button class="btn btn-primary my-2 my-sm-0" onClick="javascript::window.location.href='https://github.com/eternal-flame-AD'"><i class="fab fa-github"></i>Follow me on Github</button>
+    </div>
+</nav>
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-4">gfw</h1>
+            <p class="text-muted">This is a list for articles of tag: gfw</p>
+        </div>
+        
+            <div class="list-item ">
+    <h3 class="list-title"><a href="/blog/2018/09/%E9%80%9A%E8%BF%87https%E4%B8%AD%E9%97%B4%E4%BA%BA%E7%BB%95%E8%BF%87sni-based-censorship/">通过HTTPS中间人绕过SNI-based censorship</a></h3>
+    <i class="text-muted"><i class="fas fa-user"></i>Eternal-flame-AD</i> <br />
+    <i class="text-muted"><i class="fas fa-clock"></i>Wed, Sep 19, 2018</i> <br />
+    <i class="text-muted"><i class="fas fa-shapes"></i><a href="/categories/golang">Golang&nbsp;</a><a href="/categories/%e6%8a%80%e6%9c%af">技术&nbsp;</a></i> <br />
+    <i class="text-muted"><i class="fas fa-tags"></i><a href="/tags/gfw">GFW&nbsp;</a><a href="/tags/golang">Golang&nbsp;</a><a href="/tags/http%e4%bb%a3%e7%90%86">HTTP代理&nbsp;</a><a href="/tags/sni">SNI&nbsp;</a><a href="/tags/tls">TLS&nbsp;</a></i>
+    
+    <hr />
+    
+    <p class="text-muted">
+        
+            最近墙似乎又升级了，增加了基于SNI的检测，导致P站不翻墙完全不能访问，症状是Firefox建立的所有TCP链接均在TLS Client Hello发送后被Reset，之前写的mkhosts工具也不好使了：因为直接建立TCP是能通的，但是真正访问目标网站的时候因为要发送明文的SNI，因此被拦截。
+本来这么一想解决方法就是简单粗暴——别发SNI不就好了，但后来发现并不简单，没有哪个浏览器允许用户使用任何方式直接调整TLS握手的时候的参数的。
+看来这样，完全在浏览器里解决问题是不太现实了，我本来想着是不是可以把握手的时候浏览器发送的SNI修改一下，但每次浏览器都无法建立TLS链接，使用wireshark抓包发现在Handshake Finished阶段对端发出Alert Decryption Error，无法完成握手。查询rfc发现自己Too Young Too Simple，Handshake Finished阶段服务器端要签名整个握手阶段报文的hash来确定握手没有被修改，所以这条路又凉了。
+最后只好退一步编写一个中间人来截获浏览器的TLS连接，再向目标服务器建立另一个修改过的链接，然后把两边的TLS通道相互copy一下。
+上一个演示代码（Github Gist 国内现在好像也凉了 可能是因为上面有一些你懂得证据吧），利用elazarl/goproxy 来建立本地HTTP代理，截获其中的CONNECT请求（浏览器会通过HTTP CONNECT动词尝试经过代理服务器建立和对端服务器的连接，我们在这里不要直接链接对方服务器而是自己签发对方域名的证书，然后做一次修改的握手，复制两边TLS通道内传递的消息）修改的握手部分主要要注意ServerName不要传递，跳过默认证书验证（因为那是基于ServerName的，你没有给ServerName是过不了的），使用内置的crypto/x509写一个自定义的验证函数（再次吐槽 node里面只要checkServerIdentity: (host, cert)=&gt;tls.checkServerIdentity(realhost, cert)一句话就好了，go写了这么长hhhh）：
+ 安装ca证书后，编译运行代码，浏览器设置http代理http://127.0.0.1:8080/ （HTTPS也要走这个代理）即可
+&nbsp;
+有个朋友当时跟小透明说要不要把这个完善一下做成项目，小透明后来想了一下觉得还是不了，一是因为SNI审查不会是常态，应该会过去的，二是整个思路其实很清晰很简单也不复杂，程序员应该很容易就能写出来而且更加符合自己的需求，而对于普通人这些方法想比××上网来的太不稳定太复杂了，也没有太大价值。就当作一次尝试啦～
+更新：已经写成项目了，在这里
+        
+    </p>
+</div>
+        
+    </div>
+    </body>
+</html>

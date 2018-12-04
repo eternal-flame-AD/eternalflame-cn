@@ -1,0 +1,44 @@
+article {
+	border-radius: .3rem;
+	padding: 2rem 2rem;
+	background-color: rgba($gray-100, 0.8);
+	img {
+		width: 100%;
+		max-height: auto;
+	}
+	blockquote {
+		&::before {
+			content: '”';
+			display: block;
+			width: 90px;
+			font-family: 'Georgia', 'Times New Roman', serif;
+			font-size: 72px;
+			line-height: 72px;
+			font-weight: 700;
+			color: $main-fg;
+			text-align: center;
+			-webkit-font-smoothing: antialiased;
+			position: absolute;
+			top: 29px;
+			left: 0px;
+		}
+		p {
+			font-size: 28px;
+			font-style: italic;
+			color: #555;
+		}
+		padding: 30px 30px 30px 90px;
+		border-radius: 3px;
+		background: #eaeaea;
+		position: relative;
+		cite {
+			font-size: 16px;
+			color: $gray-600;
+			display: block;
+			margin-top: 25px;
+		}
+		:last-child {
+			margin-bottom: 0px;
+		}
+	}
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    
+
+    <base href="">
+    <title>python使用colorama实现控制台彩色文字输出 | eternal-flame-AD</title>
+    <link rel="canonical" href="/blog/2018/03/python%E4%BD%BF%E7%94%A8colorama%E5%AE%9E%E7%8E%B0%E6%8E%A7%E5%88%B6%E5%8F%B0%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97%E8%BE%93%E5%87%BA/">
+    
+
+    
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+
+
+<link rel="stylesheet" href="/style.css" />
+
+
+
+<script src="/js/anime.min.js"></script>
+<script async src="/js/fireworks.js"></script>
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+<body lang="en">
+    <nav class="navbar navbar-default navbar-expand-lg navbar-light bg-light">
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-main" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav-main">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+            <li class="nav-item active"><a href="/blog/" class="nav-link">Blog</a></li>
+            <li class="nav-item"><a href="https://github.com/eternal-flame-AD" class="nav-link">Github</a></li>
+            <li class="nav-item"><a href="https://connect.garmin.com/modern/profile/67225a8f-1f19-491b-ae65-274a76fe0ba1" class="nav-link">Garmin Connect</a></li>
+            <li class="nav-item"><a href="https://keybase.io/eternal_flame" class="nav-link">Keybase</a></li>
+        </ul>
+        <button class="btn btn-primary my-2 my-sm-0" onClick="javascript::window.location.href='https://github.com/eternal-flame-AD'"><i class="fab fa-github"></i>Follow me on Github</button>
+    </div>
+</nav>
+    <div class="container">
+        <div class="jumbotron jumbotron-narrow">
+            <h3 class="display-4">python使用colorama实现控制台彩色文字输出</h3>
+            <i class="text-muted"><i class="fas fa-user"></i>Eternal-flame-AD</i> <br />
+            <i class="text-muted"><i class="fas fa-clock"></i>Sat, Mar 24, 2018</i> <br />
+            <i class="text-muted"><i class="fas fa-tags"></i>Python 控制台 </i> <br />
+            <i class="text-muted"><i class="fas fa-shapes"></i><a href="/categories/python">Python&nbsp;</a><a href="/categories/%e6%8a%80%e6%9c%af">技术&nbsp;</a><a href="/categories/%e6%97%a5%e5%b8%b8">日常&nbsp;</a></i> <br />
+            <i class="text-muted"><i class="fas fa-link"></i><a style="word-wrap: break-word;" href="/blog/2018/03/python%E4%BD%BF%E7%94%A8colorama%E5%AE%9E%E7%8E%B0%E6%8E%A7%E5%88%B6%E5%8F%B0%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97%E8%BE%93%E5%87%BA/">/blog/2018/03/python%E4%BD%BF%E7%94%A8colorama%E5%AE%9E%E7%8E%B0%E6%8E%A7%E5%88%B6%E5%8F%B0%E5%BD%A9%E8%89%B2%E6%96%87%E5%AD%97%E8%BE%93%E5%87%BA/</a></i> <br />
+            <i class="text-muted"><i class="fas fa-copyright"></i><a href="https://creativecommons.org/licenses/by/4.0/deed.zh">CC-BY-NC 4.0</a></i> <br />
+            
+            
+        </div>
+        <article>
+        <p>为了之后写代码方便，打算写一个<a href="https://github.com/eternal-flame-AD/eflog">日志模块</a>，需要实现在控制台上展示不同颜色的文字区分日志紧急度，于是发现了这个colorama模块（<a href="https://github.com/tartley/colorama">Github</a>）~</p>
+
+<p>colorama可以实现跨平台的前/背景彩色输出，同时还可以加入调暗等文字效果，十分方便</p>
+
+<p>使用示例：</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> colorama  
+<span style="color:#f92672">from</span> colorama <span style="color:#f92672">import</span> Fore, Back, Style  
+<span style="color:#66d9ef">print</span>(Fore<span style="color:#f92672">.</span>RED <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;some red text&#34;</span>)  
+<span style="color:#66d9ef">print</span>(Back<span style="color:#f92672">.</span>GREEN <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;and with a green background&#34;</span>)  
+<span style="color:#66d9ef">print</span>(Style<span style="color:#f92672">.</span>DIM <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;and in dim text&#34;</span>)  
+<span style="color:#66d9ef">print</span>(Style<span style="color:#f92672">.</span>RESET_ALL)  
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;back to normal now&#34;</span>)</code></pre></div>
+
+<p>同时也可以设置自动RESET：</p>
+
+<p><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> colorama <span style="color:#f92672">import</span> init  
+init(autoreset<span style="color:#f92672">=</span>True)  
+<span style="color:#66d9ef">print</span>(Fore<span style="color:#f92672">.</span>RED <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;some red text&#34;</span>)  
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;automatically back to default color again&#34;</span>)</code></pre></div>
+有这些内置颜色：</p>
+
+<p>Fore: BLACK, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE, RESET.<br />
+Back: BLACK, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE, RESET.<br />
+Style: DIM, NORMAL, BRIGHT, RESET_ALL</p>
+        </article>
+    </div>
+    </body>
+</html>

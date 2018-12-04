@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    
+
+    <base href="">
+    <title>HAProxy使用多个iface负载均衡 | eternal-flame-AD</title>
+    <link rel="canonical" href="/blog/2018/07/haproxy%E4%BD%BF%E7%94%A8%E5%A4%9A%E4%B8%AAiface%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/">
+    
+
+    
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+
+
+<link rel="stylesheet" href="/style.css" />
+
+
+
+<script src="/js/anime.min.js"></script>
+<script async src="/js/fireworks.js"></script>
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+<body lang="en">
+    <nav class="navbar navbar-default navbar-expand-lg navbar-light bg-light">
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-main" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav-main">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+            <li class="nav-item active"><a href="/blog/" class="nav-link">Blog</a></li>
+            <li class="nav-item"><a href="https://github.com/eternal-flame-AD" class="nav-link">Github</a></li>
+            <li class="nav-item"><a href="https://connect.garmin.com/modern/profile/67225a8f-1f19-491b-ae65-274a76fe0ba1" class="nav-link">Garmin Connect</a></li>
+            <li class="nav-item"><a href="https://keybase.io/eternal_flame" class="nav-link">Keybase</a></li>
+        </ul>
+        <button class="btn btn-primary my-2 my-sm-0" onClick="javascript::window.location.href='https://github.com/eternal-flame-AD'"><i class="fab fa-github"></i>Follow me on Github</button>
+    </div>
+</nav>
+    <div class="container">
+        <div class="jumbotron jumbotron-narrow">
+            <h3 class="display-4">HAProxy使用多个iface负载均衡</h3>
+            <i class="text-muted"><i class="fas fa-user"></i>Eternal-flame-AD</i> <br />
+            <i class="text-muted"><i class="fas fa-clock"></i>Tue, Jul 24, 2018</i> <br />
+            
+            <i class="text-muted"><i class="fas fa-shapes"></i><a href="/categories/openwrt%e5%ba%94%e7%94%a8">Openwrt应用&nbsp;</a></i> <br />
+            <i class="text-muted"><i class="fas fa-link"></i><a style="word-wrap: break-word;" href="/blog/2018/07/haproxy%E4%BD%BF%E7%94%A8%E5%A4%9A%E4%B8%AAiface%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/">/blog/2018/07/haproxy%E4%BD%BF%E7%94%A8%E5%A4%9A%E4%B8%AAiface%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/</a></i> <br />
+            <i class="text-muted"><i class="fas fa-copyright"></i><a href="https://creativecommons.org/licenses/by/4.0/deed.zh">CC-BY-NC 4.0</a></i> <br />
+            
+            
+        </div>
+        <article>
+        <p>因为家里软路由是两条宽带上游，所以希望自己路由器上运行的的HAProxy能够在两个路由器上均分负载，需求大致是这样：</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-INI" data-lang="INI"><span style="color:#a6e22e">eth0.2</span>
+<span style="color:#a6e22e">+---------------+               +-----------------+</span>
+<span style="color:#a6e22e">|               +---------------&gt;                 |</span>
+<span style="color:#a6e22e">|   HAProxy     |               |    Backend      |</span>
+<span style="color:#a6e22e">|               +---------------&gt;                 |</span>
+<span style="color:#a6e22e">+---------------+               +-----------------+</span>
+                     <span style="color:#a6e22e">eth0.3</span></code></pre></div>
+
+<p>原来查了HAProxy的文档竟然没有看出来怎么做，后来在stackoverflow上找了很久发现server句是可以使用source参数的，这个小透明觉得文档写的不是很清楚，故在这里记录一下，大致写法是这样：</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-INI" data-lang="INI"><span style="color:#a6e22e">server back1 1.2.3.4:31646 source 0.0.0.0 interface eth0.2</span>
+<span style="color:#a6e22e">server back2 1.2.3.4:31646 source 0.0.0.0 interface eth0.3</span></code></pre></div>
+
+<p>&nbsp;</p>
+
+        </article>
+    </div>
+    </body>
+</html>

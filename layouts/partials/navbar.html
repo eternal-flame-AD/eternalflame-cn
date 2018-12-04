@@ -1,0 +1,18 @@
+<nav class="navbar navbar-default navbar-expand-lg navbar-light bg-light">
+    <!--<div class="navbar-header">
+        <a class="navbar-brand" href="/">Eternal-flame-AD</a>
+    </div>-->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-main" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav-main">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item{{if .IsHome}} active{{end}}"><a href="/" class="nav-link">Home</a></li>
+            <li class="nav-item{{if ge (len .URL) 6}}{{if (eq (slicestr .URL 0 6) `/blog/`)}} active{{end}}{{end}}"><a href="/blog/" class="nav-link">Blog</a></li>
+            <li class="nav-item"><a href="https://github.com/eternal-flame-AD" class="nav-link">Github</a></li>
+            <li class="nav-item"><a href="https://connect.garmin.com/modern/profile/67225a8f-1f19-491b-ae65-274a76fe0ba1" class="nav-link">Garmin Connect</a></li>
+            <li class="nav-item"><a href="https://keybase.io/eternal_flame" class="nav-link">Keybase</a></li>
+        </ul>
+        <button class="btn btn-primary my-2 my-sm-0" onClick="javascript::window.location.href='https://github.com/eternal-flame-AD'"><i class="fab fa-github"></i>Follow me on Github</button>
+    </div>
+</nav>

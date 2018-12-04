@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    
+
+    <base href="">
+    <title>【AP CSA学习心得】（3）接口 | eternal-flame-AD</title>
+    <link rel="canonical" href="/blog/2018/03/ap-csa%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%973%E6%8E%A5%E5%8F%A3/">
+    
+
+    
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+
+
+<link rel="stylesheet" href="/style.css" />
+
+
+
+<script src="/js/anime.min.js"></script>
+<script async src="/js/fireworks.js"></script>
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+<body lang="en">
+    <nav class="navbar navbar-default navbar-expand-lg navbar-light bg-light">
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-main" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav-main">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+            <li class="nav-item active"><a href="/blog/" class="nav-link">Blog</a></li>
+            <li class="nav-item"><a href="https://github.com/eternal-flame-AD" class="nav-link">Github</a></li>
+            <li class="nav-item"><a href="https://connect.garmin.com/modern/profile/67225a8f-1f19-491b-ae65-274a76fe0ba1" class="nav-link">Garmin Connect</a></li>
+            <li class="nav-item"><a href="https://keybase.io/eternal_flame" class="nav-link">Keybase</a></li>
+        </ul>
+        <button class="btn btn-primary my-2 my-sm-0" onClick="javascript::window.location.href='https://github.com/eternal-flame-AD'"><i class="fab fa-github"></i>Follow me on Github</button>
+    </div>
+</nav>
+    <div class="container">
+        <div class="jumbotron jumbotron-narrow">
+            <h3 class="display-4">【AP CSA学习心得】（3）接口</h3>
+            <i class="text-muted"><i class="fas fa-user"></i>Eternal-flame-AD</i> <br />
+            <i class="text-muted"><i class="fas fa-clock"></i>Tue, Mar 27, 2018</i> <br />
+            
+            <i class="text-muted"><i class="fas fa-shapes"></i><a href="/categories/%e6%97%a5%e5%b8%b8">日常&nbsp;</a></i> <br />
+            <i class="text-muted"><i class="fas fa-link"></i><a style="word-wrap: break-word;" href="/blog/2018/03/ap-csa%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%973%E6%8E%A5%E5%8F%A3/">/blog/2018/03/ap-csa%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%973%E6%8E%A5%E5%8F%A3/</a></i> <br />
+            <i class="text-muted"><i class="fas fa-copyright"></i><a href="https://creativecommons.org/licenses/by/4.0/deed.zh">CC-BY-NC 4.0</a></i> <br />
+            
+            
+        </div>
+        <article>
+        <p>接口（Interface）是一种和类相似的结构，只包含常量和抽象方法，用处是指明多个对象的共同行为（个人认为是一种比抽象类更抽象的对象？？？？）：</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">student</span> <span style="color:#f92672">{</span> 
+    <span style="color:#75715e">//abstract static int studentID=0; // eclipse don&#39;t accept this but it does compile
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">int</span> studentID<span style="color:#f92672">=</span>0<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">char</span> grade<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;A&#39;</span><span style="color:#f92672">;</span> <span style="color:#75715e">//public static final
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setGrade</span><span style="color:#f92672">(</span><span style="color:#66d9ef">char</span> s<span style="color:#f92672">);</span> <span style="color:#75715e">//public abstract
+</span><span style="color:#75715e"></span><span style="color:#f92672">}</span></code></pre></div>
+
+<p>在interface中所有常量均为public static final</p>
+
+<p>所有方法均为public abstract，因此可以省略</p>
+
+<p>不过我如果显式地写出abstract static int的话我的Eclipse会显示错误但实际是可以编译的不知道为什么QWQ</p>
+
+<p>其它类可以通过完成abstract方法实现这个接口：</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">myStudent</span> <span style="color:#66d9ef">implements</span> student <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">int</span> studentID<span style="color:#f92672">=</span>0<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> nowID<span style="color:#f92672">=</span>0<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">char</span> grade<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">incrementID</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        nowID<span style="color:#f92672">++;</span>
+    <span style="color:#f92672">}</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">getID</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        myStudent<span style="color:#f92672">.</span><span style="color:#a6e22e">incrementID</span><span style="color:#f92672">();</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">studentID</span><span style="color:#f92672">=</span>nowID<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setGrade</span><span style="color:#f92672">(</span><span style="color:#66d9ef">char</span> grade<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">grade</span><span style="color:#f92672">=</span>grade<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span></code></pre></div>
+
+<p>和抽象类一样，interface也不可以创建自身的实例。</p>
+
+        </article>
+    </div>
+    </body>
+</html>

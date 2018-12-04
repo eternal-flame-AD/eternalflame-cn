@@ -1,0 +1,21 @@
+<div class="list-item {{if .Draft}}warning{{end}}">
+    <h3 class="list-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+    <i class="text-muted"><i class="fas fa-user"></i>{{ .Params.author }}</i> <br />
+    <i class="text-muted"><i class="fas fa-clock"></i>{{ .Date.Format "Mon, Jan 2, 2006" }}</i> <br />
+    {{ if .Params.categories}}<i class="text-muted"><i class="fas fa-shapes"></i>{{range $i, $t := .Params.categories}}<a href="/categories/{{lower $t}}">{{$t}}&nbsp;</a>{{end}}</i>{{end}} <br />
+    {{ if .Params.tags}}<i class="text-muted"><i class="fas fa-tags"></i>{{range $i, $t := .Params.tags}}<a href="/tags/{{lower $t}}">{{$t}}&nbsp;</a>{{end}}</i>{{end}}
+    {{if .Draft }}
+    <i class="fas fa-edit text-danger">Draft</i>
+    {{end}}
+    <hr />
+    {{if .Params.featured_image}}
+        <img src="{{.Params.featured_image}}" class="img-fluid" />
+    {{end}}
+    <p class="text-muted">
+        {{if .Params.signature }}
+            {{ .Params.signature }}
+        {{else}}
+            {{ .Summary }}
+        {{end}}
+    </p>
+</div>

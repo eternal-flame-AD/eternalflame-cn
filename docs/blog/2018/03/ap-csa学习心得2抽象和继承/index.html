@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    
+
+    <base href="">
+    <title>【AP CSA学习心得】（2）抽象和继承 | eternal-flame-AD</title>
+    <link rel="canonical" href="/blog/2018/03/ap-csa%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%972%E6%8A%BD%E8%B1%A1%E5%92%8C%E7%BB%A7%E6%89%BF/">
+    
+
+    
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+
+
+<link rel="stylesheet" href="/style.css" />
+
+
+
+<script src="/js/anime.min.js"></script>
+<script async src="/js/fireworks.js"></script>
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+<body lang="en">
+    <nav class="navbar navbar-default navbar-expand-lg navbar-light bg-light">
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-main" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav-main">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+            <li class="nav-item active"><a href="/blog/" class="nav-link">Blog</a></li>
+            <li class="nav-item"><a href="https://github.com/eternal-flame-AD" class="nav-link">Github</a></li>
+            <li class="nav-item"><a href="https://connect.garmin.com/modern/profile/67225a8f-1f19-491b-ae65-274a76fe0ba1" class="nav-link">Garmin Connect</a></li>
+            <li class="nav-item"><a href="https://keybase.io/eternal_flame" class="nav-link">Keybase</a></li>
+        </ul>
+        <button class="btn btn-primary my-2 my-sm-0" onClick="javascript::window.location.href='https://github.com/eternal-flame-AD'"><i class="fab fa-github"></i>Follow me on Github</button>
+    </div>
+</nav>
+    <div class="container">
+        <div class="jumbotron jumbotron-narrow">
+            <h3 class="display-4">【AP CSA学习心得】（2）抽象和继承</h3>
+            <i class="text-muted"><i class="fas fa-user"></i>Eternal-flame-AD</i> <br />
+            <i class="text-muted"><i class="fas fa-clock"></i>Tue, Mar 27, 2018</i> <br />
+            <i class="text-muted"><i class="fas fa-tags"></i>AP Computer Science A Python </i> <br />
+            <i class="text-muted"><i class="fas fa-shapes"></i><a href="/categories/java">Java&nbsp;</a><a href="/categories/%e5%ad%a6%e4%b9%a0">学习&nbsp;</a></i> <br />
+            <i class="text-muted"><i class="fas fa-link"></i><a style="word-wrap: break-word;" href="/blog/2018/03/ap-csa%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%972%E6%8A%BD%E8%B1%A1%E5%92%8C%E7%BB%A7%E6%89%BF/">/blog/2018/03/ap-csa%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%972%E6%8A%BD%E8%B1%A1%E5%92%8C%E7%BB%A7%E6%89%BF/</a></i> <br />
+            <i class="text-muted"><i class="fas fa-copyright"></i><a href="https://creativecommons.org/licenses/by/4.0/deed.zh">CC-BY-NC 4.0</a></i> <br />
+            
+            
+        </div>
+        <article>
+        <p>抽象和继承一直是AP CSA考察的重点，在这里先码一段介绍整理一下（知识点只涉及了AP涉及到的部分，求大佬轻喷）</p>
+
+<p>&nbsp;</p>
+
+<p>在定义类时，我们可以加入abstract关键字来定义一个抽象类：</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">abstract</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">book</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> String material<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;paper&#34;</span><span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">public</span> String ISBN<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">public</span> String title<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> pagenow<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">protected</span> <span style="color:#a6e22e">book</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span> <span style="color:#75715e">//constructor dont have return types
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">pagenow</span><span style="color:#f92672">=</span>1<span style="color:#f92672">;</span> 
+    <span style="color:#f92672">}</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">flip_page</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        pagenow<span style="color:#f92672">++;</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Flipped to page &#34;</span><span style="color:#f92672">+</span>pagenow<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span></code></pre></div>
+
+<p>抽象类和class很像，只是不能实例化，因此这个book现在只能读取book.material=&#8221;paper&#8221;</p>
+
+<p>抽象类可以被继承成更加具体的类：</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">AP_Princeton</span> <span style="color:#66d9ef">extends</span> book <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> String ISBN<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;978-1-101-91988-0&#34;</span><span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">public</span> String title<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Cracking the AP CSA Exam&#34;</span><span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> String Customer_review<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">flip_page</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;FLipping page of:&#34;</span><span style="color:#f92672">+</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">title</span><span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">super</span><span style="color:#f92672">.</span><span style="color:#a6e22e">flip_page</span><span style="color:#f92672">();</span>  <span style="color:#75715e">//Not this.super
+</span><span style="color:#75715e"></span>    <span style="color:#f92672">}</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">write_review</span><span style="color:#f92672">(</span>String rev<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">Customer_review</span><span style="color:#f92672">=</span>rev<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">read_review</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> Customer_review<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span></code></pre></div>
+
+<p>当然也可以被另一个抽象类继承：</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">abstract</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Electronicbook</span> <span style="color:#66d9ef">extends</span> book <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> String material<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Electrical device&#34;</span><span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Python_docs</span> <span style="color:#66d9ef">extends</span> Electronicbook <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> String title<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Python docs&#34;</span><span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span></code></pre></div>
+
+<p>一直需要注意的是，java是一种强类型的语言：如下的代码段会返回paper(不论material是否是static)：</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">book myPythondoc<span style="color:#f92672">=</span><span style="color:#66d9ef">new</span> Python_docs<span style="color:#f92672">();</span>
+<span style="color:#66d9ef">return</span> myPythondoc<span style="color:#f92672">.</span><span style="color:#a6e22e">material</span><span style="color:#f92672">;</span></code></pre></div>
+
+<p>正确的应该显式转换：</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">book myPythondoc<span style="color:#f92672">=</span><span style="color:#66d9ef">new</span> Python_docs<span style="color:#f92672">();</span>
+<span style="color:#66d9ef">return</span> <span style="color:#f92672">((</span>Electronicbook<span style="color:#f92672">)</span>myPythondoc<span style="color:#f92672">).</span><span style="color:#a6e22e">material</span><span style="color:#f92672">;</span></code></pre></div>
+
+<p>AP_Princeton对象可以被存在book类型引用中，但book的其它子类（Electronicbook等）不能被存储在AP_Princeton类型引用中：</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">book myAPbook<span style="color:#f92672">=</span><span style="color:#66d9ef">new</span> AP_Princeton<span style="color:#f92672">();</span> <span style="color:#75715e">//This is correct
+</span><span style="color:#75715e"></span>AP_Princeton myAPbook<span style="color:#f92672">=</span><span style="color:#66d9ef">new</span> AP_Princeton<span style="color:#f92672">();</span> <span style="color:#75715e">// This is even more correct
+</span><span style="color:#75715e"></span>Python_docs myAPbook<span style="color:#f92672">=</span><span style="color:#66d9ef">new</span> AP_Princeton<span style="color:#f92672">();</span> <span style="color:#f92672">//</span>WILL NOT COMPILE</code></pre></div>
+
+<p>最后贴上一段完整的Demo:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> classes<span style="color:#f92672">;</span>
+<span style="color:#66d9ef">abstract</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">book</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> String material<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;paper&#34;</span><span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">public</span> String ISBN<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">public</span> String title<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> pagenow<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">protected</span> <span style="color:#a6e22e">book</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">pagenow</span><span style="color:#f92672">=</span>1<span style="color:#f92672">;</span> 
+    <span style="color:#f92672">}</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">flip_page</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        pagenow<span style="color:#f92672">++;</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Flipped to page &#34;</span><span style="color:#f92672">+</span>pagenow<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+<span style="color:#66d9ef">abstract</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Electronicbook</span> <span style="color:#66d9ef">extends</span> book <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> String material<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Electrical device&#34;</span><span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">AP_Princeton</span> <span style="color:#66d9ef">extends</span> book <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> String ISBN<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;978-1-101-91988-0&#34;</span><span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">public</span> String title<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Cracking the AP CSA Exam&#34;</span><span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> String Customer_review<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">flip_page</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;FLipping page of:&#34;</span><span style="color:#f92672">+</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">title</span><span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">super</span><span style="color:#f92672">.</span><span style="color:#a6e22e">flip_page</span><span style="color:#f92672">();</span>  <span style="color:#75715e">//Not this.super
+</span><span style="color:#75715e"></span>    <span style="color:#f92672">}</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">write_review</span><span style="color:#f92672">(</span>String rev<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">Customer_review</span><span style="color:#f92672">=</span>rev<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">read_review</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> Customer_review<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Python_docs</span> <span style="color:#66d9ef">extends</span> Electronicbook <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> String title<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Python docs&#34;</span><span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">AbstractDemo</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#75715e">//You can NOT instantiate a book object
+</span><span style="color:#75715e"></span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>book<span style="color:#f92672">.</span><span style="color:#a6e22e">material</span><span style="color:#f92672">);</span> <span style="color:#75715e">//paper
+</span><span style="color:#75715e"></span>        book myAPbook<span style="color:#f92672">=</span><span style="color:#66d9ef">new</span> AP_Princeton<span style="color:#f92672">();</span>
+        myAPbook<span style="color:#f92672">.</span><span style="color:#a6e22e">flip_page</span><span style="color:#f92672">();</span>
+        <span style="color:#75715e">/*
+</span><span style="color:#75715e">         * FLipping page of:Cracking the AP CSA Exam
+</span><span style="color:#75715e">         * Flipped to page 2
+</span><span style="color:#75715e">         */</span>
+        <span style="color:#f92672">((</span>AP_Princeton<span style="color:#f92672">)</span>myAPbook<span style="color:#f92672">).</span><span style="color:#a6e22e">write_review</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Sucks...&#34;</span><span style="color:#f92672">);</span> <span style="color:#75715e">//explicitly tell java this is an instance of AP_Princeton or it will NOT compile
+</span><span style="color:#75715e"></span>        AP_Princeton anotherAPbook<span style="color:#f92672">=</span><span style="color:#66d9ef">new</span> AP_Princeton<span style="color:#f92672">();</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>anotherAPbook<span style="color:#f92672">.</span><span style="color:#a6e22e">read_review</span><span style="color:#f92672">());</span> <span style="color:#75715e">//Sucks...
+</span><span style="color:#75715e"></span>        book myPythondoc<span style="color:#f92672">=</span><span style="color:#66d9ef">new</span> Python_docs<span style="color:#f92672">();</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>myPythondoc<span style="color:#f92672">.</span><span style="color:#a6e22e">material</span><span style="color:#f92672">);</span> <span style="color:#75715e">// paper !!!!
+</span><span style="color:#75715e"></span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(((</span>Electronicbook<span style="color:#f92672">)</span>myPythondoc<span style="color:#f92672">).</span><span style="color:#a6e22e">material</span><span style="color:#f92672">);</span> <span style="color:#75715e">//Electrical device
+</span><span style="color:#75715e"></span>    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span></code></pre></div>
+
+        </article>
+    </div>
+    </body>
+</html>

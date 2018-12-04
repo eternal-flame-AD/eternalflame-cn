@@ -1,0 +1,20 @@
+{{ partial "head.html" .}}
+    <div class="container">
+        <div class="jumbotron jumbotron-narrow">
+            <h3 class="display-4">{{ .Title }}</h3>
+            <i class="text-muted"><i class="fas fa-user"></i>{{ .Params.author }}</i> <br />
+            <i class="text-muted"><i class="fas fa-clock"></i>{{ .Date.Format "Mon, Jan 2, 2006" }}</i> <br />
+            {{ if .Params.tags}}<i class="text-muted"><i class="fas fa-tags"></i>{{range $i, $t := .Params.tags}}{{$t}} {{end}}</i> <br />{{end}}
+            {{ if .Params.categories}}<i class="text-muted"><i class="fas fa-shapes"></i>{{range $i, $t := .Params.categories}}<a href="/categories/{{lower $t}}">{{$t}}&nbsp;</a>{{end}}</i> <br />{{end}}
+            <i class="text-muted"><i class="fas fa-link"></i><a style="word-wrap: break-word;" href="{{ .Permalink }}">{{ .Permalink }}</a></i> <br />
+            <i class="text-muted"><i class="fas fa-copyright"></i><a href="https://creativecommons.org/licenses/by/4.0/deed.zh">CC-BY-NC 4.0</a></i> <br />
+            {{if .Draft }}
+                <i class="fas fa-edit text-danger">Draft</i> <br />
+            {{end}}
+            {{ if .Params.signature }}<hr class="my-4" /><p class="text-muted">{{ .Params.signature }}</p>{{end}}
+        </div>
+        <article>
+        {{ .Content }}
+        </article>
+    </div>
+{{ partial "tail.html" .}}

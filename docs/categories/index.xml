@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Eternal-flame-AD</title>
+    <link>/categories/</link>
+    <description>Recent content in Categories on Eternal-flame-AD</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Golang</title>
+      <link>/categories/golang/</link>
+      <pubDate>Wed, 19 Sep 2018 02:56:41 +0000</pubDate>
+      
+      <guid>/categories/golang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Java</title>
+      <link>/categories/java/</link>
+      <pubDate>Tue, 27 Mar 2018 03:24:02 +0000</pubDate>
+      
+      <guid>/categories/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Lgbtq</title>
+      <link>/categories/lgbtq/</link>
+      <pubDate>Wed, 19 Sep 2018 08:57:59 +0000</pubDate>
+      
+      <guid>/categories/lgbtq/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Openwrt应用</title>
+      <link>/categories/openwrt%E5%BA%94%E7%94%A8/</link>
+      <pubDate>Tue, 24 Jul 2018 11:19:55 +0000</pubDate>
+      
+      <guid>/categories/openwrt%E5%BA%94%E7%94%A8/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Php</title>
+      <link>/categories/php/</link>
+      <pubDate>Sun, 25 Mar 2018 01:59:57 +0000</pubDate>
+      
+      <guid>/categories/php/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>/categories/python/</link>
+      <pubDate>Fri, 05 Oct 2018 08:53:24 +0000</pubDate>
+      
+      <guid>/categories/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>分享</title>
+      <link>/categories/%E5%88%86%E4%BA%AB/</link>
+      <pubDate>Thu, 01 Nov 2018 14:04:02 +0000</pubDate>
+      
+      <guid>/categories/%E5%88%86%E4%BA%AB/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>学习</title>
+      <link>/categories/%E5%AD%A6%E4%B9%A0/</link>
+      <pubDate>Thu, 29 Mar 2018 14:58:04 +0000</pubDate>
+      
+      <guid>/categories/%E5%AD%A6%E4%B9%A0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>技术</title>
+      <link>/categories/%E6%8A%80%E6%9C%AF/</link>
+      <pubDate>Fri, 05 Oct 2018 08:53:24 +0000</pubDate>
+      
+      <guid>/categories/%E6%8A%80%E6%9C%AF/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>日常</title>
+      <link>/categories/%E6%97%A5%E5%B8%B8/</link>
+      <pubDate>Thu, 01 Nov 2018 14:04:02 +0000</pubDate>
+      
+      <guid>/categories/%E6%97%A5%E5%B8%B8/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>站点公告</title>
+      <link>/categories/%E7%AB%99%E7%82%B9%E5%85%AC%E5%91%8A/</link>
+      <pubDate>Tue, 27 Mar 2018 13:42:17 +0000</pubDate>
+      
+      <guid>/categories/%E7%AB%99%E7%82%B9%E5%85%AC%E5%91%8A/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>随想</title>
+      <link>/categories/%E9%9A%8F%E6%83%B3/</link>
+      <pubDate>Wed, 31 Oct 2018 05:28:33 +0000</pubDate>
+      
+      <guid>/categories/%E9%9A%8F%E6%83%B3/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

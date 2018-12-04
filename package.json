@@ -1,0 +1,15 @@
+{
+  "name": "eternalflame-cn",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "eternal-flame-AD",
+  "license": "Apache-2.0",
+  "private": false,
+  "dependencies": {
+    "bootstrap": "^4.1.3"
+  },
+  "scripts": {
+    "build": "rm -rf docs && hugo",
+    "dev": "hugo server -D"
+  }
+}
