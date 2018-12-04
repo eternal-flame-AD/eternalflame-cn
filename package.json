@@ -9,7 +9,7 @@
     "bootstrap": "^4.1.3"
   },
   "scripts": {
-    "build": "rm -rf docs && hugo",
+    "build": "rm -rf docs/**/* && hugo",
     "dev": "hugo server -D"
   }
 }
