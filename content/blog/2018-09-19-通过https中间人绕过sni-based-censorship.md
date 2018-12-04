@@ -2,6 +2,7 @@
 title: 通过HTTPS中间人绕过SNI-based censorship
 author: Eternal-flame-AD
 layout: post
+identifier: 3706f6dcf9b7266132ec2a7956d618bf
 date: 2018-09-19T02:56:41+00:00
 categories:
   - Golang

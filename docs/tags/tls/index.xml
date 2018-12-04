@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tls on Eternal-flame-AD</title>
-    <link>/tags/tls/</link>
+    <link>https://eternalflame.cn/tags/tls/</link>
     <description>Recent content in Tls on Eternal-flame-AD</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 19 Sep 2018 02:56:41 +0000</lastBuildDate>
     
-	<atom:link href="/tags/tls/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://eternalflame.cn/tags/tls/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>通过HTTPS中间人绕过SNI-based censorship</title>
-      <link>/blog/2018/09/%E9%80%9A%E8%BF%87https%E4%B8%AD%E9%97%B4%E4%BA%BA%E7%BB%95%E8%BF%87sni-based-censorship/</link>
+      <link>https://eternalflame.cn/blog/2018/09/%E9%80%9A%E8%BF%87https%E4%B8%AD%E9%97%B4%E4%BA%BA%E7%BB%95%E8%BF%87sni-based-censorship/</link>
       <pubDate>Wed, 19 Sep 2018 02:56:41 +0000</pubDate>
       
-      <guid>/blog/2018/09/%E9%80%9A%E8%BF%87https%E4%B8%AD%E9%97%B4%E4%BA%BA%E7%BB%95%E8%BF%87sni-based-censorship/</guid>
+      <guid>https://eternalflame.cn/blog/2018/09/%E9%80%9A%E8%BF%87https%E4%B8%AD%E9%97%B4%E4%BA%BA%E7%BB%95%E8%BF%87sni-based-censorship/</guid>
       <description>最近墙似乎又升级了，增加了基于SNI的检测，导致P站不翻墙完全不能访问，症状是Firefox建立的所有TCP链接均在TLS Client Hello发送后被Reset，之前写的mkhosts工具也不好使了：因为直接建立TCP是能通的，但是真正访问目标网站的时候因为要发送明文的SNI，因此被拦截。
 本来这么一想解决方法就是简单粗暴——别发SNI不就好了，但后来发现并不简单，没有哪个浏览器允许用户使用任何方式直接调整TLS握手的时候的参数的。
 看来这样，完全在浏览器里解决问题是不太现实了，我本来想着是不是可以把握手的时候浏览器发送的SNI修改一下，但每次浏览器都无法建立TLS链接，使用wireshark抓包发现在Handshake Finished阶段对端发出Alert Decryption Error，无法完成握手。查询rfc发现自己Too Young Too Simple，Handshake Finished阶段服务器端要签名整个握手阶段报文的hash来确定握手没有被修改，所以这条路又凉了。

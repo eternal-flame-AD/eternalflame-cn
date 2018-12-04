@@ -4,6 +4,7 @@
     <i class="text-muted"><i class="fas fa-clock"></i>{{ .Date.Format "Mon, Jan 2, 2006" }}</i> <br />
     {{ if .Params.categories}}<i class="text-muted"><i class="fas fa-shapes"></i>{{range $i, $t := .Params.categories}}<a href="/categories/{{lower $t}}">{{$t}}&nbsp;</a>{{end}}</i>{{end}} <br />
     {{ if .Params.tags}}<i class="text-muted"><i class="fas fa-tags"></i>{{range $i, $t := .Params.tags}}<a href="/tags/{{lower $t}}">{{$t}}&nbsp;</a>{{end}}</i>{{end}}
+    <i class="text-muted"><i class="fas fa-comment"></i><a href="{{ .Permalink }}#disqus_thread">Comments</a></i> <br />
     {{if .Draft }}
     <i class="fas fa-edit text-danger">Draft</i>
     {{end}}

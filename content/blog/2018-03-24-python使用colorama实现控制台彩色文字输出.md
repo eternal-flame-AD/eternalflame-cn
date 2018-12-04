@@ -2,6 +2,7 @@
 title: python使用colorama实现控制台彩色文字输出
 author: Eternal-flame-AD
 layout: post
+identifier: 2c010c70a608620272cdcc8e73cf0f50
 date: 2018-03-24T13:51:25+00:00
 featured_image: Python_logo_and_wordmark.svg_.png
 categories:

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Java on Eternal-flame-AD</title>
-    <link>/tags/java/</link>
+    <link>https://eternalflame.cn/tags/java/</link>
     <description>Recent content in Java on Eternal-flame-AD</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 26 Mar 2018 15:47:40 +0000</lastBuildDate>
     
-	<atom:link href="/tags/java/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://eternalflame.cn/tags/java/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>【AP CSA学习心得】（1）String的比较</title>
-      <link>/blog/2018/03/ap-csa%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%971string%E7%9A%84%E6%AF%94%E8%BE%83/</link>
+      <link>https://eternalflame.cn/blog/2018/03/ap-csa%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%971string%E7%9A%84%E6%AF%94%E8%BE%83/</link>
       <pubDate>Mon, 26 Mar 2018 15:47:40 +0000</pubDate>
       
-      <guid>/blog/2018/03/ap-csa%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%971string%E7%9A%84%E6%AF%94%E8%BE%83/</guid>
+      <guid>https://eternalflame.cn/blog/2018/03/ap-csa%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%971string%E7%9A%84%E6%AF%94%E8%BE%83/</guid>
       <description>今天学习AP CSA时出现了一个问题：
 package loops; import java.util.Scanner; public class WhileLoop { public static void main(String[] args) { Scanner input=new Scanner(System.in); String password=&amp;#34;&amp;#34;; while (password!=&amp;#34;PASSWORD&amp;#34;) { //WARNING: password!=&amp;#34;PASSWORD&amp;#34; is NOT going to work! This is causing an infinite loop  System.out.print(&amp;#34;Password please:&amp;#34;); password=input.next(); //password=&amp;#34;PASSWORD&amp;#34;; //Uncomment this and the while loop will end  System.out.println(password.length()); //8  System.out.println(&amp;#34;PASSWORD&amp;#34;.length()); //8  System.out.println(password==&amp;#34;PASSWORD&amp;#34;); //always false  } System.out.println(&amp;#34;OK.&amp;#34;); } } 如上的代码，不论输入的字符串是否正确，循环均会一直进行，找了很久没有找到原因，后来发现是input.next()出来的String对象和直接&amp;#8221;PASSWORD&amp;#8221;出来的对象不等，应当使用String.equals()方法
 然而，int等其它类型却没有这个问题

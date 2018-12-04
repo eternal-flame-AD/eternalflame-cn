@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Openwrt应用 on Eternal-flame-AD</title>
-    <link>/categories/openwrt%E5%BA%94%E7%94%A8/</link>
+    <link>https://eternalflame.cn/categories/openwrt%E5%BA%94%E7%94%A8/</link>
     <description>Recent content in Openwrt应用 on Eternal-flame-AD</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 24 Jul 2018 11:19:55 +0000</lastBuildDate>
     
-	<atom:link href="/categories/openwrt%E5%BA%94%E7%94%A8/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://eternalflame.cn/categories/openwrt%E5%BA%94%E7%94%A8/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>HAProxy使用多个iface负载均衡</title>
-      <link>/blog/2018/07/haproxy%E4%BD%BF%E7%94%A8%E5%A4%9A%E4%B8%AAiface%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/</link>
+      <link>https://eternalflame.cn/blog/2018/07/haproxy%E4%BD%BF%E7%94%A8%E5%A4%9A%E4%B8%AAiface%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/</link>
       <pubDate>Tue, 24 Jul 2018 11:19:55 +0000</pubDate>
       
-      <guid>/blog/2018/07/haproxy%E4%BD%BF%E7%94%A8%E5%A4%9A%E4%B8%AAiface%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/</guid>
+      <guid>https://eternalflame.cn/blog/2018/07/haproxy%E4%BD%BF%E7%94%A8%E5%A4%9A%E4%B8%AAiface%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/</guid>
       <description>因为家里软路由是两条宽带上游，所以希望自己路由器上运行的的HAProxy能够在两个路由器上均分负载，需求大致是这样：
 eth0.2 +---------------+ +-----------------+ | +---------------&amp;gt; | | HAProxy | | Backend | | +---------------&amp;gt; | +---------------+ +-----------------+ eth0.3 原来查了HAProxy的文档竟然没有看出来怎么做，后来在stackoverflow上找了很久发现server句是可以使用source参数的，这个小透明觉得文档写的不是很清楚，故在这里记录一下，大致写法是这样：
 server back1 1.2.3.4:31646 source 0.0.0.0 interface eth0.2 server back2 1.2.3.4:31646 source 0.0.0.0 interface eth0.3 &amp;nbsp;</description>
@@ -24,10 +24,10 @@ server back1 1.2.3.4:31646 source 0.0.0.0 interface eth0.2 server back2 1.2.3.4:
     
     <item>
       <title>在openwrt/lede上部署dnscrypt-proxy，强化家庭网络dns安全</title>
-      <link>/blog/2018/07/%E5%9C%A8openwrt-lede%E4%B8%8A%E9%83%A8%E7%BD%B2dnscrypt-proxy%E5%BC%BA%E5%8C%96%E5%AE%B6%E5%BA%AD%E7%BD%91%E7%BB%9Cdns%E5%AE%89%E5%85%A8/</link>
+      <link>https://eternalflame.cn/blog/2018/07/%E5%9C%A8openwrt-lede%E4%B8%8A%E9%83%A8%E7%BD%B2dnscrypt-proxy%E5%BC%BA%E5%8C%96%E5%AE%B6%E5%BA%AD%E7%BD%91%E7%BB%9Cdns%E5%AE%89%E5%85%A8/</link>
       <pubDate>Tue, 24 Jul 2018 11:04:54 +0000</pubDate>
       
-      <guid>/blog/2018/07/%E5%9C%A8openwrt-lede%E4%B8%8A%E9%83%A8%E7%BD%B2dnscrypt-proxy%E5%BC%BA%E5%8C%96%E5%AE%B6%E5%BA%AD%E7%BD%91%E7%BB%9Cdns%E5%AE%89%E5%85%A8/</guid>
+      <guid>https://eternalflame.cn/blog/2018/07/%E5%9C%A8openwrt-lede%E4%B8%8A%E9%83%A8%E7%BD%B2dnscrypt-proxy%E5%BC%BA%E5%8C%96%E5%AE%B6%E5%BA%AD%E7%BD%91%E7%BB%9Cdns%E5%AE%89%E5%85%A8/</guid>
       <description>&lt;p&gt;自从部署了透明代理之后，整个人都变得宅了很多（家里的wifi太美好了）。但一直有个问题让我很烦恼——有部分网站因为不在gfwlist中，对应域名的dns查询并没有走代理，存在一个可能被跟踪的隐患，而如果全部将dns查询代理出去，有很多国内网站会出现解析到国外的问题。后来做了一些研究，使用dnsmasq+dnscrypt-proxy的方法解决了这个问题，将大致方法记录如下：&lt;/p&gt;
 
 &lt;p&gt;首先我们要分析一下自己的需求——国内域名直接解析（我也不在乎了，国内网站很多连https都懒得上我也不觉得有什么隐私可言），国外域名使用DNS-over-TLS或DNS-over-HTTPS进行解析。也就是我们需要几个工具：&lt;/p&gt;

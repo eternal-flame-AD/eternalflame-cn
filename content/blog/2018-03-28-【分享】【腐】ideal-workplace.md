@@ -2,6 +2,7 @@
 title: 【分享】【腐】Ideal workplace
 author: Eternal-flame-AD
 layout: post
+identifier: 65064df7c2e9c548a8e5502f32515dc3
 date: 2018-03-27T16:48:02+00:00
 categories:
   - 日常

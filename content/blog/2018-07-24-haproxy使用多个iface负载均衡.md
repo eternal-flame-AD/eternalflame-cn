@@ -2,6 +2,7 @@
 title: HAProxy使用多个iface负载均衡
 author: Eternal-flame-AD
 layout: post
+identifier: d67521bc361af9de1149b7ced09f86f5
 date: 2018-07-24T11:19:55+00:00
 categories:
   - Openwrt应用

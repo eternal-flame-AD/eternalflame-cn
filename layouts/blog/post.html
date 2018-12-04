@@ -8,6 +8,7 @@
             {{ if .Params.categories}}<i class="text-muted"><i class="fas fa-shapes"></i>{{range $i, $t := .Params.categories}}<a href="/categories/{{lower $t}}">{{$t}}&nbsp;</a>{{end}}</i> <br />{{end}}
             <i class="text-muted"><i class="fas fa-link"></i><a style="word-wrap: break-word;" href="{{ .Permalink }}">{{ .Permalink }}</a></i> <br />
             <i class="text-muted"><i class="fas fa-copyright"></i><a href="https://creativecommons.org/licenses/by/4.0/deed.zh">CC-BY-NC 4.0</a></i> <br />
+            <i class="text-muted"><i class="fas fa-comment"></i><a href="{{ .Permalink }}#disqus_thread">Comments</a></i> <br />
             {{if .Draft }}
                 <i class="fas fa-edit text-danger">Draft</i> <br />
             {{end}}
@@ -16,5 +17,7 @@
         <article>
         {{ .Content }}
         </article>
+        {{ partial "disqus.html" .}}
     </div>
+<script id="dsq-count-scr" src="//eternalflame-cn.disqus.com/count.js" async></script>
 {{ partial "tail.html" .}}

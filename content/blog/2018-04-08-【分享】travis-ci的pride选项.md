@@ -2,6 +2,7 @@
 title: 【分享】Travis CI的Pride选项
 author: Eternal-flame-AD
 layout: post
+identifier: 046ce1b6c23fd4ac5d2d1c112536a3ee
 date: 2018-04-08T01:46:29+00:00
 categories:
   - LGBTQ

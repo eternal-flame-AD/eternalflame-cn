@@ -5,9 +5,9 @@
 
     
 
-    <base href="">
+    <base href="https://eternalflame.cn/">
     <title>【PGP简介】（3）PGP密钥对的构成和信任逻辑 | eternal-flame-AD</title>
-    <link rel="canonical" href="/blog/2018/03/pgp%E7%AE%80%E4%BB%8B3pgp%E5%AF%86%E9%92%A5%E5%AF%B9%E7%9A%84%E6%9E%84%E6%88%90%E5%92%8C%E4%BF%A1%E4%BB%BB%E9%80%BB%E8%BE%91/">
+    <link rel="canonical" href="https://eternalflame.cn/blog/2018/03/pgp%E7%AE%80%E4%BB%8B3pgp%E5%AF%86%E9%92%A5%E5%AF%B9%E7%9A%84%E6%9E%84%E6%88%90%E5%92%8C%E4%BF%A1%E4%BB%BB%E9%80%BB%E8%BE%91/">
     
 
     
@@ -18,7 +18,7 @@
 
 
 
-<link rel="stylesheet" href="/style.css" />
+<link rel="stylesheet" href="https://eternalflame.cn/style.css" />
 
 
 
@@ -51,8 +51,9 @@
             <i class="text-muted"><i class="fas fa-clock"></i>Sat, Mar 31, 2018</i> <br />
             
             <i class="text-muted"><i class="fas fa-shapes"></i><a href="/categories/%e6%8a%80%e6%9c%af">技术&nbsp;</a><a href="/categories/%e6%97%a5%e5%b8%b8">日常&nbsp;</a></i> <br />
-            <i class="text-muted"><i class="fas fa-link"></i><a style="word-wrap: break-word;" href="/blog/2018/03/pgp%E7%AE%80%E4%BB%8B3pgp%E5%AF%86%E9%92%A5%E5%AF%B9%E7%9A%84%E6%9E%84%E6%88%90%E5%92%8C%E4%BF%A1%E4%BB%BB%E9%80%BB%E8%BE%91/">/blog/2018/03/pgp%E7%AE%80%E4%BB%8B3pgp%E5%AF%86%E9%92%A5%E5%AF%B9%E7%9A%84%E6%9E%84%E6%88%90%E5%92%8C%E4%BF%A1%E4%BB%BB%E9%80%BB%E8%BE%91/</a></i> <br />
+            <i class="text-muted"><i class="fas fa-link"></i><a style="word-wrap: break-word;" href="https://eternalflame.cn/blog/2018/03/pgp%E7%AE%80%E4%BB%8B3pgp%E5%AF%86%E9%92%A5%E5%AF%B9%E7%9A%84%E6%9E%84%E6%88%90%E5%92%8C%E4%BF%A1%E4%BB%BB%E9%80%BB%E8%BE%91/">https://eternalflame.cn/blog/2018/03/pgp%E7%AE%80%E4%BB%8B3pgp%E5%AF%86%E9%92%A5%E5%AF%B9%E7%9A%84%E6%9E%84%E6%88%90%E5%92%8C%E4%BF%A1%E4%BB%BB%E9%80%BB%E8%BE%91/</a></i> <br />
             <i class="text-muted"><i class="fas fa-copyright"></i><a href="https://creativecommons.org/licenses/by/4.0/deed.zh">CC-BY-NC 4.0</a></i> <br />
+            <i class="text-muted"><i class="fas fa-comment"></i><a href="https://eternalflame.cn/blog/2018/03/pgp%E7%AE%80%E4%BB%8B3pgp%E5%AF%86%E9%92%A5%E5%AF%B9%E7%9A%84%E6%9E%84%E6%88%90%E5%92%8C%E4%BF%A1%E4%BB%BB%E9%80%BB%E8%BE%91/#disqus_thread">Comments</a></i> <br />
             
             
         </div>
@@ -92,6 +93,26 @@
 <p>但是，现在就出现了一个问题，我们假设Alice和Bob使用某种不安全聊天工具交换公钥的时候，Eve（服务器）在中间不仅可以监听，还可以截获/伪造消息，那么，Eve完全有能力自己生成两个密钥对，分别填上Alice和Bob的用户标识，并把假冒的公钥发给Alice和Bob，这样Alice和Bob都会发现自己拿到了用户标识写着对方的公钥（实际上是Eve的公钥，对应的私钥在Eve手中），而当他们再进行通信的时候，他们加密出的所有内容都可以被Eve解密了（例如：Alice把她的消息用自己的私钥签名，之后通过<strong>他认为的</strong>Bob的公钥加密发出去；Eve截获这个消息，用自己手中的私钥解密（因为Alice手中认为的Bob的公钥其实是Eve生成的 这时Eve就获得<strong>消息明文</strong>了） 再用自己假冒的Alice的私钥签名 用Bob真正的公钥加密发给Bob；Bob就得到了一条看起来由Alice签名并加密给自己的信息） 这种情况就被称为<a href="https://en.wikipedia.org/wiki/Man-in-the-middle_attack">中间人攻击（MITM）</a>，为了确定密钥交换过程中没有中间人的干扰，我们就需要去验证双方收到的公钥是否和发出的相匹配，这一点PGP并不能帮你去做，你只能通过某种安全的渠道（例如见面），逐字核对密钥指纹来确定Alice获得的公钥就是和Bob手中的私钥相对应。在下一篇中我会详细说到PGP是如何处理对公钥的信任的问题的。</p>
 
         </article>
+        <div id="disqus_thread"></div>
+<script>
+
+
+
+var disqus_config = function () {
+this.page.url = "https:\/\/eternalflame.cn\/blog\/2018\/03\/pgp%E7%AE%80%E4%BB%8B3pgp%E5%AF%86%E9%92%A5%E5%AF%B9%E7%9A%84%E6%9E%84%E6%88%90%E5%92%8C%E4%BF%A1%E4%BB%BB%E9%80%BB%E8%BE%91\/";  
+this.page.identifier = "738c90d60a61e0bd8b4b0f1a8e9f3544"; 
+};
+
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://eternalflame-cn.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
     </div>
+<script id="dsq-count-scr" src="//eternalflame-cn.disqus.com/count.js" async></script>
     </body>
 </html>

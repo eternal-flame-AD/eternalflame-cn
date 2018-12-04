@@ -2,6 +2,7 @@
 title: 关于美国对ZTE的出口禁令
 author: Eternal-flame-AD
 layout: post
+identifier: c553e08b7d3955dd3e29917f6ad21769
 date: 2018-04-26T05:24:07+00:00
 categories:
   - 日常

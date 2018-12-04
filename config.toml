@@ -1,3 +1,4 @@
+baseURL = "https://eternalflame.cn/"
 languageCode = "en-us"
 title = "Eternal-flame-AD"
 canonifyURLS = false

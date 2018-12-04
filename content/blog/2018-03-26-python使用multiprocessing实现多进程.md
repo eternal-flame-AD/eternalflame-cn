@@ -2,6 +2,7 @@
 title: Python使用multiprocessing实现多进程
 author: Eternal-flame-AD
 layout: post
+identifier: 276b5db472f122dbd21a0c405d8a5e32
 date: 2018-03-26T11:02:33+00:00
 featured_image: /images/Python_logo_and_wordmark.svg_.png
 categories:

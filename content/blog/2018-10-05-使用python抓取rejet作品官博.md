@@ -2,6 +2,7 @@
 title: 使用Python抓取rejet作品官博
 author: Eternal-flame-AD
 layout: post
+identifier: 47798cd3f7d6966cc95cde49c47d1850
 date: 2018-10-05T08:53:24+00:00
 categories:
   - Python

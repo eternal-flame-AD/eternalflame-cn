@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>学习 on Eternal-flame-AD</title>
-    <link>/categories/%E5%AD%A6%E4%B9%A0/</link>
+    <link>https://eternalflame.cn/categories/%E5%AD%A6%E4%B9%A0/</link>
     <description>Recent content in 学习 on Eternal-flame-AD</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 29 Mar 2018 14:58:04 +0000</lastBuildDate>
     
-	<atom:link href="/categories/%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://eternalflame.cn/categories/%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>【PGP简介】（1） Phil Zimmermann – Creator of PGP | Phil Zimmermann——PGP之父</title>
-      <link>/blog/2018/03/pgp%E7%AE%80%E4%BB%8B1-phil-zimmermann-creator-of-pgp-phil-zimmermannpgp%E4%B9%8B%E7%88%B6/</link>
+      <link>https://eternalflame.cn/blog/2018/03/pgp%E7%AE%80%E4%BB%8B1-phil-zimmermann-creator-of-pgp-phil-zimmermannpgp%E4%B9%8B%E7%88%B6/</link>
       <pubDate>Thu, 29 Mar 2018 14:58:04 +0000</pubDate>
       
-      <guid>/blog/2018/03/pgp%E7%AE%80%E4%BB%8B1-phil-zimmermann-creator-of-pgp-phil-zimmermannpgp%E4%B9%8B%E7%88%B6/</guid>
+      <guid>https://eternalflame.cn/blog/2018/03/pgp%E7%AE%80%E4%BB%8B1-phil-zimmermann-creator-of-pgp-phil-zimmermannpgp%E4%B9%8B%E7%88%B6/</guid>
       <description>打算开天坑啦~这次打算开一个PGP简介的系列，会从简介和历史讲起，之后会介绍一些常用PGP工具的使用，其中具体技术实现上只打算触及原理介绍和使用方法，不打算涉及过于复杂的细节上的实现，适合用来拉人入坑~
 
 Phil Zimmermann，Pretty Good Privacy(PGP)软件的开创者，个人网站：（中文版 英文版）。他在1991年开发了PGP软件的第一个版本，据说这样一个名字是受到一家名为“Ralph&amp;#8217;s Pretty Good Grocery”的果蔬店的启发而来，当时Phil Zimmermann作为一名反核人士，打算利用自己开发的PGP来保证同样反核的人们能够在互联网上安全的交换信息。因为这个目的，所以Phil Zimmermann没有打算通过售卖PGP的授权获得任何利润，而是直接将PGP及其源代码发布在了各大BBS上，让互联网上的每个人都有权使用、检查和修改其中的代码。
@@ -26,10 +26,10 @@ Phil Zimmermann的PGP很快便引起了极大的反响，也有很多其它国�
     
     <item>
       <title>【AP CSA学习心得】（2）抽象和继承</title>
-      <link>/blog/2018/03/ap-csa%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%972%E6%8A%BD%E8%B1%A1%E5%92%8C%E7%BB%A7%E6%89%BF/</link>
+      <link>https://eternalflame.cn/blog/2018/03/ap-csa%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%972%E6%8A%BD%E8%B1%A1%E5%92%8C%E7%BB%A7%E6%89%BF/</link>
       <pubDate>Tue, 27 Mar 2018 03:24:02 +0000</pubDate>
       
-      <guid>/blog/2018/03/ap-csa%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%972%E6%8A%BD%E8%B1%A1%E5%92%8C%E7%BB%A7%E6%89%BF/</guid>
+      <guid>https://eternalflame.cn/blog/2018/03/ap-csa%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%972%E6%8A%BD%E8%B1%A1%E5%92%8C%E7%BB%A7%E6%89%BF/</guid>
       <description>抽象和继承一直是AP CSA考察的重点，在这里先码一段介绍整理一下（知识点只涉及了AP涉及到的部分，求大佬轻喷）
 &amp;nbsp;
 在定义类时，我们可以加入abstract关键字来定义一个抽象类：
@@ -40,10 +40,10 @@ class AP_Princeton extends book { public String ISBN=&amp;#34;978-1-101-91988-0&
     
     <item>
       <title>【AP CSA学习心得】（1）String的比较</title>
-      <link>/blog/2018/03/ap-csa%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%971string%E7%9A%84%E6%AF%94%E8%BE%83/</link>
+      <link>https://eternalflame.cn/blog/2018/03/ap-csa%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%971string%E7%9A%84%E6%AF%94%E8%BE%83/</link>
       <pubDate>Mon, 26 Mar 2018 15:47:40 +0000</pubDate>
       
-      <guid>/blog/2018/03/ap-csa%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%971string%E7%9A%84%E6%AF%94%E8%BE%83/</guid>
+      <guid>https://eternalflame.cn/blog/2018/03/ap-csa%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%971string%E7%9A%84%E6%AF%94%E8%BE%83/</guid>
       <description>今天学习AP CSA时出现了一个问题：
 package loops; import java.util.Scanner; public class WhileLoop { public static void main(String[] args) { Scanner input=new Scanner(System.in); String password=&amp;#34;&amp;#34;; while (password!=&amp;#34;PASSWORD&amp;#34;) { //WARNING: password!=&amp;#34;PASSWORD&amp;#34; is NOT going to work! This is causing an infinite loop  System.out.print(&amp;#34;Password please:&amp;#34;); password=input.next(); //password=&amp;#34;PASSWORD&amp;#34;; //Uncomment this and the while loop will end  System.out.println(password.length()); //8  System.out.println(&amp;#34;PASSWORD&amp;#34;.length()); //8  System.out.println(password==&amp;#34;PASSWORD&amp;#34;); //always false  } System.out.println(&amp;#34;OK.&amp;#34;); } } 如上的代码，不论输入的字符串是否正确，循环均会一直进行，找了很久没有找到原因，后来发现是input.next()出来的String对象和直接&amp;#8221;PASSWORD&amp;#8221;出来的对象不等，应当使用String.equals()方法
 然而，int等其它类型却没有这个问题

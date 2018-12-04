@@ -2,6 +2,7 @@
 title: 在openwrt/lede上部署dnscrypt-proxy，强化家庭网络dns安全
 author: Eternal-flame-AD
 layout: post
+identifier: b26d3d40cf9f5655cdb6c8308cba9864
 date: 2018-07-24T11:04:54+00:00
 categories:
   - Openwrt应用

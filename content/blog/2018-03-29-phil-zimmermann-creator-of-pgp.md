@@ -2,6 +2,7 @@
 title: 【PGP简介】（1） Phil Zimmermann – Creator of PGP | Phil Zimmermann——PGP之父
 author: Eternal-flame-AD
 layout: post
+identifier: 6ef2fe16ba0be6f01cdd096da49ae7ff
 date: 2018-03-29T14:58:04+00:00
 categories:
   - 学习
